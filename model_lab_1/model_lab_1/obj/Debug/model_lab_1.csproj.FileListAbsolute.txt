@@ -1,0 +1,11 @@
+C:\Users\boris\source\repos\model_lab_1\model_lab_1\bin\Debug\model_lab_1.exe.config
+C:\Users\boris\source\repos\model_lab_1\model_lab_1\bin\Debug\model_lab_1.exe
+C:\Users\boris\source\repos\model_lab_1\model_lab_1\bin\Debug\model_lab_1.pdb
+C:\Users\boris\source\repos\model_lab_1\model_lab_1\obj\Debug\model_lab_1.csproj.AssemblyReference.cache
+C:\Users\boris\source\repos\model_lab_1\model_lab_1\obj\Debug\model_lab_1.csproj.SuggestedBindingRedirects.cache
+C:\Users\boris\source\repos\model_lab_1\model_lab_1\obj\Debug\model_lab_1.Form1.resources
+C:\Users\boris\source\repos\model_lab_1\model_lab_1\obj\Debug\model_lab_1.Properties.Resources.resources
+C:\Users\boris\source\repos\model_lab_1\model_lab_1\obj\Debug\model_lab_1.csproj.GenerateResource.cache
+C:\Users\boris\source\repos\model_lab_1\model_lab_1\obj\Debug\model_lab_1.csproj.CoreCompileInputs.cache
+C:\Users\boris\source\repos\model_lab_1\model_lab_1\obj\Debug\model_lab_1.exe
+C:\Users\boris\source\repos\model_lab_1\model_lab_1\obj\Debug\model_lab_1.pdb
