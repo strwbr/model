@@ -67,7 +67,7 @@
             this.infixText.BackColor = System.Drawing.Color.White;
             this.infixText.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.infixText.Font = new System.Drawing.Font("Segoe UI", 16F);
-            this.infixText.Location = new System.Drawing.Point(25, 30);
+            this.infixText.Location = new System.Drawing.Point(31, 32);
             this.infixText.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.infixText.Name = "infixText";
             this.infixText.Size = new System.Drawing.Size(187, 32);
@@ -121,7 +121,7 @@
             this.open_btn.TabIndex = 16;
             this.open_btn.Text = "(";
             this.open_btn.UseVisualStyleBackColor = false;
-            this.open_btn.Click += new System.EventHandler(this.Symbol_Click);
+            this.open_btn.Click += new System.EventHandler(this.open_btn_Click);
             // 
             // close_btn
             // 
@@ -137,7 +137,7 @@
             this.close_btn.TabIndex = 18;
             this.close_btn.Text = ")";
             this.close_btn.UseVisualStyleBackColor = false;
-            this.close_btn.Click += new System.EventHandler(this.Symbol_Click);
+            this.close_btn.Click += new System.EventHandler(this.close_btn_Click);
             // 
             // clear_all_btn
             // 
@@ -153,6 +153,7 @@
             this.clear_all_btn.TabIndex = 17;
             this.clear_all_btn.Text = "C";
             this.clear_all_btn.UseVisualStyleBackColor = false;
+            this.clear_all_btn.Click += new System.EventHandler(this.clear_all_btn_Click);
             // 
             // clear_btn
             // 
@@ -169,6 +170,7 @@
             this.clear_btn.Size = new System.Drawing.Size(50, 50);
             this.clear_btn.TabIndex = 0;
             this.clear_btn.UseVisualStyleBackColor = false;
+            this.clear_btn.Click += new System.EventHandler(this.clear_btn_Click);
             // 
             // pow_btn
             // 
@@ -184,7 +186,7 @@
             this.pow_btn.TabIndex = 18;
             this.pow_btn.Text = "^";
             this.pow_btn.UseVisualStyleBackColor = false;
-            this.pow_btn.Click += new System.EventHandler(this.Symbol_Click);
+            this.pow_btn.Click += new System.EventHandler(this.pow_btn_Click);
             // 
             // a_btn
             // 
@@ -200,7 +202,7 @@
             this.a_btn.TabIndex = 19;
             this.a_btn.Text = "a";
             this.a_btn.UseVisualStyleBackColor = false;
-            this.a_btn.Click += new System.EventHandler(this.Symbol_Click);
+            this.a_btn.Click += new System.EventHandler(this.a_btn_Click);
             // 
             // b_btn
             // 
@@ -216,7 +218,7 @@
             this.b_btn.TabIndex = 1;
             this.b_btn.Text = "b";
             this.b_btn.UseVisualStyleBackColor = false;
-            this.b_btn.Click += new System.EventHandler(this.Symbol_Click);
+            this.b_btn.Click += new System.EventHandler(this.b_btn_Click);
             // 
             // c_btn
             // 
@@ -232,7 +234,7 @@
             this.c_btn.TabIndex = 2;
             this.c_btn.Text = "c";
             this.c_btn.UseVisualStyleBackColor = false;
-            this.c_btn.Click += new System.EventHandler(this.Symbol_Click);
+            this.c_btn.Click += new System.EventHandler(this.c_btn_Click);
             // 
             // div_btn
             // 
@@ -248,7 +250,7 @@
             this.div_btn.TabIndex = 3;
             this.div_btn.Text = "/";
             this.div_btn.UseVisualStyleBackColor = false;
-            this.div_btn.Click += new System.EventHandler(this.Symbol_Click);
+            this.div_btn.Click += new System.EventHandler(this.div_btn_Click);
             // 
             // abs_btn
             // 
@@ -264,7 +266,7 @@
             this.abs_btn.TabIndex = 19;
             this.abs_btn.Text = "abs";
             this.abs_btn.UseVisualStyleBackColor = false;
-            this.abs_btn.Click += new System.EventHandler(this.Symbol_Click);
+            this.abs_btn.Click += new System.EventHandler(this.abs_btn_Click);
             // 
             // d_btn
             // 
@@ -280,7 +282,7 @@
             this.d_btn.TabIndex = 4;
             this.d_btn.Text = "d";
             this.d_btn.UseVisualStyleBackColor = false;
-            this.d_btn.Click += new System.EventHandler(this.Symbol_Click);
+            this.d_btn.Click += new System.EventHandler(this.d_btn_Click);
             // 
             // e_btn
             // 
@@ -296,7 +298,7 @@
             this.e_btn.TabIndex = 5;
             this.e_btn.Text = "e";
             this.e_btn.UseVisualStyleBackColor = false;
-            this.e_btn.Click += new System.EventHandler(this.Symbol_Click);
+            this.e_btn.Click += new System.EventHandler(this.e_btn_Click);
             // 
             // f_btn
             // 
@@ -312,7 +314,7 @@
             this.f_btn.TabIndex = 6;
             this.f_btn.Text = "f";
             this.f_btn.UseVisualStyleBackColor = false;
-            this.f_btn.Click += new System.EventHandler(this.Symbol_Click);
+            this.f_btn.Click += new System.EventHandler(this.f_btn_Click);
             // 
             // mult_btn
             // 
@@ -328,7 +330,7 @@
             this.mult_btn.TabIndex = 7;
             this.mult_btn.Text = "*";
             this.mult_btn.UseVisualStyleBackColor = false;
-            this.mult_btn.Click += new System.EventHandler(this.Symbol_Click);
+            this.mult_btn.Click += new System.EventHandler(this.mult_btn_Click);
             // 
             // sin_btn
             // 
@@ -344,7 +346,7 @@
             this.sin_btn.TabIndex = 16;
             this.sin_btn.Text = "sin";
             this.sin_btn.UseVisualStyleBackColor = false;
-            this.sin_btn.Click += new System.EventHandler(this.Symbol_Click);
+            this.sin_btn.Click += new System.EventHandler(this.sin_btn_Click);
             // 
             // g_btn
             // 
@@ -360,7 +362,7 @@
             this.g_btn.TabIndex = 8;
             this.g_btn.Text = "g";
             this.g_btn.UseVisualStyleBackColor = false;
-            this.g_btn.Click += new System.EventHandler(this.Symbol_Click);
+            this.g_btn.Click += new System.EventHandler(this.g_btn_Click);
             // 
             // h_btn
             // 
@@ -376,7 +378,7 @@
             this.h_btn.TabIndex = 9;
             this.h_btn.Text = "h";
             this.h_btn.UseVisualStyleBackColor = false;
-            this.h_btn.Click += new System.EventHandler(this.Symbol_Click);
+            this.h_btn.Click += new System.EventHandler(this.h_btn_Click);
             // 
             // i_btn
             // 
@@ -392,7 +394,7 @@
             this.i_btn.TabIndex = 10;
             this.i_btn.Text = "i";
             this.i_btn.UseVisualStyleBackColor = false;
-            this.i_btn.Click += new System.EventHandler(this.Symbol_Click);
+            this.i_btn.Click += new System.EventHandler(this.i_btn_Click);
             // 
             // sub_btn
             // 
@@ -408,7 +410,7 @@
             this.sub_btn.TabIndex = 11;
             this.sub_btn.Text = "-";
             this.sub_btn.UseVisualStyleBackColor = false;
-            this.sub_btn.Click += new System.EventHandler(this.Symbol_Click);
+            this.sub_btn.Click += new System.EventHandler(this.sub_btn_Click);
             // 
             // cos_btn
             // 
@@ -424,7 +426,7 @@
             this.cos_btn.TabIndex = 17;
             this.cos_btn.Text = "cos";
             this.cos_btn.UseVisualStyleBackColor = false;
-            this.cos_btn.Click += new System.EventHandler(this.Symbol_Click);
+            this.cos_btn.Click += new System.EventHandler(this.cos_btn_Click);
             // 
             // button12
             // 
@@ -454,7 +456,7 @@
             this.j_btn.TabIndex = 13;
             this.j_btn.Text = "j";
             this.j_btn.UseVisualStyleBackColor = false;
-            this.j_btn.Click += new System.EventHandler(this.Symbol_Click);
+            this.j_btn.Click += new System.EventHandler(this.j_btn_Click);
             // 
             // button14
             // 
@@ -484,7 +486,7 @@
             this.add_btn.TabIndex = 15;
             this.add_btn.Text = "+";
             this.add_btn.UseVisualStyleBackColor = false;
-            this.add_btn.Click += new System.EventHandler(this.Symbol_Click);
+            this.add_btn.Click += new System.EventHandler(this.add_btn_Click);
             // 
             // tg_btn
             // 
@@ -500,7 +502,7 @@
             this.tg_btn.TabIndex = 20;
             this.tg_btn.Text = "tg";
             this.tg_btn.UseVisualStyleBackColor = false;
-            this.tg_btn.Click += new System.EventHandler(this.Symbol_Click);
+            this.tg_btn.Click += new System.EventHandler(this.tg_btn_Click);
             // 
             // flowLayoutPanel2
             // 
@@ -519,6 +521,7 @@
             this.exit_btn.TabIndex = 4;
             this.exit_btn.Text = "Готово";
             this.exit_btn.UseVisualStyleBackColor = true;
+            this.exit_btn.Click += new System.EventHandler(this.exit_btn_Click);
             // 
             // Form2
             // 
