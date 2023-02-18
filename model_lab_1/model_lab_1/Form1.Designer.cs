@@ -65,14 +65,16 @@
             this.createBtn = new System.Windows.Forms.Button();
             this.beatBtn = new System.Windows.Forms.Button();
             this.translateBtn = new System.Windows.Forms.Button();
-            this.stack = new System.Windows.Forms.DataGridView();
+            this.stackForm = new System.Windows.Forms.DataGridView();
             this.stackColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
+            this.originalLine = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.decisionTable)).BeginInit();
             this.groupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.stack)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.stackForm)).BeginInit();
             this.SuspendLayout();
             // 
             // decisionTable
@@ -104,7 +106,7 @@
             this.Column10});
             dataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle12.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle12.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle12.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             dataGridViewCellStyle12.ForeColor = System.Drawing.SystemColors.ControlText;
             dataGridViewCellStyle12.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle12.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
@@ -112,13 +114,12 @@
             this.decisionTable.DefaultCellStyle = dataGridViewCellStyle12;
             this.decisionTable.Enabled = false;
             this.decisionTable.EnableHeadersVisualStyles = false;
-            this.decisionTable.Location = new System.Drawing.Point(11, 213);
-            this.decisionTable.Margin = new System.Windows.Forms.Padding(2);
+            this.decisionTable.Location = new System.Drawing.Point(15, 409);
             this.decisionTable.MultiSelect = false;
             this.decisionTable.Name = "decisionTable";
             dataGridViewCellStyle13.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle13.BackColor = System.Drawing.Color.Linen;
-            dataGridViewCellStyle13.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle13.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle13.ForeColor = System.Drawing.SystemColors.WindowText;
             dataGridViewCellStyle13.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle13.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
@@ -130,7 +131,7 @@
             this.decisionTable.RowTemplate.Height = 28;
             this.decisionTable.RowTemplate.Resizable = System.Windows.Forms.DataGridViewTriState.False;
             this.decisionTable.ShowCellToolTips = false;
-            this.decisionTable.Size = new System.Drawing.Size(483, 303);
+            this.decisionTable.Size = new System.Drawing.Size(724, 466);
             this.decisionTable.TabIndex = 0;
             // 
             // Column1
@@ -232,11 +233,9 @@
             this.groupBox1.Controls.Add(this.postfixText);
             this.groupBox1.Controls.Add(this.infixText);
             this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.groupBox1.Location = new System.Drawing.Point(9, -3);
-            this.groupBox1.Margin = new System.Windows.Forms.Padding(2);
+            this.groupBox1.Location = new System.Drawing.Point(22, 83);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Padding = new System.Windows.Forms.Padding(2);
-            this.groupBox1.Size = new System.Drawing.Size(663, 170);
+            this.groupBox1.Size = new System.Drawing.Size(994, 262);
             this.groupBox1.TabIndex = 1;
             this.groupBox1.TabStop = false;
             // 
@@ -244,9 +243,10 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
-            this.label4.Location = new System.Drawing.Point(6, 20);
+            this.label4.Location = new System.Drawing.Point(9, 31);
+            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(210, 19);
+            this.label4.Size = new System.Drawing.Size(293, 28);
             this.label4.TabIndex = 8;
             this.label4.Text = "Строка в инфиксной форме:";
             this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -255,9 +255,10 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
-            this.label3.Location = new System.Drawing.Point(6, 90);
+            this.label3.Location = new System.Drawing.Point(9, 138);
+            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(223, 19);
+            this.label3.Size = new System.Drawing.Size(311, 28);
             this.label3.TabIndex = 7;
             this.label3.Text = "Строка в постфиксной форме:";
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -269,10 +270,9 @@
             this.postfixText.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.postfixText.Font = new System.Drawing.Font("Segoe UI", 14F);
             this.postfixText.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.postfixText.Location = new System.Drawing.Point(10, 119);
-            this.postfixText.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.postfixText.Location = new System.Drawing.Point(15, 183);
             this.postfixText.Name = "postfixText";
-            this.postfixText.Size = new System.Drawing.Size(154, 27);
+            this.postfixText.Size = new System.Drawing.Size(226, 40);
             this.postfixText.TabIndex = 1;
             this.postfixText.Text = "// потфикс текст";
             // 
@@ -282,10 +282,9 @@
             this.infixText.BackColor = System.Drawing.Color.White;
             this.infixText.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.infixText.Font = new System.Drawing.Font("Segoe UI", 14F);
-            this.infixText.Location = new System.Drawing.Point(10, 51);
-            this.infixText.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.infixText.Location = new System.Drawing.Point(15, 78);
             this.infixText.Name = "infixText";
-            this.infixText.Size = new System.Drawing.Size(160, 27);
+            this.infixText.Size = new System.Drawing.Size(235, 40);
             this.infixText.TabIndex = 0;
             this.infixText.Text = "// инфикс строка";
             // 
@@ -293,10 +292,9 @@
             // 
             this.createBtn.AutoSize = true;
             this.createBtn.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.createBtn.Location = new System.Drawing.Point(679, 11);
-            this.createBtn.Margin = new System.Windows.Forms.Padding(2);
+            this.createBtn.Location = new System.Drawing.Point(1022, 102);
             this.createBtn.Name = "createBtn";
-            this.createBtn.Size = new System.Drawing.Size(128, 33);
+            this.createBtn.Size = new System.Drawing.Size(192, 51);
             this.createBtn.TabIndex = 2;
             this.createBtn.Text = "Ввести строку";
             this.createBtn.UseVisualStyleBackColor = true;
@@ -306,33 +304,33 @@
             // 
             this.beatBtn.AutoSize = true;
             this.beatBtn.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.beatBtn.Location = new System.Drawing.Point(801, 486);
-            this.beatBtn.Margin = new System.Windows.Forms.Padding(2);
+            this.beatBtn.Location = new System.Drawing.Point(1201, 829);
             this.beatBtn.Name = "beatBtn";
-            this.beatBtn.Size = new System.Drawing.Size(68, 31);
+            this.beatBtn.Size = new System.Drawing.Size(102, 48);
             this.beatBtn.TabIndex = 3;
             this.beatBtn.Text = "Такт";
             this.beatBtn.UseVisualStyleBackColor = true;
+            this.beatBtn.Click += new System.EventHandler(this.beatBtn_Click);
             // 
             // translateBtn
             // 
             this.translateBtn.AutoSize = true;
             this.translateBtn.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.translateBtn.Location = new System.Drawing.Point(690, 486);
-            this.translateBtn.Margin = new System.Windows.Forms.Padding(2);
+            this.translateBtn.Location = new System.Drawing.Point(1034, 829);
             this.translateBtn.Name = "translateBtn";
-            this.translateBtn.Size = new System.Drawing.Size(102, 31);
+            this.translateBtn.Size = new System.Drawing.Size(153, 48);
             this.translateBtn.TabIndex = 4;
             this.translateBtn.Text = "Перевести";
             this.translateBtn.UseVisualStyleBackColor = true;
+            this.translateBtn.Click += new System.EventHandler(this.translateBtn_Click);
             // 
-            // stack
+            // stackForm
             // 
-            this.stack.AllowUserToAddRows = false;
-            this.stack.AllowUserToDeleteRows = false;
-            this.stack.AllowUserToResizeColumns = false;
-            this.stack.AllowUserToResizeRows = false;
-            this.stack.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.stackForm.AllowUserToAddRows = false;
+            this.stackForm.AllowUserToDeleteRows = false;
+            this.stackForm.AllowUserToResizeColumns = false;
+            this.stackForm.AllowUserToResizeRows = false;
+            this.stackForm.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             dataGridViewCellStyle15.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle15.BackColor = System.Drawing.SystemColors.Control;
             dataGridViewCellStyle15.Font = new System.Drawing.Font("Segoe UI", 14F);
@@ -340,9 +338,9 @@
             dataGridViewCellStyle15.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle15.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle15.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.stack.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle15;
-            this.stack.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.stack.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.stackForm.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle15;
+            this.stackForm.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.stackForm.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.stackColumn});
             dataGridViewCellStyle17.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle17.BackColor = System.Drawing.SystemColors.Window;
@@ -351,12 +349,13 @@
             dataGridViewCellStyle17.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle17.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle17.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.stack.DefaultCellStyle = dataGridViewCellStyle17;
-            this.stack.Enabled = false;
-            this.stack.Location = new System.Drawing.Point(513, 213);
-            this.stack.MultiSelect = false;
-            this.stack.Name = "stack";
-            this.stack.ReadOnly = true;
+            this.stackForm.DefaultCellStyle = dataGridViewCellStyle17;
+            this.stackForm.Enabled = false;
+            this.stackForm.Location = new System.Drawing.Point(769, 409);
+            this.stackForm.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.stackForm.MultiSelect = false;
+            this.stackForm.Name = "stackForm";
+            this.stackForm.ReadOnly = true;
             dataGridViewCellStyle18.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle18.BackColor = System.Drawing.SystemColors.Control;
             dataGridViewCellStyle18.Font = new System.Drawing.Font("Segoe UI", 12F);
@@ -364,10 +363,10 @@
             dataGridViewCellStyle18.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle18.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle18.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.stack.RowHeadersDefaultCellStyle = dataGridViewCellStyle18;
-            this.stack.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToDisplayedHeaders;
-            this.stack.Size = new System.Drawing.Size(161, 303);
-            this.stack.TabIndex = 5;
+            this.stackForm.RowHeadersDefaultCellStyle = dataGridViewCellStyle18;
+            this.stackForm.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToDisplayedHeaders;
+            this.stackForm.Size = new System.Drawing.Size(242, 466);
+            this.stackForm.TabIndex = 5;
             // 
             // stackColumn
             // 
@@ -375,6 +374,7 @@
             dataGridViewCellStyle16.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.stackColumn.DefaultCellStyle = dataGridViewCellStyle16;
             this.stackColumn.HeaderText = "Stack";
+            this.stackColumn.MinimumWidth = 8;
             this.stackColumn.Name = "stackColumn";
             this.stackColumn.ReadOnly = true;
             this.stackColumn.Resizable = System.Windows.Forms.DataGridViewTriState.False;
@@ -383,9 +383,10 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
-            this.label1.Location = new System.Drawing.Point(12, 183);
+            this.label1.Location = new System.Drawing.Point(17, 363);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(210, 19);
+            this.label1.Size = new System.Drawing.Size(293, 28);
             this.label1.TabIndex = 6;
             this.label1.Text = "Таблица принятия решений:";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -394,42 +395,71 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
-            this.label2.Location = new System.Drawing.Point(509, 183);
+            this.label2.Location = new System.Drawing.Point(763, 363);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(40, 19);
+            this.label2.Size = new System.Drawing.Size(55, 28);
             this.label2.TabIndex = 7;
             this.label2.Text = "Стек";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label5
             // 
-            this.label5.Location = new System.Drawing.Point(687, 223);
+            this.label5.Location = new System.Drawing.Point(1029, 424);
+            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(181, 36);
+            this.label5.Size = new System.Drawing.Size(272, 55);
             this.label5.TabIndex = 8;
             this.label5.Text = "// у таблиц Enabled=false, чтобы юзер не мог выделить ячейки";
             // 
+            // originalLine
+            // 
+            this.originalLine.AutoSize = true;
+            this.originalLine.BackColor = System.Drawing.Color.White;
+            this.originalLine.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.originalLine.Font = new System.Drawing.Font("Segoe UI", 14F);
+            this.originalLine.ForeColor = System.Drawing.Color.DarkOrchid;
+            this.originalLine.Location = new System.Drawing.Point(639, 23);
+            this.originalLine.Name = "originalLine";
+            this.originalLine.Size = new System.Drawing.Size(258, 40);
+            this.originalLine.TabIndex = 9;
+            this.originalLine.Text = "// исходная строка";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
+            this.label6.Location = new System.Drawing.Point(240, 31);
+            this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(392, 28);
+            this.label6.TabIndex = 10;
+            this.label6.Text = "Исходная строка в инфиксной форме:";
+            this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label6.Click += new System.EventHandler(this.label6_Click);
+            // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(880, 550);
+            this.ClientSize = new System.Drawing.Size(1320, 955);
+            this.Controls.Add(this.label6);
+            this.Controls.Add(this.originalLine);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.stack);
+            this.Controls.Add(this.stackForm);
             this.Controls.Add(this.translateBtn);
             this.Controls.Add(this.beatBtn);
             this.Controls.Add(this.createBtn);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.decisionTable);
-            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "Form1";
             this.Text = "Form1";
             ((System.ComponentModel.ISupportInitialize)(this.decisionTable)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.stack)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.stackForm)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -444,7 +474,7 @@
         private System.Windows.Forms.Button createBtn;
         private System.Windows.Forms.Button beatBtn;
         private System.Windows.Forms.Button translateBtn;
-        private System.Windows.Forms.DataGridView stack;
+        private System.Windows.Forms.DataGridView stackForm;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
@@ -461,6 +491,8 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.DataGridViewTextBoxColumn stackColumn;
+        private System.Windows.Forms.Label originalLine;
+        private System.Windows.Forms.Label label6;
     }
 }
 

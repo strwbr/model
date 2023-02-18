@@ -12,6 +12,8 @@ namespace model_lab_1
         private string InfixLine;
         private Dictionary<string, double> ValueMap = new Dictionary<string, double>();
 
+        public event Action<string> EnterLine;
+
         public Form2()
         {
             InitializeComponent();
@@ -169,7 +171,15 @@ namespace model_lab_1
 
         private void exit_btn_Click(object sender, EventArgs e)
         {
-            Close(); // Закрытие формы
+            if(InfixLine!=null)
+            {
+                EnterLine?.Invoke(InfixLine);
+                Close(); // Закрытие формы
+            } else
+            {
+                // Alert 
+            }
+            
         }
 
         private void clear_all_btn_Click(object sender, EventArgs e)
