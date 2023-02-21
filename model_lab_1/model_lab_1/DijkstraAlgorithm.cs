@@ -21,5 +21,10 @@ namespace model_lab_1
             { 2, 2, 2, 2, 2, 2, 1, 7, 7, 6 }
         };
 
+        /*public static void PutToStack(Stack<char> stack, char symbol)
+        {
+            stack.Push(symbol);
+        }*/
+
     }
 }

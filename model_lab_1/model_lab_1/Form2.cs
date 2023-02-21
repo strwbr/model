@@ -80,7 +80,7 @@ namespace model_lab_1
         private void i_btn_Click(object sender, EventArgs e)
         {
             DisplayInfixLine += "i";
-            DisplayInfixLine += "i";
+            InfixLine += "i";
             infixText.Text = DisplayInfixLine;
         }
 
@@ -121,8 +121,9 @@ namespace model_lab_1
 
         private void pow_btn_Click(object sender, EventArgs e)
         {
-            DisplayInfixLine += "^(";
-            InfixLine += "^(";
+            //"^("
+            DisplayInfixLine += "^";
+            InfixLine += "^";
             infixText.Text = DisplayInfixLine;
         }
 

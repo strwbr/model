@@ -15,7 +15,8 @@ namespace model_lab_1
         private Form2 calculatorForm = new Form2();
         private Stack<char> stack = new Stack<char>();
 
-        private char[] InfixSymbols;
+        //private char[] InfixSymbols;
+        private string InfixSymbols;
         private string PostfixLine;
 
         private byte indexSymbol = 0;
@@ -63,7 +64,8 @@ namespace model_lab_1
         private void CalculatorForm_EnterLine(string line)
         {
             infixText.Text = line;
-            InfixSymbols = new char[line.Length];
+            //InfixSymbols = new char[line.Length];
+            InfixSymbols = line;
         }
 
         private void createBtn_Click(object sender, EventArgs e)
@@ -84,11 +86,12 @@ namespace model_lab_1
 
         private void beatBtn_Click(object sender, EventArgs e)
         {
-            char currStackElem = (stack != null)? stack.Peek() : '|';
-            char currInputStrElem =(InfixSymbols!=null)? InfixSymbols[indexSymbol]: '|';
+            char currStackElem = (stack.Count != 0) ? stack.Peek() : '|';
+            char currInputStrElem = (InfixSymbols.Length != 0) ? char.Parse(InfixSymbols.Substring(0, 1)) : '|';
 
             byte col = 0;
             byte row = 0;
+            bool oper3 = false;
 
             switch(currStackElem) {
                 case '|': row = 0; break;            
@@ -97,8 +100,11 @@ namespace model_lab_1
                 case '*': row = 3; break;            
                 case '/': row = 4; break;            
                 case '^': row = 5; break;            
-                case '(': row = 6; break;            
-                case 'F': row = 7; break;            
+                case '(': row = 6; break;
+                case 'A': row = 7; break;
+                case 'S': row = 7; break;
+                case 'C': row = 7; break;
+                case 'T': row = 7; break;
             }   
             
             switch(currInputStrElem) {
@@ -108,9 +114,13 @@ namespace model_lab_1
                 case '*': col = 3; break;            
                 case '/': col = 4; break;            
                 case '^': col = 5; break;            
-                case '(': col = 6; break;            
-                case 'F': col = 7; break;            
-                case 'P': col = 8; break;            
+                case '(': col = 6; break;
+                case ')': col = 7; break;
+                case 'A': col = 8; break;
+                case 'S': col = 8; break;
+                case 'C': col = 8; break;
+                case 'T': col = 8; break;
+                default: col = 9; break;  //стриггерится и на функции          
             }
 
             indexOperation = DijkstraAlgorithm.DijkstraTable[row, col];
@@ -120,23 +130,95 @@ namespace model_lab_1
             {
                 case 0: // ...
                     break; 
-                case 1:// ...
+                case 1:
+                    Operation1(currInputStrElem);
+
                     break;
-                case 2:// ...
+                case 2:
+                    Operation2();
                     break;
-                case 3:// ...
+                case 3:
+                    Operation3();
+                    oper3 = true;
+                    //PopLastSymbol();
                     break;
-                case 4:// ...
+                case 4:
+                    //больше не еш
+                    //МОЖЕТ то что под свитч кейс уронит код!!!!
+                    //beatBtn.Enabled = false;
+                    MessageBox.Show("Это успехххххх");
                     break;
                 case 5:// ...
+                    MessageBox.Show("Ошибка скобочной структуры!");
                     break;
-                case 6:// ...
+                case 6:
+                    Operation6(currInputStrElem);
                     break;
-                case 7:// ...
+                case 7:
+                    MessageBox.Show("После функции отсутствует '('");
                     break;
             }
+            if(stack.Count != 0)
+            {
+                Stack<char> copy = new Stack<char>(stack);
+                //надеюсь стек выжил
+                //copy = (Stack<char>)copy.Reverse();
+                for(byte i = 0; i < stack.Count; i++)
+                {
+                    stackForm.Rows[stackForm.Rows.Count - 1 - i].Cells[0].Value = copy.Pop();
+                }
+            }
+            //infixText.Text = InfixSymbols.Substring(indexSymbol);
+            //indexSymbol++;
+            
+            //если ) то удалять нельзя
+            //раскидать сабстринг по каждому кейсу (в третий точно не надо)
+            if(!InfixSymbols.StartsWith(")") && !oper3) InfixSymbols = (InfixSymbols.Length!=0) ? InfixSymbols.Substring(1) : "";
+            
+            postfixText.Text = PostfixLine;
+            infixText.Text = InfixSymbols;
+        }
 
-            indexSymbol++;
+        public void Operation1(char symbol)
+        {
+            stack.Push(symbol);
+        }
+
+        public void Operation2()
+        {
+            if (stack.Peek() == '(')
+            {
+                stack.Pop();
+            }
+            else
+            {
+                PostfixLine += stack.Pop();
+            }
+        }
+
+        public void Operation3()
+        {
+            if (stack.Peek() == '(') stack.Pop();
+            InfixSymbols = InfixSymbols.Substring(InfixSymbols.IndexOf(')') + 1);
+            
+            //PostfixLine += stack.Pop();
+        }
+
+        
+
+        /*public void PopLastSymbol()
+        {
+            //TODO
+        }*/
+
+        public void Operation6(char symbol)
+        {
+            PostfixLine += symbol;
+        }
+
+        private void label5_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

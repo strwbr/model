@@ -33,3 +33,15 @@ C:\Users\boris\CodeProjects\CSharpCode\model\model_lab_1\model_lab_1\obj\Debug\m
 C:\Users\boris\CodeProjects\CSharpCode\model\model_lab_1\model_lab_1\obj\Debug\model_lab_1.csproj.CoreCompileInputs.cache
 C:\Users\boris\CodeProjects\CSharpCode\model\model_lab_1\model_lab_1\obj\Debug\model_lab_1.exe
 C:\Users\boris\CodeProjects\CSharpCode\model\model_lab_1\model_lab_1\obj\Debug\model_lab_1.pdb
+C:\Users\MSI\си шарповская папка\моделирование\model\model_lab_1\model_lab_1\bin\Debug\model_lab_1.exe.config
+C:\Users\MSI\си шарповская папка\моделирование\model\model_lab_1\model_lab_1\bin\Debug\model_lab_1.exe
+C:\Users\MSI\си шарповская папка\моделирование\model\model_lab_1\model_lab_1\bin\Debug\model_lab_1.pdb
+C:\Users\MSI\си шарповская папка\моделирование\model\model_lab_1\model_lab_1\obj\Debug\model_lab_1.csproj.AssemblyReference.cache
+C:\Users\MSI\си шарповская папка\моделирование\model\model_lab_1\model_lab_1\obj\Debug\model_lab_1.csproj.SuggestedBindingRedirects.cache
+C:\Users\MSI\си шарповская папка\моделирование\model\model_lab_1\model_lab_1\obj\Debug\model_lab_1.Form1.resources
+C:\Users\MSI\си шарповская папка\моделирование\model\model_lab_1\model_lab_1\obj\Debug\model_lab_1.Form2.resources
+C:\Users\MSI\си шарповская папка\моделирование\model\model_lab_1\model_lab_1\obj\Debug\model_lab_1.Properties.Resources.resources
+C:\Users\MSI\си шарповская папка\моделирование\model\model_lab_1\model_lab_1\obj\Debug\model_lab_1.csproj.GenerateResource.cache
+C:\Users\MSI\си шарповская папка\моделирование\model\model_lab_1\model_lab_1\obj\Debug\model_lab_1.csproj.CoreCompileInputs.cache
+C:\Users\MSI\си шарповская папка\моделирование\model\model_lab_1\model_lab_1\obj\Debug\model_lab_1.exe
+C:\Users\MSI\си шарповская папка\моделирование\model\model_lab_1\model_lab_1\obj\Debug\model_lab_1.pdb
