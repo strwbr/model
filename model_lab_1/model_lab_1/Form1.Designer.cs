@@ -417,7 +417,6 @@
             this.label5.Size = new System.Drawing.Size(242, 44);
             this.label5.TabIndex = 8;
             this.label5.Text = "// у таблиц Enabled=false, чтобы юзер не мог выделить ячейки";
-            this.label5.Click += new System.EventHandler(this.label5_Click);
             // 
             // originalLine
             // 
@@ -443,7 +442,6 @@
             this.label6.TabIndex = 10;
             this.label6.Text = "Исходная строка в инфиксной форме:";
             this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.label6.Click += new System.EventHandler(this.label6_Click);
             // 
             // Form1
             // 

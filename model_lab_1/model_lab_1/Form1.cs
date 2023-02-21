@@ -74,11 +74,6 @@ namespace model_lab_1
             calculatorForm.ShowDialog();
         }
 
-        private void label6_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void translateBtn_Click(object sender, EventArgs e)
         {
 
@@ -132,10 +127,11 @@ namespace model_lab_1
                     break; 
                 case 1:
                     Operation1(currInputStrElem);
-
+                    InfixSymbols = (InfixSymbols.Length != 0) ? InfixSymbols.Substring(1) : "";
                     break;
                 case 2:
                     Operation2();
+                   // InfixSymbols = (InfixSymbols.Length != 0) ? InfixSymbols.Substring(1) : "";
                     break;
                 case 3:
                     Operation3();
@@ -153,6 +149,7 @@ namespace model_lab_1
                     break;
                 case 6:
                     Operation6(currInputStrElem);
+                    InfixSymbols = (InfixSymbols.Length != 0) ? InfixSymbols.Substring(1) : "";
                     break;
                 case 7:
                     MessageBox.Show("После функции отсутствует '('");
@@ -173,7 +170,7 @@ namespace model_lab_1
             
             //если ) то удалять нельзя
             //раскидать сабстринг по каждому кейсу (в третий точно не надо)
-            if(!InfixSymbols.StartsWith(")") && !oper3) InfixSymbols = (InfixSymbols.Length!=0) ? InfixSymbols.Substring(1) : "";
+           // if(!InfixSymbols.StartsWith(")") && !oper3) InfixSymbols = (InfixSymbols.Length!=0) ? InfixSymbols.Substring(1) : "";
             
             postfixText.Text = PostfixLine;
             infixText.Text = InfixSymbols;
@@ -186,14 +183,11 @@ namespace model_lab_1
 
         public void Operation2()
         {
-            if (stack.Peek() == '(')
-            {
-                stack.Pop();
-            }
-            else
-            {
+            //if (stack.Peek() == '(')
+            
+            //    stack.Pop();
+            //else
                 PostfixLine += stack.Pop();
-            }
         }
 
         public void Operation3()
@@ -204,21 +198,16 @@ namespace model_lab_1
             //PostfixLine += stack.Pop();
         }
 
-        
+        public void Operation6(char symbol)
+        {
+            PostfixLine += symbol;
+        }
 
         /*public void PopLastSymbol()
         {
             //TODO
         }*/
 
-        public void Operation6(char symbol)
-        {
-            PostfixLine += symbol;
-        }
-
-        private void label5_Click(object sender, EventArgs e)
-        {
-
-        }
+        
     }
 }
