@@ -14,6 +14,7 @@ namespace model_lab_1
     public partial class Form1 : Form
     {
         private Form2 calculatorForm = new Form2();
+        private Form3 Info = new Form3();
         private Stack<char> stack = new Stack<char>();
 
         //private char[] InfixSymbols;
@@ -283,6 +284,11 @@ namespace model_lab_1
         {
             PostfixLine += symbol;
             InfixSymbols = (InfixSymbols.Length != 0) ? InfixSymbols.Substring(1) : "";
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Info.Show();
         }
 
 

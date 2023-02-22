@@ -45,3 +45,15 @@ C:\Users\MSI\си шарповская папка\моделирование\mod
 C:\Users\MSI\си шарповская папка\моделирование\model\model_lab_1\model_lab_1\obj\Debug\model_lab_1.csproj.CoreCompileInputs.cache
 C:\Users\MSI\си шарповская папка\моделирование\model\model_lab_1\model_lab_1\obj\Debug\model_lab_1.exe
 C:\Users\MSI\си шарповская папка\моделирование\model\model_lab_1\model_lab_1\obj\Debug\model_lab_1.pdb
+C:\Gitproj\model\model_lab_1\model_lab_1\bin\Debug\model_lab_1.exe.config
+C:\Gitproj\model\model_lab_1\model_lab_1\bin\Debug\model_lab_1.exe
+C:\Gitproj\model\model_lab_1\model_lab_1\bin\Debug\model_lab_1.pdb
+C:\Gitproj\model\model_lab_1\model_lab_1\obj\Debug\model_lab_1.csproj.AssemblyReference.cache
+C:\Gitproj\model\model_lab_1\model_lab_1\obj\Debug\model_lab_1.Form1.resources
+C:\Gitproj\model\model_lab_1\model_lab_1\obj\Debug\model_lab_1.Form2.resources
+C:\Gitproj\model\model_lab_1\model_lab_1\obj\Debug\model_lab_1.Properties.Resources.resources
+C:\Gitproj\model\model_lab_1\model_lab_1\obj\Debug\model_lab_1.csproj.GenerateResource.cache
+C:\Gitproj\model\model_lab_1\model_lab_1\obj\Debug\model_lab_1.csproj.CoreCompileInputs.cache
+C:\Gitproj\model\model_lab_1\model_lab_1\obj\Debug\model_lab_1.exe
+C:\Gitproj\model\model_lab_1\model_lab_1\obj\Debug\model_lab_1.pdb
+C:\Gitproj\model\model_lab_1\model_lab_1\obj\Debug\model_lab_1.Form3.resources
