@@ -28,15 +28,15 @@ namespace model_lab_1
             InitializeComponent();
             calculatorForm.EnterLine += CalculatorForm_EnterLine;
 
+            // Отключение кнопок
+            beatBtn.Enabled = false;
+            translateBtn.Enabled = false;
+
             // Создание строк в таблице и в стеке
             decisionTable.Rows.Add(8);
             stackForm.Rows.Add(10); // 10 строк в стеке == 10 строк в таблице решений
 
             this.stackForm.ClearSelection();
-            
-            //stack.Rows[0].Cells[0].Value = "+";
-            //stack.Rows[1].Cells[0].Value = ")";
-            //stack.Rows[2].Cells[0].Value = "/";
             this.stackForm.Rows[9].Cells[0].Selected = true;
 
             // Добавление заголовков у строк в таблице решений
@@ -48,8 +48,6 @@ namespace model_lab_1
             this.decisionTable.Rows[5].HeaderCell.Value = "^";
             this.decisionTable.Rows[6].HeaderCell.Value = "(";
             this.decisionTable.Rows[7].HeaderCell.Value = "F";
-
-
 
             // Заполнение таблицы решений
             for (int i = 0; i < 8; i++)
@@ -67,6 +65,9 @@ namespace model_lab_1
             originalLine.Text = displayLine;
             //InfixSymbols = new char[line.Length];
             InfixSymbols = line;
+
+            translateBtn.Enabled = true;
+            beatBtn.Enabled = true;
         }
 
         private void createBtn_Click(object sender, EventArgs e)
@@ -77,11 +78,13 @@ namespace model_lab_1
 
         private void translateBtn_Click(object sender, EventArgs e)
         {
-
+            beatBtn.Enabled = false;
         }
 
         private void beatBtn_Click(object sender, EventArgs e)
         {
+            translateBtn.Enabled = false;
+
             char currStackElem = (stack.Count != 0) ? stack.Peek() : '|';
             char currInputStrElem = (InfixSymbols.Length != 0) ? char.Parse(InfixSymbols.Substring(0, 1)) : '|';
 
