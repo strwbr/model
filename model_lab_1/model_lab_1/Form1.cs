@@ -74,6 +74,8 @@ namespace model_lab_1
         {
             // calculatorForm = new Form2();
             calculatorForm.ShowDialog();
+            postfixText.Text = "";
+            PostfixLine = "";
         }
 
         private void timer1_Tick(object sender, EventArgs e)
@@ -91,7 +93,7 @@ namespace model_lab_1
         private void translateBtn_Click(object sender, EventArgs e)
         {
             beatBtn.Enabled = false;
-
+            createBtn.Enabled = false;
             timer1.Start();
         }
 
@@ -162,9 +164,11 @@ namespace model_lab_1
                     //МОЖЕТ то что под свитч кейс уронит код!!!!
                     //beatBtn.Enabled = false;
                     MessageBox.Show("Успешное окончание преобразования");
+                    createBtn.Enabled = true;
                     break;
                 case 5:// ...
                     MessageBox.Show("Ошибка скобочной структуры!");
+                    createBtn.Enabled = true;
                     break;
                 case 6:
                     Operation6(elem);
@@ -173,6 +177,7 @@ namespace model_lab_1
                     break;
                 case 7:
                     MessageBox.Show("Ошибка: после функции отсутствует '('");
+                    createBtn.Enabled = true;
                     break;
             }
         }
@@ -197,8 +202,11 @@ namespace model_lab_1
         private void beatBtn_Click(object sender, EventArgs e)
         {
             translateBtn.Enabled = false;
+            createBtn.Enabled = false;
 
             TransformInfixToPostfix();
+
+
 
             //RedrawStack();
 
