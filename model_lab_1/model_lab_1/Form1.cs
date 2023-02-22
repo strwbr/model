@@ -5,6 +5,7 @@ using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -21,7 +22,6 @@ namespace model_lab_1
 
         private byte indexSymbol = 0;
         private byte indexOperation = 0;
-
 
         public Form1()
         {
@@ -76,22 +76,29 @@ namespace model_lab_1
             calculatorForm.ShowDialog();
         }
 
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            if (indexOperation == 4 || indexOperation == 5 || indexOperation == 7)
+            {
+                timer1.Enabled = false;
+                timer1.Stop();
+            }
+            else
+                TransformInfixToPostfix();
+
+        }
+
         private void translateBtn_Click(object sender, EventArgs e)
         {
             beatBtn.Enabled = false;
+
+            timer1.Start();
         }
 
-        private void beatBtn_Click(object sender, EventArgs e)
+        private byte GetRow(char elem)
         {
-            translateBtn.Enabled = false;
-
-            char currStackElem = (stack.Count != 0) ? stack.Peek() : '|';
-            char currInputStrElem = (InfixSymbols.Length != 0) ? char.Parse(InfixSymbols.Substring(0, 1)) : '|';
-
-            byte col = 0;
             byte row = 0;
-
-            switch (currStackElem)
+            switch (elem)
             {
                 case '|': row = 0; break;
                 case '+': row = 1; break;
@@ -105,8 +112,13 @@ namespace model_lab_1
                 case 'C': row = 7; break;
                 case 'T': row = 7; break;
             }
+            return row;
+        }
 
-            switch (currInputStrElem)
+        private byte GetColumn(char elem)
+        {
+            byte col = 0;
+            switch (elem)
             {
                 case '|': col = 0; break;
                 case '+': col = 1; break;
@@ -122,16 +134,17 @@ namespace model_lab_1
                 case 'T': col = 8; break;
                 default: col = 9; break;  //стриггерится и на функции          
             }
+            return col;
+        }
 
-            indexOperation = DijkstraAlgorithm.DijkstraTable[row, col];
-            this.decisionTable.Rows[row].Cells[col].Selected = true;
-
-            switch (indexOperation)
+        private void DoOperation(byte operationID, char elem)
+        {
+            switch (operationID)
             {
                 case 0: // ...
                     break;
                 case 1:
-                    Operation1(currInputStrElem);
+                    Operation1(elem);
                     //  InfixSymbols = (InfixSymbols.Length != 0) ? InfixSymbols.Substring(1) : "";
                     RedrawStack();
                     break;
@@ -154,7 +167,7 @@ namespace model_lab_1
                     MessageBox.Show("Ошибка скобочной структуры!");
                     break;
                 case 6:
-                    Operation6(currInputStrElem);
+                    Operation6(elem);
                     //     InfixSymbols = (InfixSymbols.Length != 0) ? InfixSymbols.Substring(1) : "";
                     RedrawStack();
                     break;
@@ -162,6 +175,31 @@ namespace model_lab_1
                     MessageBox.Show("Ошибка: после функции отсутствует '('");
                     break;
             }
+        }
+
+        private void TransformInfixToPostfix()
+        {
+            char currStackElem = (stack.Count != 0) ? stack.Peek() : '|';
+            char currInputStrElem = (InfixSymbols.Length != 0) ? char.Parse(InfixSymbols.Substring(0, 1)) : '|';
+
+            byte col = GetColumn(currInputStrElem);
+            byte row = GetRow(currStackElem);
+
+            indexOperation = DijkstraAlgorithm.DijkstraTable[row, col]; // вернуть сюда!!!
+            this.decisionTable.Rows[row].Cells[col].Selected = true;
+
+            DoOperation(indexOperation, currInputStrElem);
+
+            postfixText.Text = PostfixLine;
+            infixText.Text = InfixSymbols;
+        }
+
+        private void beatBtn_Click(object sender, EventArgs e)
+        {
+            translateBtn.Enabled = false;
+
+            TransformInfixToPostfix();
+
             //RedrawStack();
 
             //infixText.Text = InfixSymbols.Substring(indexSymbol);
@@ -171,8 +209,7 @@ namespace model_lab_1
             //раскидать сабстринг по каждому кейсу (в третий точно не надо)
             // if(!InfixSymbols.StartsWith(")") && !oper3) InfixSymbols = (InfixSymbols.Length!=0) ? InfixSymbols.Substring(1) : "";
 
-            postfixText.Text = PostfixLine;
-            infixText.Text = InfixSymbols;
+
         }
 
         private void RedrawStack()
@@ -199,6 +236,7 @@ namespace model_lab_1
                 stackForm.Rows[stackForm.Rows.Count - 1 - i].Cells[0].Value = copy.Pop();
             }
 
+            // Выделение верхушки стека
             if (stack.Count != 0)
                 stackForm.Rows[stackForm.RowCount - stack.Count].Cells[0].Selected = true;
             //}
@@ -238,5 +276,7 @@ namespace model_lab_1
             PostfixLine += symbol;
             InfixSymbols = (InfixSymbols.Length != 0) ? InfixSymbols.Substring(1) : "";
         }
+
+
     }
 }

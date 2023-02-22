@@ -172,15 +172,16 @@ namespace model_lab_1
 
         private void exit_btn_Click(object sender, EventArgs e)
         {
-            if(InfixLine!=null)
+            if (InfixLine != null)
             {
                 EnterLine?.Invoke(InfixLine, DisplayInfixLine);
                 Close(); // Закрытие формы
-            } else
+            }
+            else
             {
                 // Alert 
             }
-            
+
         }
 
         private void clear_all_btn_Click(object sender, EventArgs e)
@@ -191,9 +192,12 @@ namespace model_lab_1
 
         private void clear_btn_Click(object sender, EventArgs e)
         {
-            DisplayInfixLine = DisplayInfixLine.Remove(DisplayInfixLine.Length - 1);
-            InfixLine = InfixLine.Remove(InfixLine.Length - 1);
+            if (DisplayInfixLine.Length!=0)
+                DisplayInfixLine = DisplayInfixLine.Remove(DisplayInfixLine.Length - 1);
+            if (InfixLine.Length!=0)
+                InfixLine = InfixLine.Remove(InfixLine.Length - 1);
             infixText.Text = DisplayInfixLine;
+
         }
 
         // Обработчик нажатия по кнопкам добавления символов (переменных, знаков операций, функций)
