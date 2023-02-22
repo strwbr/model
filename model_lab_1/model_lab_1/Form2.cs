@@ -12,7 +12,7 @@ namespace model_lab_1
         private string InfixLine;
         private Dictionary<string, double> ValueMap = new Dictionary<string, double>();
 
-        public event Action<string> EnterLine;
+        public event Action<string, string> EnterLine;
 
         public Form2()
         {
@@ -174,7 +174,7 @@ namespace model_lab_1
         {
             if(InfixLine!=null)
             {
-                EnterLine?.Invoke(InfixLine);
+                EnterLine?.Invoke(InfixLine, DisplayInfixLine);
                 Close(); // Закрытие формы
             } else
             {

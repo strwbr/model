@@ -61,9 +61,10 @@ namespace model_lab_1
             }
         }
 
-        private void CalculatorForm_EnterLine(string line)
+        private void CalculatorForm_EnterLine(string line, string displayLine)
         {
             infixText.Text = line;
+            originalLine.Text = displayLine;
             //InfixSymbols = new char[line.Length];
             InfixSymbols = line;
         }
@@ -86,7 +87,6 @@ namespace model_lab_1
 
             byte col = 0;
             byte row = 0;
-            bool oper3 = false;
 
             switch(currStackElem) {
                 case '|': row = 0; break;            
@@ -128,15 +128,16 @@ namespace model_lab_1
                 case 1:
                     Operation1(currInputStrElem);
                     InfixSymbols = (InfixSymbols.Length != 0) ? InfixSymbols.Substring(1) : "";
+                    RedrawStack();
                     break;
                 case 2:
                     Operation2();
-                   // InfixSymbols = (InfixSymbols.Length != 0) ? InfixSymbols.Substring(1) : "";
+                    RedrawStack();
+                    // InfixSymbols = (InfixSymbols.Length != 0) ? InfixSymbols.Substring(1) : "";
                     break;
                 case 3:
                     Operation3();
-                    oper3 = true;
-                    //PopLastSymbol();
+                    RedrawStack();
                     break;
                 case 4:
                     //больше не еш
@@ -150,21 +151,14 @@ namespace model_lab_1
                 case 6:
                     Operation6(currInputStrElem);
                     InfixSymbols = (InfixSymbols.Length != 0) ? InfixSymbols.Substring(1) : "";
+                    //RedrawStack();
                     break;
                 case 7:
                     MessageBox.Show("После функции отсутствует '('");
                     break;
             }
-            if(stack.Count != 0)
-            {
-                Stack<char> copy = new Stack<char>(stack);
-                //надеюсь стек выжил
-                //copy = (Stack<char>)copy.Reverse();
-                for(byte i = 0; i < stack.Count; i++)
-                {
-                    stackForm.Rows[stackForm.Rows.Count - 1 - i].Cells[0].Value = copy.Pop();
-                }
-            }
+            //RedrawStack();
+
             //infixText.Text = InfixSymbols.Substring(indexSymbol);
             //indexSymbol++;
             
@@ -176,11 +170,39 @@ namespace model_lab_1
             infixText.Text = InfixSymbols;
         }
 
+        private void RedrawStack()
+        {
+            if (stack.Count != 0)
+            {     
+                // Очистка стека на форме
+                for (byte i = 0; i < stackForm.Rows.Count; i++)
+                {
+                    stackForm.Rows[i].Cells[0].Value = "";
+                }
+
+                Stack<char> copy = new Stack<char>(stack);
+
+                // Добавляет новые строки в стек на форме, если необходимо
+                // не тестила - мб улетит:)
+                if (stack.Count > stackForm.RowCount)
+                    stackForm.Rows.Add(stack.Count - stackForm.RowCount);
+
+                //надеюсь стек выжил
+                // copy = (Stack<char>)copy.Reverse();
+                for (byte i = 0; i < stack.Count; i++)
+                {
+                    stackForm.Rows[stackForm.Rows.Count - 1 - i].Cells[0].Value = copy.Pop();
+                } 
+            }
+        }
+
+        // 1 – поместить символ из входной строки в стек
         public void Operation1(char symbol)
         {
             stack.Push(symbol);
         }
 
+        // 2 – извлечь символ из стека и отправить его в выходную строку
         public void Operation2()
         {
             //if (stack.Peek() == '(')
@@ -190,24 +212,21 @@ namespace model_lab_1
                 PostfixLine += stack.Pop();
         }
 
+        // 3 – удалить символ ")" из входной строки и символ "(" из стека
         public void Operation3()
         {
-            if (stack.Peek() == '(') stack.Pop();
+            if (stack.Peek() == '(') // можно и без проверки обойтись
+                stack.Pop(); 
+
             InfixSymbols = InfixSymbols.Substring(InfixSymbols.IndexOf(')') + 1);
             
             //PostfixLine += stack.Pop();
         }
 
+        // 6 – переслать символ из входной строки в выходную строку
         public void Operation6(char symbol)
         {
             PostfixLine += symbol;
-        }
-
-        /*public void PopLastSymbol()
-        {
-            //TODO
-        }*/
-
-        
+        } 
     }
 }

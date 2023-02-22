@@ -66,12 +66,12 @@
             this.beatBtn = new System.Windows.Forms.Button();
             this.translateBtn = new System.Windows.Forms.Button();
             this.stackForm = new System.Windows.Forms.DataGridView();
-            this.stackColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.originalLine = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
+            this.stackColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.decisionTable)).BeginInit();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.stackForm)).BeginInit();
@@ -114,8 +114,8 @@
             this.decisionTable.DefaultCellStyle = dataGridViewCellStyle12;
             this.decisionTable.Enabled = false;
             this.decisionTable.EnableHeadersVisualStyles = false;
-            this.decisionTable.Location = new System.Drawing.Point(13, 327);
-            this.decisionTable.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.decisionTable.Location = new System.Drawing.Point(10, 266);
+            this.decisionTable.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.decisionTable.MultiSelect = false;
             this.decisionTable.Name = "decisionTable";
             dataGridViewCellStyle13.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
@@ -132,7 +132,7 @@
             this.decisionTable.RowTemplate.Height = 28;
             this.decisionTable.RowTemplate.Resizable = System.Windows.Forms.DataGridViewTriState.False;
             this.decisionTable.ShowCellToolTips = false;
-            this.decisionTable.Size = new System.Drawing.Size(644, 373);
+            this.decisionTable.Size = new System.Drawing.Size(483, 303);
             this.decisionTable.TabIndex = 0;
             // 
             // Column1
@@ -234,11 +234,11 @@
             this.groupBox1.Controls.Add(this.postfixText);
             this.groupBox1.Controls.Add(this.infixText);
             this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.groupBox1.Location = new System.Drawing.Point(20, 66);
-            this.groupBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.groupBox1.Location = new System.Drawing.Point(15, 54);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.groupBox1.Size = new System.Drawing.Size(884, 210);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox1.Size = new System.Drawing.Size(663, 171);
             this.groupBox1.TabIndex = 1;
             this.groupBox1.TabStop = false;
             // 
@@ -246,10 +246,9 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
-            this.label4.Location = new System.Drawing.Point(8, 25);
-            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label4.Location = new System.Drawing.Point(6, 20);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(249, 23);
+            this.label4.Size = new System.Drawing.Size(210, 19);
             this.label4.TabIndex = 8;
             this.label4.Text = "Строка в инфиксной форме:";
             this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -258,10 +257,9 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
-            this.label3.Location = new System.Drawing.Point(8, 110);
-            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label3.Location = new System.Drawing.Point(6, 89);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(264, 23);
+            this.label3.Size = new System.Drawing.Size(223, 19);
             this.label3.TabIndex = 7;
             this.label3.Text = "Строка в постфиксной форме:";
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -273,9 +271,10 @@
             this.postfixText.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.postfixText.Font = new System.Drawing.Font("Segoe UI", 14F);
             this.postfixText.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.postfixText.Location = new System.Drawing.Point(13, 146);
+            this.postfixText.Location = new System.Drawing.Point(10, 119);
+            this.postfixText.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.postfixText.Name = "postfixText";
-            this.postfixText.Size = new System.Drawing.Size(195, 34);
+            this.postfixText.Size = new System.Drawing.Size(154, 27);
             this.postfixText.TabIndex = 1;
             this.postfixText.Text = "// потфикс текст";
             // 
@@ -285,9 +284,10 @@
             this.infixText.BackColor = System.Drawing.Color.White;
             this.infixText.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.infixText.Font = new System.Drawing.Font("Segoe UI", 14F);
-            this.infixText.Location = new System.Drawing.Point(13, 62);
+            this.infixText.Location = new System.Drawing.Point(10, 50);
+            this.infixText.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.infixText.Name = "infixText";
-            this.infixText.Size = new System.Drawing.Size(202, 34);
+            this.infixText.Size = new System.Drawing.Size(160, 27);
             this.infixText.TabIndex = 0;
             this.infixText.Text = "// инфикс строка";
             // 
@@ -295,10 +295,10 @@
             // 
             this.createBtn.AutoSize = true;
             this.createBtn.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.createBtn.Location = new System.Drawing.Point(908, 82);
-            this.createBtn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.createBtn.Location = new System.Drawing.Point(689, 66);
+            this.createBtn.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.createBtn.Name = "createBtn";
-            this.createBtn.Size = new System.Drawing.Size(171, 41);
+            this.createBtn.Size = new System.Drawing.Size(128, 33);
             this.createBtn.TabIndex = 2;
             this.createBtn.Text = "Ввести строку";
             this.createBtn.UseVisualStyleBackColor = true;
@@ -308,10 +308,10 @@
             // 
             this.beatBtn.AutoSize = true;
             this.beatBtn.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.beatBtn.Location = new System.Drawing.Point(1068, 663);
-            this.beatBtn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.beatBtn.Location = new System.Drawing.Point(801, 539);
+            this.beatBtn.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.beatBtn.Name = "beatBtn";
-            this.beatBtn.Size = new System.Drawing.Size(91, 38);
+            this.beatBtn.Size = new System.Drawing.Size(68, 31);
             this.beatBtn.TabIndex = 3;
             this.beatBtn.Text = "Такт";
             this.beatBtn.UseVisualStyleBackColor = true;
@@ -321,10 +321,10 @@
             // 
             this.translateBtn.AutoSize = true;
             this.translateBtn.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.translateBtn.Location = new System.Drawing.Point(919, 663);
-            this.translateBtn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.translateBtn.Location = new System.Drawing.Point(689, 539);
+            this.translateBtn.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.translateBtn.Name = "translateBtn";
-            this.translateBtn.Size = new System.Drawing.Size(136, 38);
+            this.translateBtn.Size = new System.Drawing.Size(102, 31);
             this.translateBtn.TabIndex = 4;
             this.translateBtn.Text = "Перевести";
             this.translateBtn.UseVisualStyleBackColor = true;
@@ -357,8 +357,7 @@
             dataGridViewCellStyle17.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.stackForm.DefaultCellStyle = dataGridViewCellStyle17;
             this.stackForm.Enabled = false;
-            this.stackForm.Location = new System.Drawing.Point(684, 327);
-            this.stackForm.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.stackForm.Location = new System.Drawing.Point(513, 266);
             this.stackForm.MultiSelect = false;
             this.stackForm.Name = "stackForm";
             this.stackForm.ReadOnly = true;
@@ -371,28 +370,16 @@
             dataGridViewCellStyle18.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.stackForm.RowHeadersDefaultCellStyle = dataGridViewCellStyle18;
             this.stackForm.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToDisplayedHeaders;
-            this.stackForm.Size = new System.Drawing.Size(215, 373);
+            this.stackForm.Size = new System.Drawing.Size(161, 303);
             this.stackForm.TabIndex = 5;
-            // 
-            // stackColumn
-            // 
-            this.stackColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            dataGridViewCellStyle16.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.stackColumn.DefaultCellStyle = dataGridViewCellStyle16;
-            this.stackColumn.HeaderText = "Stack";
-            this.stackColumn.MinimumWidth = 8;
-            this.stackColumn.Name = "stackColumn";
-            this.stackColumn.ReadOnly = true;
-            this.stackColumn.Resizable = System.Windows.Forms.DataGridViewTriState.False;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
-            this.label1.Location = new System.Drawing.Point(15, 290);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label1.Location = new System.Drawing.Point(11, 236);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(251, 23);
+            this.label1.Size = new System.Drawing.Size(210, 19);
             this.label1.TabIndex = 6;
             this.label1.Text = "Таблица принятия решений:";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -401,20 +388,18 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
-            this.label2.Location = new System.Drawing.Point(678, 290);
-            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label2.Location = new System.Drawing.Point(508, 236);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(48, 23);
+            this.label2.Size = new System.Drawing.Size(40, 19);
             this.label2.TabIndex = 7;
             this.label2.Text = "Стек";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label5
             // 
-            this.label5.Location = new System.Drawing.Point(915, 339);
-            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label5.Location = new System.Drawing.Point(686, 275);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(242, 44);
+            this.label5.Size = new System.Drawing.Size(182, 36);
             this.label5.TabIndex = 8;
             this.label5.Text = "// у таблиц Enabled=false, чтобы юзер не мог выделить ячейки";
             // 
@@ -425,9 +410,10 @@
             this.originalLine.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.originalLine.Font = new System.Drawing.Font("Segoe UI", 14F);
             this.originalLine.ForeColor = System.Drawing.Color.DarkOrchid;
-            this.originalLine.Location = new System.Drawing.Point(568, 18);
+            this.originalLine.Location = new System.Drawing.Point(426, 15);
+            this.originalLine.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.originalLine.Name = "originalLine";
-            this.originalLine.Size = new System.Drawing.Size(222, 34);
+            this.originalLine.Size = new System.Drawing.Size(177, 27);
             this.originalLine.TabIndex = 9;
             this.originalLine.Text = "// исходная строка";
             // 
@@ -435,19 +421,29 @@
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
-            this.label6.Location = new System.Drawing.Point(213, 25);
-            this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label6.Location = new System.Drawing.Point(140, 19);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(331, 23);
+            this.label6.Size = new System.Drawing.Size(281, 19);
             this.label6.TabIndex = 10;
             this.label6.Text = "Исходная строка в инфиксной форме:";
             this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // stackColumn
+            // 
+            this.stackColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            dataGridViewCellStyle16.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.stackColumn.DefaultCellStyle = dataGridViewCellStyle16;
+            this.stackColumn.HeaderText = "Стек";
+            this.stackColumn.MinimumWidth = 8;
+            this.stackColumn.Name = "stackColumn";
+            this.stackColumn.ReadOnly = true;
+            this.stackColumn.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1173, 764);
+            this.ClientSize = new System.Drawing.Size(880, 621);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.originalLine);
             this.Controls.Add(this.label5);
@@ -459,7 +455,7 @@
             this.Controls.Add(this.createBtn);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.decisionTable);
-            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "Form1";
             this.Text = "Form1";
             ((System.ComponentModel.ISupportInitialize)(this.decisionTable)).EndInit();
@@ -496,9 +492,9 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.DataGridViewTextBoxColumn stackColumn;
         private System.Windows.Forms.Label originalLine;
         private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.DataGridViewTextBoxColumn stackColumn;
     }
 }
 
