@@ -470,7 +470,7 @@
             this.Controls.Add(this.decisionTable);
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "Form1";
-            this.Text = "Form1";
+            this.Text = "Моделирование компиляции алгебраических выражений";
             ((System.ComponentModel.ISupportInitialize)(this.decisionTable)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();

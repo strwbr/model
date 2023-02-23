@@ -13,16 +13,28 @@ namespace model_lab_1
 {
     public partial class Form1 : Form
     {
-        private Form2 calculatorForm = new Form2();
-        private Form3 Info = new Form3();
-        private Stack<char> stack = new Stack<char>();
+        private Form2 calculatorForm = new Form2(); // форма для калькулятора 
+        private Form3 Info = new Form3(); // форма для вывода справки 
+        private Stack<char> stack = new Stack<char>(); // стек 
 
-        //private char[] InfixSymbols;
-        private string InfixSymbols;
-        private string PostfixLine;
 
-        private byte indexSymbol = 0;
-        private byte indexOperation = 0;
+        private string InfixSymbols; //входная строка
+        private string PostfixLine; // выходная строка 
+
+        private byte indexSymbol = 0; // индекс очередного символа входной строки
+        private byte indexOperation = 0; //значение операции в таблице (поведение алгоритма) 
+
+        public static byte[,] DijkstraTable = new byte[8, 10] // таблица принятия решений 
+        {
+            { 4, 1, 1, 1, 1, 1, 1, 5, 1, 6 },
+            { 2, 2, 2, 1, 1, 1, 1, 2, 1, 6 },
+            { 2, 2, 2, 1, 1, 1, 1, 2, 1, 6 },
+            { 2, 2, 2, 2, 2, 1, 1, 2, 1, 6 },
+            { 2, 2, 2, 2, 2, 1, 1, 2, 1, 6 },
+            { 2, 2, 2, 2, 2, 2, 1, 2, 1, 6 },
+            { 5, 1, 1, 1, 1, 1, 1, 3, 1, 6 },
+            { 2, 2, 2, 2, 2, 2, 1, 7, 7, 6 }
+        };
 
         public Form1()
         {
@@ -55,30 +67,32 @@ namespace model_lab_1
             {
                 for (int j = 0; j < 10; j++)
                 {
-                    this.decisionTable.Rows[i].Cells[j].Value = DijkstraAlgorithm.DijkstraTable[i, j];
+                    this.decisionTable.Rows[i].Cells[j].Value = DijkstraTable[i, j];
                 }
             }
         }
 
+        // Отображение входной строки на калькуляторе 
         private void CalculatorForm_EnterLine(string line, string displayLine)
         {
             infixText.Text = line;
             originalLine.Text = displayLine;
-            //InfixSymbols = new char[line.Length];
             InfixSymbols = line;
 
             translateBtn.Enabled = true;
             beatBtn.Enabled = true;
         }
 
+        // Обработчик нажатия на кнопку "Ввести строку"
         private void createBtn_Click(object sender, EventArgs e)
         {
-            // calculatorForm = new Form2();
             calculatorForm.ShowDialog();
             postfixText.Text = "";
             PostfixLine = "";
         }
 
+        // Событие таймера для визуального отображения
+        // процесса преобразования в автмоатичеком режиме
         private void timer1_Tick(object sender, EventArgs e)
         {
             if (indexOperation == 4 || indexOperation == 5 || indexOperation == 7)
@@ -91,6 +105,7 @@ namespace model_lab_1
 
         }
 
+        // Обработчик нажатия на кнопку "Перевести"
         private void translateBtn_Click(object sender, EventArgs e)
         {
             beatBtn.Enabled = false;
@@ -98,6 +113,7 @@ namespace model_lab_1
             timer1.Start();
         }
 
+        // Метод для получения значения строки в таблице решений
         private byte GetRow(char elem)
         {
             byte row = 0;
@@ -118,6 +134,7 @@ namespace model_lab_1
             return row;
         }
 
+        // Метод для получения значения столбца в таблице решений
         private byte GetColumn(char elem)
         {
             byte col = 0;
@@ -135,45 +152,40 @@ namespace model_lab_1
                 case 'S': col = 8; break;
                 case 'C': col = 8; break;
                 case 'T': col = 8; break;
-                default: col = 9; break;  //стриггерится и на функции          
+                default: col = 9; break;        
             }
             return col;
         }
 
+        // Метод для выполнения операций в зависимости от их значения
         private void DoOperation(byte operationID, char elem)
         {
             switch (operationID)
             {
-                case 0: // ...
+                case 0: 
                     break;
                 case 1:
-                    Operation1(elem);
-                    //  InfixSymbols = (InfixSymbols.Length != 0) ? InfixSymbols.Substring(1) : "";
-                    RedrawStack();
-                    break;
+                    Operation1(elem); // выполнение операции 1
+                    RedrawStack(); // вывод содержимого стека на форму
+                    break; // вышесказанное для каждого значения операции 
                 case 2:
-                    Operation2();
+                    Operation2(); 
                     RedrawStack();
-                    // InfixSymbols = (InfixSymbols.Length != 0) ? InfixSymbols.Substring(1) : "";
                     break;
                 case 3:
                     Operation3();
                     RedrawStack();
                     break;
                 case 4:
-                    //больше не еш
-                    //МОЖЕТ то что под свитч кейс уронит код!!!!
-                    //beatBtn.Enabled = false;
                     MessageBox.Show("Успешное окончание преобразования");
                     createBtn.Enabled = true;
                     break;
-                case 5:// ...
+                case 5:
                     MessageBox.Show("Ошибка скобочной структуры!");
                     createBtn.Enabled = true;
                     break;
                 case 6:
                     Operation6(elem);
-                    //     InfixSymbols = (InfixSymbols.Length != 0) ? InfixSymbols.Substring(1) : "";
                     RedrawStack();
                     break;
                 case 7:
@@ -183,6 +195,7 @@ namespace model_lab_1
             }
         }
 
+        // Преобразование входной строки в постфиксную фомру
         private void TransformInfixToPostfix()
         {
             char currStackElem = (stack.Count != 0) ? stack.Peek() : '|';
@@ -191,7 +204,7 @@ namespace model_lab_1
             byte col = GetColumn(currInputStrElem);
             byte row = GetRow(currStackElem);
 
-            indexOperation = DijkstraAlgorithm.DijkstraTable[row, col]; // вернуть сюда!!!
+            indexOperation = DijkstraTable[row, col]; 
             this.decisionTable.Rows[row].Cells[col].Selected = true;
 
             DoOperation(indexOperation, currInputStrElem);
@@ -200,31 +213,19 @@ namespace model_lab_1
             infixText.Text = InfixSymbols;
         }
 
+        // Обработчик нажатия на кнопку "Такт"
         private void beatBtn_Click(object sender, EventArgs e)
         {
             translateBtn.Enabled = false;
             createBtn.Enabled = false;
 
             TransformInfixToPostfix();
-
-
-
-            //RedrawStack();
-
-            //infixText.Text = InfixSymbols.Substring(indexSymbol);
-            //indexSymbol++;
-
-            //если ) то удалять нельзя
-            //раскидать сабстринг по каждому кейсу (в третий точно не надо)
-            // if(!InfixSymbols.StartsWith(")") && !oper3) InfixSymbols = (InfixSymbols.Length!=0) ? InfixSymbols.Substring(1) : "";
-
-
         }
 
+        // Метод для выведения стека на форму
         private void RedrawStack()
         {
-            //if (stack.Count != 0)
-            //{
+
             // Очистка стека на форме
             for (byte i = 0; i < stackForm.Rows.Count; i++)
             {
@@ -234,12 +235,9 @@ namespace model_lab_1
             Stack<char> copy = new Stack<char>(stack);
 
             // Добавляет новые строки в стек на форме, если необходимо
-            // не тестила - мб улетит:)
             if (stack.Count > stackForm.RowCount)
                 stackForm.Rows.Add(stack.Count - stackForm.RowCount);
 
-            //надеюсь стек выжил
-            // copy = (Stack<char>)copy.Reverse();
             for (byte i = 0; i < stack.Count; i++)
             {
                 stackForm.Rows[stackForm.Rows.Count - 1 - i].Cells[0].Value = copy.Pop();
@@ -248,7 +246,6 @@ namespace model_lab_1
             // Выделение верхушки стека
             if (stack.Count != 0)
                 stackForm.Rows[stackForm.RowCount - stack.Count].Cells[0].Selected = true;
-            //}
         }
 
         // 1 – поместить символ из входной строки в стек
@@ -261,22 +258,17 @@ namespace model_lab_1
         // 2 – извлечь символ из стека и отправить его в выходную строку
         public void Operation2()
         {
-            //if (stack.Peek() == '(')
-
-            //    stack.Pop();
-            //else
             PostfixLine += stack.Pop();
         }
 
         // 3 – удалить символ ")" из входной строки и символ "(" из стека
         public void Operation3()
         {
-            if (stack.Peek() == '(') // можно и без проверки обойтись
+            if (stack.Peek() == '(') 
                 stack.Pop();
 
             InfixSymbols = InfixSymbols.Substring(InfixSymbols.IndexOf(')') + 1);
 
-            //PostfixLine += stack.Pop();
         }
 
         // 6 – переслать символ из входной строки в выходную строку
@@ -286,6 +278,7 @@ namespace model_lab_1
             InfixSymbols = (InfixSymbols.Length != 0) ? InfixSymbols.Substring(1) : "";
         }
 
+        // Обработчик нажатия на кнопку "Справка"
         private void button1_Click(object sender, EventArgs e)
         {
             Info.Show();
