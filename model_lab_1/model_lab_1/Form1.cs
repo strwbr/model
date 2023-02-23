@@ -24,7 +24,7 @@ namespace model_lab_1
         private byte indexSymbol = 0; // индекс очередного символа входной строки
         private byte indexOperation = 0; //значение операции в таблице (поведение алгоритма) 
 
-        public static byte[,] DijkstraTable = new byte[8, 10] // таблица принятия решений 
+        private byte[,] DijkstraTable = new byte[8, 10] // таблица принятия решений 
         {
             { 4, 1, 1, 1, 1, 1, 1, 5, 1, 6 },
             { 2, 2, 2, 1, 1, 1, 1, 2, 1, 6 },
@@ -33,7 +33,7 @@ namespace model_lab_1
             { 2, 2, 2, 2, 2, 1, 1, 2, 1, 6 },
             { 2, 2, 2, 2, 2, 2, 1, 2, 1, 6 },
             { 5, 1, 1, 1, 1, 1, 1, 3, 1, 6 },
-            { 2, 2, 2, 2, 2, 2, 1, 7, 7, 6 }
+            { 2, 2, 2, 2, 2, 2, 1, 2, 7, 6 }
         };
 
         public Form1()
@@ -179,9 +179,11 @@ namespace model_lab_1
                 case 4:
                     MessageBox.Show("Успешное окончание преобразования");
                     createBtn.Enabled = true;
+                    stack.Clear();
                     break;
                 case 5:
                     MessageBox.Show("Ошибка скобочной структуры!");
+                    stack.Clear();
                     createBtn.Enabled = true;
                     break;
                 case 6:
@@ -190,6 +192,7 @@ namespace model_lab_1
                     break;
                 case 7:
                     MessageBox.Show("Ошибка: после функции отсутствует '('");
+                    stack.Clear();
                     createBtn.Enabled = true;
                     break;
             }

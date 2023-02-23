@@ -116,6 +116,7 @@
             this.decisionTable.DefaultCellStyle = dataGridViewCellStyle12;
             this.decisionTable.Enabled = false;
             this.decisionTable.EnableHeadersVisualStyles = false;
+            this.decisionTable.GridColor = System.Drawing.SystemColors.ActiveBorder;
             this.decisionTable.Location = new System.Drawing.Point(13, 327);
             this.decisionTable.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.decisionTable.MultiSelect = false;
@@ -134,7 +135,7 @@
             this.decisionTable.RowTemplate.Height = 28;
             this.decisionTable.RowTemplate.Resizable = System.Windows.Forms.DataGridViewTriState.False;
             this.decisionTable.ShowCellToolTips = false;
-            this.decisionTable.Size = new System.Drawing.Size(644, 314);
+            this.decisionTable.Size = new System.Drawing.Size(644, 318);
             this.decisionTable.TabIndex = 0;
             // 
             // Column1
