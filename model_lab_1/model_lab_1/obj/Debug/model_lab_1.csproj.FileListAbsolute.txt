@@ -57,3 +57,4 @@ C:\Gitproj\model\model_lab_1\model_lab_1\obj\Debug\model_lab_1.csproj.CoreCompil
 C:\Gitproj\model\model_lab_1\model_lab_1\obj\Debug\model_lab_1.exe
 C:\Gitproj\model\model_lab_1\model_lab_1\obj\Debug\model_lab_1.pdb
 C:\Gitproj\model\model_lab_1\model_lab_1\obj\Debug\model_lab_1.Form3.resources
+C:\Users\boris\source\repos\model\model_lab_1\model_lab_1\obj\Debug\model_lab_1.Form3.resources

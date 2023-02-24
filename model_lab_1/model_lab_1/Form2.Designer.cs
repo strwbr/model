@@ -56,7 +56,6 @@
             this.button14 = new System.Windows.Forms.Button();
             this.add_btn = new System.Windows.Forms.Button();
             this.tg_btn = new System.Windows.Forms.Button();
-            this.flowLayoutPanel2 = new System.Windows.Forms.FlowLayoutPanel();
             this.exit_btn = new System.Windows.Forms.Button();
             this.flowLayoutPanel1.SuspendLayout();
             this.SuspendLayout();
@@ -67,9 +66,10 @@
             this.infixText.BackColor = System.Drawing.Color.White;
             this.infixText.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.infixText.Font = new System.Drawing.Font("Segoe UI", 16F);
-            this.infixText.Location = new System.Drawing.Point(41, 39);
+            this.infixText.Location = new System.Drawing.Point(31, 32);
+            this.infixText.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.infixText.Name = "infixText";
-            this.infixText.Size = new System.Drawing.Size(365, 39);
+            this.infixText.Size = new System.Drawing.Size(298, 32);
             this.infixText.TabIndex = 1;
             this.infixText.Text = "Строка в инфиксной форме";
             // 
@@ -100,11 +100,10 @@
             this.flowLayoutPanel1.Controls.Add(this.button14);
             this.flowLayoutPanel1.Controls.Add(this.add_btn);
             this.flowLayoutPanel1.Controls.Add(this.tg_btn);
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(33, 113);
-            this.flowLayoutPanel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(25, 92);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(411, 353);
+            this.flowLayoutPanel1.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(308, 287);
             this.flowLayoutPanel1.TabIndex = 2;
             // 
             // open_btn
@@ -115,10 +114,9 @@
             this.open_btn.FlatAppearance.MouseOverBackColor = System.Drawing.SystemColors.ControlDark;
             this.open_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.open_btn.Font = new System.Drawing.Font("Segoe UI", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.open_btn.Location = new System.Drawing.Point(8, 8);
-            this.open_btn.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.open_btn.Location = new System.Drawing.Point(6, 6);
             this.open_btn.Name = "open_btn";
-            this.open_btn.Size = new System.Drawing.Size(67, 62);
+            this.open_btn.Size = new System.Drawing.Size(50, 50);
             this.open_btn.TabIndex = 16;
             this.open_btn.Text = "(";
             this.open_btn.UseVisualStyleBackColor = false;
@@ -132,10 +130,9 @@
             this.close_btn.FlatAppearance.MouseOverBackColor = System.Drawing.SystemColors.ControlDark;
             this.close_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.close_btn.Font = new System.Drawing.Font("Segoe UI", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.close_btn.Location = new System.Drawing.Point(83, 8);
-            this.close_btn.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.close_btn.Location = new System.Drawing.Point(62, 6);
             this.close_btn.Name = "close_btn";
-            this.close_btn.Size = new System.Drawing.Size(67, 62);
+            this.close_btn.Size = new System.Drawing.Size(50, 50);
             this.close_btn.TabIndex = 18;
             this.close_btn.Text = ")";
             this.close_btn.UseVisualStyleBackColor = false;
@@ -149,10 +146,9 @@
             this.clear_all_btn.FlatAppearance.MouseOverBackColor = System.Drawing.SystemColors.ControlDark;
             this.clear_all_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.clear_all_btn.Font = new System.Drawing.Font("Segoe UI", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.clear_all_btn.Location = new System.Drawing.Point(158, 8);
-            this.clear_all_btn.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.clear_all_btn.Location = new System.Drawing.Point(118, 6);
             this.clear_all_btn.Name = "clear_all_btn";
-            this.clear_all_btn.Size = new System.Drawing.Size(67, 62);
+            this.clear_all_btn.Size = new System.Drawing.Size(50, 50);
             this.clear_all_btn.TabIndex = 17;
             this.clear_all_btn.Text = "C";
             this.clear_all_btn.UseVisualStyleBackColor = false;
@@ -168,10 +164,9 @@
             this.clear_btn.FlatAppearance.MouseOverBackColor = System.Drawing.SystemColors.ControlDark;
             this.clear_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.clear_btn.Font = new System.Drawing.Font("Segoe UI", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.clear_btn.Location = new System.Drawing.Point(233, 8);
-            this.clear_btn.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.clear_btn.Location = new System.Drawing.Point(174, 6);
             this.clear_btn.Name = "clear_btn";
-            this.clear_btn.Size = new System.Drawing.Size(67, 62);
+            this.clear_btn.Size = new System.Drawing.Size(50, 50);
             this.clear_btn.TabIndex = 0;
             this.clear_btn.UseVisualStyleBackColor = false;
             this.clear_btn.Click += new System.EventHandler(this.clear_btn_Click);
@@ -184,10 +179,9 @@
             this.pow_btn.FlatAppearance.MouseOverBackColor = System.Drawing.SystemColors.ControlDark;
             this.pow_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.pow_btn.Font = new System.Drawing.Font("Segoe UI", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.pow_btn.Location = new System.Drawing.Point(308, 8);
-            this.pow_btn.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pow_btn.Location = new System.Drawing.Point(230, 6);
             this.pow_btn.Name = "pow_btn";
-            this.pow_btn.Size = new System.Drawing.Size(93, 62);
+            this.pow_btn.Size = new System.Drawing.Size(70, 50);
             this.pow_btn.TabIndex = 18;
             this.pow_btn.Text = "^";
             this.pow_btn.UseVisualStyleBackColor = false;
@@ -201,10 +195,9 @@
             this.a_btn.FlatAppearance.MouseOverBackColor = System.Drawing.SystemColors.ControlDark;
             this.a_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.a_btn.Font = new System.Drawing.Font("Segoe UI", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.a_btn.Location = new System.Drawing.Point(8, 78);
-            this.a_btn.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.a_btn.Location = new System.Drawing.Point(6, 62);
             this.a_btn.Name = "a_btn";
-            this.a_btn.Size = new System.Drawing.Size(67, 62);
+            this.a_btn.Size = new System.Drawing.Size(50, 50);
             this.a_btn.TabIndex = 19;
             this.a_btn.Text = "a";
             this.a_btn.UseVisualStyleBackColor = false;
@@ -218,10 +211,9 @@
             this.b_btn.FlatAppearance.MouseOverBackColor = System.Drawing.SystemColors.ControlDark;
             this.b_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.b_btn.Font = new System.Drawing.Font("Segoe UI", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.b_btn.Location = new System.Drawing.Point(83, 78);
-            this.b_btn.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.b_btn.Location = new System.Drawing.Point(62, 62);
             this.b_btn.Name = "b_btn";
-            this.b_btn.Size = new System.Drawing.Size(67, 62);
+            this.b_btn.Size = new System.Drawing.Size(50, 50);
             this.b_btn.TabIndex = 1;
             this.b_btn.Text = "b";
             this.b_btn.UseVisualStyleBackColor = false;
@@ -235,10 +227,9 @@
             this.c_btn.FlatAppearance.MouseOverBackColor = System.Drawing.SystemColors.ControlDark;
             this.c_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.c_btn.Font = new System.Drawing.Font("Segoe UI", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.c_btn.Location = new System.Drawing.Point(158, 78);
-            this.c_btn.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.c_btn.Location = new System.Drawing.Point(118, 62);
             this.c_btn.Name = "c_btn";
-            this.c_btn.Size = new System.Drawing.Size(67, 62);
+            this.c_btn.Size = new System.Drawing.Size(50, 50);
             this.c_btn.TabIndex = 2;
             this.c_btn.Text = "c";
             this.c_btn.UseVisualStyleBackColor = false;
@@ -252,10 +243,9 @@
             this.div_btn.FlatAppearance.MouseOverBackColor = System.Drawing.SystemColors.ControlDark;
             this.div_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.div_btn.Font = new System.Drawing.Font("Segoe UI", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.div_btn.Location = new System.Drawing.Point(233, 78);
-            this.div_btn.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.div_btn.Location = new System.Drawing.Point(174, 62);
             this.div_btn.Name = "div_btn";
-            this.div_btn.Size = new System.Drawing.Size(67, 62);
+            this.div_btn.Size = new System.Drawing.Size(50, 50);
             this.div_btn.TabIndex = 3;
             this.div_btn.Text = "/";
             this.div_btn.UseVisualStyleBackColor = false;
@@ -269,10 +259,9 @@
             this.abs_btn.FlatAppearance.MouseOverBackColor = System.Drawing.SystemColors.ControlDark;
             this.abs_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.abs_btn.Font = new System.Drawing.Font("Segoe UI", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.abs_btn.Location = new System.Drawing.Point(308, 78);
-            this.abs_btn.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.abs_btn.Location = new System.Drawing.Point(230, 62);
             this.abs_btn.Name = "abs_btn";
-            this.abs_btn.Size = new System.Drawing.Size(93, 62);
+            this.abs_btn.Size = new System.Drawing.Size(70, 50);
             this.abs_btn.TabIndex = 19;
             this.abs_btn.Text = "abs";
             this.abs_btn.UseVisualStyleBackColor = false;
@@ -286,10 +275,9 @@
             this.d_btn.FlatAppearance.MouseOverBackColor = System.Drawing.SystemColors.ControlDark;
             this.d_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.d_btn.Font = new System.Drawing.Font("Segoe UI", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.d_btn.Location = new System.Drawing.Point(8, 148);
-            this.d_btn.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.d_btn.Location = new System.Drawing.Point(6, 118);
             this.d_btn.Name = "d_btn";
-            this.d_btn.Size = new System.Drawing.Size(67, 62);
+            this.d_btn.Size = new System.Drawing.Size(50, 50);
             this.d_btn.TabIndex = 4;
             this.d_btn.Text = "d";
             this.d_btn.UseVisualStyleBackColor = false;
@@ -303,10 +291,9 @@
             this.e_btn.FlatAppearance.MouseOverBackColor = System.Drawing.SystemColors.ControlDark;
             this.e_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.e_btn.Font = new System.Drawing.Font("Segoe UI", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.e_btn.Location = new System.Drawing.Point(83, 148);
-            this.e_btn.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.e_btn.Location = new System.Drawing.Point(62, 118);
             this.e_btn.Name = "e_btn";
-            this.e_btn.Size = new System.Drawing.Size(67, 62);
+            this.e_btn.Size = new System.Drawing.Size(50, 50);
             this.e_btn.TabIndex = 5;
             this.e_btn.Text = "e";
             this.e_btn.UseVisualStyleBackColor = false;
@@ -320,10 +307,9 @@
             this.f_btn.FlatAppearance.MouseOverBackColor = System.Drawing.SystemColors.ControlDark;
             this.f_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.f_btn.Font = new System.Drawing.Font("Segoe UI", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.f_btn.Location = new System.Drawing.Point(158, 148);
-            this.f_btn.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.f_btn.Location = new System.Drawing.Point(118, 118);
             this.f_btn.Name = "f_btn";
-            this.f_btn.Size = new System.Drawing.Size(67, 62);
+            this.f_btn.Size = new System.Drawing.Size(50, 50);
             this.f_btn.TabIndex = 6;
             this.f_btn.Text = "f";
             this.f_btn.UseVisualStyleBackColor = false;
@@ -337,10 +323,9 @@
             this.mult_btn.FlatAppearance.MouseOverBackColor = System.Drawing.SystemColors.ControlDark;
             this.mult_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.mult_btn.Font = new System.Drawing.Font("Segoe UI", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.mult_btn.Location = new System.Drawing.Point(233, 148);
-            this.mult_btn.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.mult_btn.Location = new System.Drawing.Point(174, 118);
             this.mult_btn.Name = "mult_btn";
-            this.mult_btn.Size = new System.Drawing.Size(67, 62);
+            this.mult_btn.Size = new System.Drawing.Size(50, 50);
             this.mult_btn.TabIndex = 7;
             this.mult_btn.Text = "*";
             this.mult_btn.UseVisualStyleBackColor = false;
@@ -354,10 +339,9 @@
             this.sin_btn.FlatAppearance.MouseOverBackColor = System.Drawing.SystemColors.ControlDark;
             this.sin_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.sin_btn.Font = new System.Drawing.Font("Segoe UI", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.sin_btn.Location = new System.Drawing.Point(308, 148);
-            this.sin_btn.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.sin_btn.Location = new System.Drawing.Point(230, 118);
             this.sin_btn.Name = "sin_btn";
-            this.sin_btn.Size = new System.Drawing.Size(93, 62);
+            this.sin_btn.Size = new System.Drawing.Size(70, 50);
             this.sin_btn.TabIndex = 16;
             this.sin_btn.Text = "sin";
             this.sin_btn.UseVisualStyleBackColor = false;
@@ -371,10 +355,9 @@
             this.g_btn.FlatAppearance.MouseOverBackColor = System.Drawing.SystemColors.ControlDark;
             this.g_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.g_btn.Font = new System.Drawing.Font("Segoe UI", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.g_btn.Location = new System.Drawing.Point(8, 218);
-            this.g_btn.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.g_btn.Location = new System.Drawing.Point(6, 174);
             this.g_btn.Name = "g_btn";
-            this.g_btn.Size = new System.Drawing.Size(67, 62);
+            this.g_btn.Size = new System.Drawing.Size(50, 50);
             this.g_btn.TabIndex = 8;
             this.g_btn.Text = "g";
             this.g_btn.UseVisualStyleBackColor = false;
@@ -388,10 +371,9 @@
             this.h_btn.FlatAppearance.MouseOverBackColor = System.Drawing.SystemColors.ControlDark;
             this.h_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.h_btn.Font = new System.Drawing.Font("Segoe UI", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.h_btn.Location = new System.Drawing.Point(83, 218);
-            this.h_btn.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.h_btn.Location = new System.Drawing.Point(62, 174);
             this.h_btn.Name = "h_btn";
-            this.h_btn.Size = new System.Drawing.Size(67, 62);
+            this.h_btn.Size = new System.Drawing.Size(50, 50);
             this.h_btn.TabIndex = 9;
             this.h_btn.Text = "h";
             this.h_btn.UseVisualStyleBackColor = false;
@@ -405,10 +387,9 @@
             this.i_btn.FlatAppearance.MouseOverBackColor = System.Drawing.SystemColors.ControlDark;
             this.i_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.i_btn.Font = new System.Drawing.Font("Segoe UI", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.i_btn.Location = new System.Drawing.Point(158, 218);
-            this.i_btn.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.i_btn.Location = new System.Drawing.Point(118, 174);
             this.i_btn.Name = "i_btn";
-            this.i_btn.Size = new System.Drawing.Size(67, 62);
+            this.i_btn.Size = new System.Drawing.Size(50, 50);
             this.i_btn.TabIndex = 10;
             this.i_btn.Text = "i";
             this.i_btn.UseVisualStyleBackColor = false;
@@ -422,10 +403,9 @@
             this.sub_btn.FlatAppearance.MouseOverBackColor = System.Drawing.SystemColors.ControlDark;
             this.sub_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.sub_btn.Font = new System.Drawing.Font("Segoe UI", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.sub_btn.Location = new System.Drawing.Point(233, 218);
-            this.sub_btn.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.sub_btn.Location = new System.Drawing.Point(174, 174);
             this.sub_btn.Name = "sub_btn";
-            this.sub_btn.Size = new System.Drawing.Size(67, 62);
+            this.sub_btn.Size = new System.Drawing.Size(50, 50);
             this.sub_btn.TabIndex = 11;
             this.sub_btn.Text = "-";
             this.sub_btn.UseVisualStyleBackColor = false;
@@ -439,10 +419,9 @@
             this.cos_btn.FlatAppearance.MouseOverBackColor = System.Drawing.SystemColors.ControlDark;
             this.cos_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cos_btn.Font = new System.Drawing.Font("Segoe UI", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.cos_btn.Location = new System.Drawing.Point(308, 218);
-            this.cos_btn.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cos_btn.Location = new System.Drawing.Point(230, 174);
             this.cos_btn.Name = "cos_btn";
-            this.cos_btn.Size = new System.Drawing.Size(93, 62);
+            this.cos_btn.Size = new System.Drawing.Size(70, 50);
             this.cos_btn.TabIndex = 17;
             this.cos_btn.Text = "cos";
             this.cos_btn.UseVisualStyleBackColor = false;
@@ -456,10 +435,9 @@
             this.button12.FlatAppearance.MouseOverBackColor = System.Drawing.SystemColors.ControlDark;
             this.button12.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button12.Font = new System.Drawing.Font("Segoe UI", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.button12.Location = new System.Drawing.Point(8, 288);
-            this.button12.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button12.Location = new System.Drawing.Point(6, 230);
             this.button12.Name = "button12";
-            this.button12.Size = new System.Drawing.Size(67, 62);
+            this.button12.Size = new System.Drawing.Size(50, 50);
             this.button12.TabIndex = 12;
             this.button12.UseVisualStyleBackColor = false;
             // 
@@ -471,10 +449,9 @@
             this.j_btn.FlatAppearance.MouseOverBackColor = System.Drawing.SystemColors.ControlDark;
             this.j_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.j_btn.Font = new System.Drawing.Font("Segoe UI", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.j_btn.Location = new System.Drawing.Point(83, 288);
-            this.j_btn.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.j_btn.Location = new System.Drawing.Point(62, 230);
             this.j_btn.Name = "j_btn";
-            this.j_btn.Size = new System.Drawing.Size(67, 62);
+            this.j_btn.Size = new System.Drawing.Size(50, 50);
             this.j_btn.TabIndex = 13;
             this.j_btn.Text = "j";
             this.j_btn.UseVisualStyleBackColor = false;
@@ -488,10 +465,9 @@
             this.button14.FlatAppearance.MouseOverBackColor = System.Drawing.SystemColors.ControlDark;
             this.button14.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button14.Font = new System.Drawing.Font("Segoe UI", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.button14.Location = new System.Drawing.Point(158, 288);
-            this.button14.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button14.Location = new System.Drawing.Point(118, 230);
             this.button14.Name = "button14";
-            this.button14.Size = new System.Drawing.Size(67, 62);
+            this.button14.Size = new System.Drawing.Size(50, 50);
             this.button14.TabIndex = 14;
             this.button14.UseVisualStyleBackColor = false;
             // 
@@ -503,10 +479,9 @@
             this.add_btn.FlatAppearance.MouseOverBackColor = System.Drawing.SystemColors.ControlDark;
             this.add_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.add_btn.Font = new System.Drawing.Font("Segoe UI", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.add_btn.Location = new System.Drawing.Point(233, 288);
-            this.add_btn.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.add_btn.Location = new System.Drawing.Point(174, 230);
             this.add_btn.Name = "add_btn";
-            this.add_btn.Size = new System.Drawing.Size(67, 62);
+            this.add_btn.Size = new System.Drawing.Size(50, 50);
             this.add_btn.TabIndex = 15;
             this.add_btn.Text = "+";
             this.add_btn.UseVisualStyleBackColor = false;
@@ -520,31 +495,20 @@
             this.tg_btn.FlatAppearance.MouseOverBackColor = System.Drawing.SystemColors.ControlDark;
             this.tg_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.tg_btn.Font = new System.Drawing.Font("Segoe UI", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.tg_btn.Location = new System.Drawing.Point(308, 288);
-            this.tg_btn.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tg_btn.Location = new System.Drawing.Point(230, 230);
             this.tg_btn.Name = "tg_btn";
-            this.tg_btn.Size = new System.Drawing.Size(93, 62);
+            this.tg_btn.Size = new System.Drawing.Size(70, 50);
             this.tg_btn.TabIndex = 20;
             this.tg_btn.Text = "tg";
             this.tg_btn.UseVisualStyleBackColor = false;
             this.tg_btn.Click += new System.EventHandler(this.tg_btn_Click);
             // 
-            // flowLayoutPanel2
-            // 
-            this.flowLayoutPanel2.Location = new System.Drawing.Point(505, 113);
-            this.flowLayoutPanel2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.flowLayoutPanel2.Name = "flowLayoutPanel2";
-            this.flowLayoutPanel2.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.flowLayoutPanel2.Size = new System.Drawing.Size(111, 353);
-            this.flowLayoutPanel2.TabIndex = 3;
-            // 
             // exit_btn
             // 
             this.exit_btn.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.exit_btn.Location = new System.Drawing.Point(33, 475);
-            this.exit_btn.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.exit_btn.Location = new System.Drawing.Point(25, 386);
             this.exit_btn.Name = "exit_btn";
-            this.exit_btn.Size = new System.Drawing.Size(411, 41);
+            this.exit_btn.Size = new System.Drawing.Size(308, 33);
             this.exit_btn.TabIndex = 4;
             this.exit_btn.Text = "Готово";
             this.exit_btn.UseVisualStyleBackColor = true;
@@ -552,14 +516,12 @@
             // 
             // Form2
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(668, 554);
+            this.ClientSize = new System.Drawing.Size(368, 450);
             this.Controls.Add(this.exit_btn);
-            this.Controls.Add(this.flowLayoutPanel2);
             this.Controls.Add(this.flowLayoutPanel1);
             this.Controls.Add(this.infixText);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "Form2";
             this.Text = "Калькулятор";
             this.flowLayoutPanel1.ResumeLayout(false);
@@ -592,7 +554,6 @@
         private System.Windows.Forms.Button clear_all_btn;
         private System.Windows.Forms.Button close_btn;
         private System.Windows.Forms.Button a_btn;
-        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel2;
         private System.Windows.Forms.Button pow_btn;
         private System.Windows.Forms.Button sin_btn;
         private System.Windows.Forms.Button cos_btn;
