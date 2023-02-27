@@ -4,10 +4,10 @@ using System.Windows.Forms;
 
 namespace model_lab_1
 {
-    public partial class Form1 : Form
+    public partial class MainForm : Form
     {
-        private Form2 calculatorForm = new Form2(); // форма для калькулятора 
-        private Form3 Info = new Form3(); // форма для вывода справки 
+        private CalculatorForm calculatorForm = new CalculatorForm(); // форма для калькулятора 
+        private HelpForm Info = new HelpForm(); // форма для вывода справки 
         private Stack<char> stack = new Stack<char>(); // стек 
         private string InfixSymbols; // входная строка
         private string PostfixLine; // выходная строка 
@@ -24,7 +24,7 @@ namespace model_lab_1
             { 2, 2, 2, 2, 2, 2, 1, 2, 7, 6 }
         };
 
-        public Form1()
+        public MainForm()
         {
             InitializeComponent();
             calculatorForm.EnterLine += CalculatorForm_EnterLine;

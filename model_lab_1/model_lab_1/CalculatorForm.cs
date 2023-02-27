@@ -3,14 +3,14 @@ using System.Windows.Forms;
 
 namespace model_lab_1
 {
-    public partial class Form2 : Form
+    public partial class CalculatorForm : Form
     {
         // Строка в инфиксной форме, где функции заменены на спец.символами
         private string InfixLine;
         // Событие ввода строки
         public event Action<string> EnterLine;
 
-        public Form2()
+        public CalculatorForm()
         {
             InitializeComponent();
             InfixLine = "";

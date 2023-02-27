@@ -1,7 +1,7 @@
 ﻿
 namespace model_lab_1
 {
-    partial class Form3
+    partial class HelpForm
     {
         /// <summary>
         /// Required designer variable.

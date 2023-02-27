@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace model_lab_1
 {
-    public partial class Form3 : Form
+    public partial class HelpForm : Form
     {
-        public Form3()
+        public HelpForm()
         {
             InitializeComponent();
         }
