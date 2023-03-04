@@ -24,8 +24,6 @@ C:\Users\boris\CodeProjects\CSharpCode\model\model_lab_1\model_lab_1\bin\Debug\m
 C:\Users\boris\CodeProjects\CSharpCode\model\model_lab_1\model_lab_1\bin\Debug\model_lab_1.pdb
 C:\Users\boris\CodeProjects\CSharpCode\model\model_lab_1\model_lab_1\obj\Debug\model_lab_1.csproj.AssemblyReference.cache
 C:\Users\boris\CodeProjects\CSharpCode\model\model_lab_1\model_lab_1\obj\Debug\model_lab_1.csproj.SuggestedBindingRedirects.cache
-C:\Users\boris\CodeProjects\CSharpCode\model\model_lab_1\model_lab_1\obj\Debug\model_lab_1.Form1.resources
-C:\Users\boris\CodeProjects\CSharpCode\model\model_lab_1\model_lab_1\obj\Debug\model_lab_1.Form2.resources
 C:\Users\boris\CodeProjects\CSharpCode\model\model_lab_1\model_lab_1\obj\Debug\model_lab_1.Properties.Resources.resources
 C:\Users\boris\CodeProjects\CSharpCode\model\model_lab_1\model_lab_1\obj\Debug\model_lab_1.csproj.GenerateResource.cache
 C:\Users\boris\CodeProjects\CSharpCode\model\model_lab_1\model_lab_1\obj\Debug\model_lab_1.csproj.CoreCompileInputs.cache
@@ -58,3 +56,6 @@ C:\Gitproj\model\model_lab_1\model_lab_1\obj\Debug\model_lab_1.Form3.resources
 C:\Users\boris\source\repos\model\model_lab_1\model_lab_1\obj\Debug\model_lab_1.MainForm.resources
 C:\Users\boris\source\repos\model\model_lab_1\model_lab_1\obj\Debug\model_lab_1.CalculatorForm.resources
 C:\Users\boris\source\repos\model\model_lab_1\model_lab_1\obj\Debug\model_lab_1.HelpForm.resources
+C:\Users\boris\CodeProjects\CSharpCode\model\model_lab_1\model_lab_1\obj\Debug\model_lab_1.MainForm.resources
+C:\Users\boris\CodeProjects\CSharpCode\model\model_lab_1\model_lab_1\obj\Debug\model_lab_1.CalculatorForm.resources
+C:\Users\boris\CodeProjects\CSharpCode\model\model_lab_1\model_lab_1\obj\Debug\model_lab_1.HelpForm.resources
