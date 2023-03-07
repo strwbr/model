@@ -7,7 +7,7 @@ namespace model_lab_1
 {
     public partial class MainForm : Form
     {
-        private CalculatorForm calculatorForm = new CalculatorForm(); // форма для калькулятора 
+        private Calculator calculatorForm = new Calculator(); // форма для калькулятора 
         private HelpForm Info = new HelpForm(); // форма для вывода справки 
         private ArrayList Stack = new ArrayList(); // стек 
         private string InputString; // входная (инфиксная) строка
@@ -16,6 +16,9 @@ namespace model_lab_1
         private byte Pointer = 0; // Указатель на вершину стека (по факту кол-во активных символов, типа +,-...)
 
         private byte indexOperation = 0; // значение операции в таблице (поведение алгоритма) 
+
+        CountForm countForm;
+
         private byte[,] DijkstraTable = new byte[8, 10] // таблица принятия решений 
         {
             { 4, 1, 1, 1, 1, 1, 1, 5, 1, 6 },
@@ -125,7 +128,7 @@ namespace model_lab_1
                 case 'A': row = 7; break; // A = abs
                 case 'S': row = 7; break; // S = sin
                 case 'C': row = 7; break; // C = cos
-                case 'T': row = 7; break; // T = tg
+                case 'L': row = 7; break; // T = tg
             }
             return row;
         }
@@ -147,7 +150,7 @@ namespace model_lab_1
                 case 'A': col = 8; break; // A = abs
                 case 'S': col = 8; break; // S = sin
                 case 'C': col = 8; break; // C = cos
-                case 'T': col = 8; break; // T = tg
+                case 'L': col = 8; break; // T = tg
                 default: col = 9; break;  // переменные      
             }
             return col;
@@ -174,6 +177,7 @@ namespace model_lab_1
                     break;
                 case 4:
                     MessageBox.Show("Успешное окончание преобразования");
+                    countForm = new CountForm(PostfixLine);
                     createBtn.Enabled = true;
                     Stack.Clear(); // Очистка стека
                     break;
@@ -308,6 +312,11 @@ namespace model_lab_1
         private void button1_Click(object sender, EventArgs e)
         {
             Info.Show();
+        }
+
+        private void calculateBtn_Click(object sender, EventArgs e)
+        {
+            if(countForm != null) countForm.ShowDialog();
         }
     }
 }

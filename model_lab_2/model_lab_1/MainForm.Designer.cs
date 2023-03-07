@@ -74,6 +74,7 @@
             this.label6 = new System.Windows.Forms.Label();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.button1 = new System.Windows.Forms.Button();
+            this.calculateBtn = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.decisionTable)).BeginInit();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.stackForm)).BeginInit();
@@ -278,7 +279,7 @@
             this.postfixText.ForeColor = System.Drawing.SystemColors.ControlText;
             this.postfixText.Location = new System.Drawing.Point(13, 146);
             this.postfixText.Name = "postfixText";
-            this.postfixText.Size = new System.Drawing.Size(346, 34);
+            this.postfixText.Size = new System.Drawing.Size(345, 34);
             this.postfixText.TabIndex = 1;
             this.postfixText.Text = "Строка в постфиксной форме";
             // 
@@ -290,7 +291,7 @@
             this.infixText.Font = new System.Drawing.Font("Segoe UI", 14F);
             this.infixText.Location = new System.Drawing.Point(13, 62);
             this.infixText.Name = "infixText";
-            this.infixText.Size = new System.Drawing.Size(325, 34);
+            this.infixText.Size = new System.Drawing.Size(324, 34);
             this.infixText.TabIndex = 0;
             this.infixText.Text = "Строка в инфиксной форме";
             // 
@@ -421,7 +422,7 @@
             this.originalLine.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.originalLine.Location = new System.Drawing.Point(430, 22);
             this.originalLine.Name = "originalLine";
-            this.originalLine.Size = new System.Drawing.Size(202, 34);
+            this.originalLine.Size = new System.Drawing.Size(201, 34);
             this.originalLine.TabIndex = 9;
             this.originalLine.Text = "Исходная строка";
             // 
@@ -453,11 +454,25 @@
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
-            // Form1
+            // calculateBtn
+            // 
+            this.calculateBtn.AutoSize = true;
+            this.calculateBtn.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.calculateBtn.Location = new System.Drawing.Point(919, 212);
+            this.calculateBtn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.calculateBtn.Name = "calculateBtn";
+            this.calculateBtn.Size = new System.Drawing.Size(136, 38);
+            this.calculateBtn.TabIndex = 12;
+            this.calculateBtn.Text = "Вычислить";
+            this.calculateBtn.UseVisualStyleBackColor = true;
+            this.calculateBtn.Click += new System.EventHandler(this.calculateBtn_Click);
+            // 
+            // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1183, 764);
+            this.Controls.Add(this.calculateBtn);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.originalLine);
@@ -470,7 +485,7 @@
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.decisionTable);
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.Name = "Form1";
+            this.Name = "MainForm";
             this.Text = "Моделирование компиляции алгебраических выражений";
             ((System.ComponentModel.ISupportInitialize)(this.decisionTable)).EndInit();
             this.groupBox1.ResumeLayout(false);
@@ -510,6 +525,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn stackColumn;
         private System.Windows.Forms.Timer timer1;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button calculateBtn;
     }
 }
 

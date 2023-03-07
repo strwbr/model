@@ -46,17 +46,29 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CountForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CountForm.Designer.cs">
+      <DependentUpon>CountForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="InputValuesForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InputValuesForm.Designer.cs">
+      <DependentUpon>InputValuesForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="MainForm.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="MainForm.Designer.cs">
       <DependentUpon>MainForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="CalculatorForm.cs">
+    <Compile Include="Calculator.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="CalculatorForm.Designer.cs">
-      <DependentUpon>CalculatorForm.cs</DependentUpon>
+    <Compile Include="Calculator.Designer.cs">
+      <DependentUpon>Calculator.cs</DependentUpon>
     </Compile>
     <Compile Include="HelpForm.cs">
       <SubType>Form</SubType>
@@ -66,11 +78,17 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="CountForm.resx">
+      <DependentUpon>CountForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InputValuesForm.resx">
+      <DependentUpon>InputValuesForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="CalculatorForm.resx">
-      <DependentUpon>CalculatorForm.cs</DependentUpon>
+    <EmbeddedResource Include="Calculator.resx">
+      <DependentUpon>Calculator.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="HelpForm.resx">
       <DependentUpon>HelpForm.cs</DependentUpon>

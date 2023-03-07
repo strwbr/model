@@ -5,7 +5,7 @@ using System.Windows.Forms;
 
 namespace model_lab_1
 {
-    public partial class CalculatorForm : Form
+    public partial class Calculator : Form
     {
         // Отображаемая строка
         private ArrayList DisplayInfixLine = new ArrayList();
@@ -15,7 +15,7 @@ namespace model_lab_1
         // Событие ввода строки
         public event Action<string, string> EnterLine;
 
-        public CalculatorForm()
+        public Calculator()
         {
             InitializeComponent();
             infixText.Text = "";

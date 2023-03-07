@@ -59,3 +59,18 @@ C:\Users\boris\source\repos\model\model_lab_1\model_lab_1\obj\Debug\model_lab_1.
 C:\Users\boris\CodeProjects\CSharpCode\model\model_lab_1\model_lab_1\obj\Debug\model_lab_1.MainForm.resources
 C:\Users\boris\CodeProjects\CSharpCode\model\model_lab_1\model_lab_1\obj\Debug\model_lab_1.CalculatorForm.resources
 C:\Users\boris\CodeProjects\CSharpCode\model\model_lab_1\model_lab_1\obj\Debug\model_lab_1.HelpForm.resources
+C:\Users\MSI\си шарповская папка\моделирование\model\model_lab_2\model_lab_1\bin\Debug\model_lab_1.exe.config
+C:\Users\MSI\си шарповская папка\моделирование\model\model_lab_2\model_lab_1\bin\Debug\model_lab_1.exe
+C:\Users\MSI\си шарповская папка\моделирование\model\model_lab_2\model_lab_1\bin\Debug\model_lab_1.pdb
+C:\Users\MSI\си шарповская папка\моделирование\model\model_lab_2\model_lab_1\obj\Debug\model_lab_1.csproj.AssemblyReference.cache
+C:\Users\MSI\си шарповская папка\моделирование\model\model_lab_2\model_lab_1\obj\Debug\model_lab_1.csproj.SuggestedBindingRedirects.cache
+C:\Users\MSI\си шарповская папка\моделирование\model\model_lab_2\model_lab_1\obj\Debug\model_lab_1.MainForm.resources
+C:\Users\MSI\си шарповская папка\моделирование\model\model_lab_2\model_lab_1\obj\Debug\model_lab_1.Calculator.resources
+C:\Users\MSI\си шарповская папка\моделирование\model\model_lab_2\model_lab_1\obj\Debug\model_lab_1.HelpForm.resources
+C:\Users\MSI\си шарповская папка\моделирование\model\model_lab_2\model_lab_1\obj\Debug\model_lab_1.Properties.Resources.resources
+C:\Users\MSI\си шарповская папка\моделирование\model\model_lab_2\model_lab_1\obj\Debug\model_lab_1.csproj.GenerateResource.cache
+C:\Users\MSI\си шарповская папка\моделирование\model\model_lab_2\model_lab_1\obj\Debug\model_lab_1.csproj.CoreCompileInputs.cache
+C:\Users\MSI\си шарповская папка\моделирование\model\model_lab_2\model_lab_1\obj\Debug\model_lab_1.exe
+C:\Users\MSI\си шарповская папка\моделирование\model\model_lab_2\model_lab_1\obj\Debug\model_lab_1.pdb
+C:\Users\MSI\си шарповская папка\моделирование\model\model_lab_2\model_lab_1\obj\Debug\model_lab_1.CountForm.resources
+C:\Users\MSI\си шарповская папка\моделирование\model\model_lab_2\model_lab_1\obj\Debug\model_lab_1.InputValuesForm.resources

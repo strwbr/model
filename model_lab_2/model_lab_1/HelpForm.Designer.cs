@@ -29,8 +29,19 @@ namespace model_lab_1
         /// </summary>
         private void InitializeComponent()
         {
-            this.fileSystemWatcher1 = new System.IO.FileSystemWatcher();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.label29 = new System.Windows.Forms.Label();
+            this.label28 = new System.Windows.Forms.Label();
+            this.label27 = new System.Windows.Forms.Label();
+            this.label26 = new System.Windows.Forms.Label();
+            this.label25 = new System.Windows.Forms.Label();
+            this.label24 = new System.Windows.Forms.Label();
+            this.label23 = new System.Windows.Forms.Label();
+            this.label22 = new System.Windows.Forms.Label();
+            this.label21 = new System.Windows.Forms.Label();
+            this.label20 = new System.Windows.Forms.Label();
+            this.label19 = new System.Windows.Forms.Label();
+            this.label18 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
@@ -49,27 +60,9 @@ namespace model_lab_1
             this.label15 = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
-            this.label18 = new System.Windows.Forms.Label();
-            this.label19 = new System.Windows.Forms.Label();
-            this.label20 = new System.Windows.Forms.Label();
-            this.label21 = new System.Windows.Forms.Label();
-            this.label22 = new System.Windows.Forms.Label();
-            this.label23 = new System.Windows.Forms.Label();
-            this.label24 = new System.Windows.Forms.Label();
-            this.label25 = new System.Windows.Forms.Label();
-            this.label26 = new System.Windows.Forms.Label();
-            this.label27 = new System.Windows.Forms.Label();
-            this.label28 = new System.Windows.Forms.Label();
-            this.label29 = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.fileSystemWatcher1)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // fileSystemWatcher1
-            // 
-            this.fileSystemWatcher1.EnableRaisingEvents = true;
-            this.fileSystemWatcher1.SynchronizingObject = this;
             // 
             // groupBox1
             // 
@@ -105,13 +98,133 @@ namespace model_lab_1
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Условные обозначения";
             // 
+            // label29
+            // 
+            this.label29.AutoSize = true;
+            this.label29.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label29.Location = new System.Drawing.Point(663, 181);
+            this.label29.Name = "label29";
+            this.label29.Size = new System.Drawing.Size(42, 28);
+            this.label29.TabIndex = 20;
+            this.label29.Text = "abs";
+            // 
+            // label28
+            // 
+            this.label28.AutoSize = true;
+            this.label28.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label28.Location = new System.Drawing.Point(663, 134);
+            this.label28.Name = "label28";
+            this.label28.Size = new System.Drawing.Size(29, 28);
+            this.label28.TabIndex = 19;
+            this.label28.Text = "lg";
+            // 
+            // label27
+            // 
+            this.label27.AutoSize = true;
+            this.label27.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label27.Location = new System.Drawing.Point(663, 85);
+            this.label27.Name = "label27";
+            this.label27.Size = new System.Drawing.Size(41, 28);
+            this.label27.TabIndex = 18;
+            this.label27.Text = "cos";
+            // 
+            // label26
+            // 
+            this.label26.AutoSize = true;
+            this.label26.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label26.Location = new System.Drawing.Point(663, 37);
+            this.label26.Name = "label26";
+            this.label26.Size = new System.Drawing.Size(46, 28);
+            this.label26.TabIndex = 17;
+            this.label26.Text = "sqrt";
+            // 
+            // label25
+            // 
+            this.label25.AutoSize = true;
+            this.label25.Font = new System.Drawing.Font("Microsoft YaHei", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label25.Location = new System.Drawing.Point(620, 185);
+            this.label25.Name = "label25";
+            this.label25.Size = new System.Drawing.Size(20, 25);
+            this.label25.TabIndex = 16;
+            this.label25.Text = "-";
+            // 
+            // label24
+            // 
+            this.label24.AutoSize = true;
+            this.label24.Font = new System.Drawing.Font("Microsoft YaHei", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label24.Location = new System.Drawing.Point(620, 138);
+            this.label24.Name = "label24";
+            this.label24.Size = new System.Drawing.Size(20, 25);
+            this.label24.TabIndex = 15;
+            this.label24.Text = "-";
+            // 
+            // label23
+            // 
+            this.label23.AutoSize = true;
+            this.label23.Font = new System.Drawing.Font("Microsoft YaHei", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label23.Location = new System.Drawing.Point(620, 89);
+            this.label23.Name = "label23";
+            this.label23.Size = new System.Drawing.Size(20, 25);
+            this.label23.TabIndex = 14;
+            this.label23.Text = "-";
+            // 
+            // label22
+            // 
+            this.label22.AutoSize = true;
+            this.label22.Font = new System.Drawing.Font("Microsoft YaHei", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label22.Location = new System.Drawing.Point(620, 43);
+            this.label22.Name = "label22";
+            this.label22.Size = new System.Drawing.Size(20, 25);
+            this.label22.TabIndex = 13;
+            this.label22.Text = "-";
+            // 
+            // label21
+            // 
+            this.label21.AutoSize = true;
+            this.label21.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label21.Location = new System.Drawing.Point(535, 139);
+            this.label21.Name = "label21";
+            this.label21.Size = new System.Drawing.Size(49, 25);
+            this.label21.TabIndex = 12;
+            this.label21.Text = "\" L \"";
+            // 
+            // label20
+            // 
+            this.label20.AutoSize = true;
+            this.label20.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label20.Location = new System.Drawing.Point(534, 88);
+            this.label20.Name = "label20";
+            this.label20.Size = new System.Drawing.Size(51, 25);
+            this.label20.TabIndex = 11;
+            this.label20.Text = "\" C \"";
+            // 
+            // label19
+            // 
+            this.label19.AutoSize = true;
+            this.label19.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label19.Location = new System.Drawing.Point(533, 188);
+            this.label19.Name = "label19";
+            this.label19.Size = new System.Drawing.Size(53, 25);
+            this.label19.TabIndex = 10;
+            this.label19.Text = "\" A \"";
+            // 
+            // label18
+            // 
+            this.label18.AutoSize = true;
+            this.label18.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label18.Location = new System.Drawing.Point(533, 42);
+            this.label18.Name = "label18";
+            this.label18.Size = new System.Drawing.Size(50, 25);
+            this.label18.TabIndex = 9;
+            this.label18.Text = "\" S \"";
+            // 
             // label12
             // 
             this.label12.AutoSize = true;
             this.label12.Font = new System.Drawing.Font("Microsoft YaHei", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label12.Location = new System.Drawing.Point(100, 185);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(20, 26);
+            this.label12.Size = new System.Drawing.Size(20, 25);
             this.label12.TabIndex = 8;
             this.label12.Text = "-";
             // 
@@ -121,7 +234,7 @@ namespace model_lab_1
             this.label11.Font = new System.Drawing.Font("Microsoft YaHei", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label11.Location = new System.Drawing.Point(100, 138);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(20, 26);
+            this.label11.Size = new System.Drawing.Size(20, 25);
             this.label11.TabIndex = 7;
             this.label11.Text = "-";
             // 
@@ -131,7 +244,7 @@ namespace model_lab_1
             this.label10.Font = new System.Drawing.Font("Microsoft YaHei", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label10.Location = new System.Drawing.Point(100, 92);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(20, 26);
+            this.label10.Size = new System.Drawing.Size(20, 25);
             this.label10.TabIndex = 2;
             this.label10.Text = "-";
             // 
@@ -141,7 +254,7 @@ namespace model_lab_1
             this.label9.Font = new System.Drawing.Font("Microsoft YaHei", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label9.Location = new System.Drawing.Point(100, 41);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(20, 26);
+            this.label9.Size = new System.Drawing.Size(20, 25);
             this.label9.TabIndex = 1;
             this.label9.Text = "-";
             // 
@@ -245,7 +358,7 @@ namespace model_lab_1
             this.label17.AutoSize = true;
             this.label17.Location = new System.Drawing.Point(15, 156);
             this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(317, 25);
+            this.label17.Size = new System.Drawing.Size(303, 25);
             this.label17.TabIndex = 4;
             this.label17.Text = "5 – ошибка в скобочной структуре.";
             // 
@@ -254,7 +367,7 @@ namespace model_lab_1
             this.label16.AutoSize = true;
             this.label16.Location = new System.Drawing.Point(15, 128);
             this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(383, 25);
+            this.label16.Size = new System.Drawing.Size(362, 25);
             this.label16.TabIndex = 3;
             this.label16.Text = "4 – успешное окончание преобразования;";
             // 
@@ -263,7 +376,7 @@ namespace model_lab_1
             this.label15.AutoSize = true;
             this.label15.Location = new System.Drawing.Point(15, 100);
             this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(559, 25);
+            this.label15.Size = new System.Drawing.Size(532, 25);
             this.label15.TabIndex = 2;
             this.label15.Text = "3 – удалить символ \")\" из входной строки и символ \"(\" из стека;";
             // 
@@ -272,7 +385,7 @@ namespace model_lab_1
             this.label14.AutoSize = true;
             this.label14.Location = new System.Drawing.Point(15, 72);
             this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(661, 25);
+            this.label14.Size = new System.Drawing.Size(630, 25);
             this.label14.TabIndex = 1;
             this.label14.Text = "2 – извлечь символ операции из стека и отправить его в выходную строку";
             // 
@@ -281,140 +394,19 @@ namespace model_lab_1
             this.label13.AutoSize = true;
             this.label13.Location = new System.Drawing.Point(15, 44);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(428, 25);
+            this.label13.Size = new System.Drawing.Size(407, 25);
             this.label13.TabIndex = 0;
             this.label13.Text = "1 – поместить символ из входной строки в стек;";
             // 
-            // label18
-            // 
-            this.label18.AutoSize = true;
-            this.label18.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label18.Location = new System.Drawing.Point(533, 42);
-            this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(51, 25);
-            this.label18.TabIndex = 9;
-            this.label18.Text = "\" S \"";
-            // 
-            // label19
-            // 
-            this.label19.AutoSize = true;
-            this.label19.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label19.Location = new System.Drawing.Point(533, 188);
-            this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(53, 25);
-            this.label19.TabIndex = 10;
-            this.label19.Text = "\" A \"";
-            // 
-            // label20
-            // 
-            this.label20.AutoSize = true;
-            this.label20.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label20.Location = new System.Drawing.Point(534, 88);
-            this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(52, 25);
-            this.label20.TabIndex = 11;
-            this.label20.Text = "\" C \"";
-            // 
-            // label21
-            // 
-            this.label21.AutoSize = true;
-            this.label21.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label21.Location = new System.Drawing.Point(535, 139);
-            this.label21.Name = "label21";
-            this.label21.Size = new System.Drawing.Size(51, 25);
-            this.label21.TabIndex = 12;
-            this.label21.Text = "\" T \"";
-            // 
-            // label22
-            // 
-            this.label22.AutoSize = true;
-            this.label22.Font = new System.Drawing.Font("Microsoft YaHei", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label22.Location = new System.Drawing.Point(620, 43);
-            this.label22.Name = "label22";
-            this.label22.Size = new System.Drawing.Size(20, 26);
-            this.label22.TabIndex = 13;
-            this.label22.Text = "-";
-            // 
-            // label23
-            // 
-            this.label23.AutoSize = true;
-            this.label23.Font = new System.Drawing.Font("Microsoft YaHei", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label23.Location = new System.Drawing.Point(620, 89);
-            this.label23.Name = "label23";
-            this.label23.Size = new System.Drawing.Size(20, 26);
-            this.label23.TabIndex = 14;
-            this.label23.Text = "-";
-            // 
-            // label24
-            // 
-            this.label24.AutoSize = true;
-            this.label24.Font = new System.Drawing.Font("Microsoft YaHei", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label24.Location = new System.Drawing.Point(620, 138);
-            this.label24.Name = "label24";
-            this.label24.Size = new System.Drawing.Size(20, 26);
-            this.label24.TabIndex = 15;
-            this.label24.Text = "-";
-            // 
-            // label25
-            // 
-            this.label25.AutoSize = true;
-            this.label25.Font = new System.Drawing.Font("Microsoft YaHei", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label25.Location = new System.Drawing.Point(620, 185);
-            this.label25.Name = "label25";
-            this.label25.Size = new System.Drawing.Size(20, 26);
-            this.label25.TabIndex = 16;
-            this.label25.Text = "-";
-            // 
-            // label26
-            // 
-            this.label26.AutoSize = true;
-            this.label26.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label26.Location = new System.Drawing.Point(663, 37);
-            this.label26.Name = "label26";
-            this.label26.Size = new System.Drawing.Size(36, 28);
-            this.label26.TabIndex = 17;
-            this.label26.Text = "sin";
-            // 
-            // label27
-            // 
-            this.label27.AutoSize = true;
-            this.label27.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label27.Location = new System.Drawing.Point(663, 85);
-            this.label27.Name = "label27";
-            this.label27.Size = new System.Drawing.Size(41, 28);
-            this.label27.TabIndex = 18;
-            this.label27.Text = "cos";
-            // 
-            // label28
-            // 
-            this.label28.AutoSize = true;
-            this.label28.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label28.Location = new System.Drawing.Point(663, 134);
-            this.label28.Name = "label28";
-            this.label28.Size = new System.Drawing.Size(31, 28);
-            this.label28.TabIndex = 19;
-            this.label28.Text = "tg";
-            // 
-            // label29
-            // 
-            this.label29.AutoSize = true;
-            this.label29.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label29.Location = new System.Drawing.Point(663, 181);
-            this.label29.Name = "label29";
-            this.label29.Size = new System.Drawing.Size(42, 28);
-            this.label29.TabIndex = 20;
-            this.label29.Text = "abs";
-            // 
-            // Form3
+            // HelpForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(820, 535);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
-            this.Name = "Form3";
+            this.Name = "HelpForm";
             this.Text = "Справка";
-            ((System.ComponentModel.ISupportInitialize)(this.fileSystemWatcher1)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.groupBox2.ResumeLayout(false);
@@ -424,8 +416,6 @@ namespace model_lab_1
         }
 
         #endregion
-
-        private System.IO.FileSystemWatcher fileSystemWatcher1;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
