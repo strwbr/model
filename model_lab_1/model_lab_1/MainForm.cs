@@ -18,6 +18,7 @@ namespace model_lab_1
         private Point startArrowPos; // начальная позиция указателя вершины стека на форме
 
         private byte indexOperation = 0; // значение операции в таблице (поведение алгоритма) 
+
         private byte[,] DijkstraTable = new byte[8, 10] // таблица принятия решений 
         {
             { 4, 1, 1, 1, 1, 1, 1, 5, 1, 6 },
@@ -78,6 +79,10 @@ namespace model_lab_1
             // Включение кнопок
             translateBtn.Enabled = true;
             beatBtn.Enabled = true;
+            // Очистка стека и указателя на вершину стека
+            Pointer = 0;
+            arrowLabel.Location = startArrowPos;
+            ClearStack();
         }
 
         // Обработчик нажатия на кнопку "Ввести строку"
@@ -275,6 +280,16 @@ namespace model_lab_1
                 arrowLabel.Location = new Point(startArrowPos.X, newY);
 
             }
+        }
+
+        // Метод для очистки стека на форме
+        private void ClearStack()
+        {
+            for (byte i = 0; i < stackForm.Rows.Count; i++)
+            {
+                stackForm.Rows[i].Cells[0].Value = "";
+            }
+            stackForm.Rows[stackForm.RowCount - 1].Cells[0].Selected = true;
         }
 
         // 1 – поместить символ из входной строки в стек
