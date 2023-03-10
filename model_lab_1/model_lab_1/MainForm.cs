@@ -82,6 +82,7 @@ namespace model_lab_1
             // Очистка стека и указателя на вершину стека
             Pointer = 0;
             arrowLabel.Location = startArrowPos;
+            Stack.Clear();
             ClearStack();
         }
 
