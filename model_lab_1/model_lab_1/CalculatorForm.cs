@@ -24,6 +24,11 @@ namespace model_lab_1
         // МОИ СОБОЛЕЗНОВАНИЯ РАЗОБРАТЬСЯ В ЭТОМ:)
         private void Symbol_Click(object sender, EventArgs e)
         {
+            if(MakeString().Length > 80)
+            {
+                MessageBox.Show("Длина исходной строки символов не должна превышать 80 символов!");
+                return;
+            }
             // к строке добавляется текст с кнопки, к-ая вызвала событие
             string newText = (sender as Button).Text;
 
@@ -61,12 +66,12 @@ namespace model_lab_1
                     else MessageBox.Show("Ошибка при вводе закрывающейся скобки!");
                     break;
                 case 4:
-                    if (lastSymbolID != 3)
+                    if (lastSymbolID != 3 && lastSymbolID != 1)
                     {
                         DisplayInfixLine.Add(newText + "(");
                         TransformInfixLine.Add(newText[0].ToString().ToUpper() + "(");
                     }
-                    else MessageBox.Show("После закрывающейся скобки не может быть функция!");
+                    else MessageBox.Show("Ошибка при вводе функции!");
                     break;
 
                 case 5:
@@ -79,30 +84,35 @@ namespace model_lab_1
                     break;
             }
 
-            string line = "";
-            foreach (string s in DisplayInfixLine)
-            {
-                line += s;
-                infixText.Text = line;
-            };
+            //string line = "";
+            //foreach (string s in DisplayInfixLine)
+            //{
+            //    line += s;
+            //    infixText.Text = line;
+            //};
+            infixText.Text = MakeString();
         }
 
+        private string MakeString()
+        {
+            string line = "";
+            foreach(string s in DisplayInfixLine)
+            {
+                line += s;
+            }
+            return line;
+        }
 
-        // Расчет веса лексемы
-        // переменная = 1
-        // ариф. операция = 2
-        // ) = 3
-        // мат.функция = 4
-        // ( = 5
+        // Расчет веса элемента вводимой строки
+        /* Веса: переменная = 1; ариф. операция = 2
+         ) = 3; мат.функция = 4; ( = 5 */
         private byte GetWeight(string str)
         {
+            // Изначально предполагаем, что элемент - это мат. функция
             byte id = 4;
-
-            //string str = DisplayInfixLine[DisplayInfixLine.Count - 1].ToString();
-
+            // Если элемент состоит из одного символа 
             if (str.Length == 1)
             {
-
                 switch (str)
                 {
                     case "+":
@@ -118,13 +128,12 @@ namespace model_lab_1
                     default:
                         id = 1; break;
                 }
-
             }
             return id;
         }
 
         // Обработчик нажатия на кнопку "Готово"
-        private void exit_btn_Click(object sender, EventArgs e)
+        private void submit_btn_Click(object sender, EventArgs e)
         {
             // Если была введена строка
             if (DisplayInfixLine.Count != 0)
@@ -158,14 +167,7 @@ namespace model_lab_1
                 DisplayInfixLine.RemoveAt(DisplayInfixLine.Count - 1);
                 TransformInfixLine.RemoveAt(TransformInfixLine.Count - 1);
             }
-
-            string line = "";
-            foreach (string s in DisplayInfixLine)
-            {
-                line += s;
-                infixText.Text = line;
-            };
-            infixText.Text = line;
+            infixText.Text = MakeString();
         }
 
         //// Проверка, является ли последний символ в строке переменной

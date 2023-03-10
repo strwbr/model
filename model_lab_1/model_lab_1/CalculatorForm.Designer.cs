@@ -56,7 +56,7 @@
             this.button14 = new System.Windows.Forms.Button();
             this.add_btn = new System.Windows.Forms.Button();
             this.tg_btn = new System.Windows.Forms.Button();
-            this.exit_btn = new System.Windows.Forms.Button();
+            this.submit_btn = new System.Windows.Forms.Button();
             this.flowLayoutPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -528,24 +528,24 @@
             this.tg_btn.UseVisualStyleBackColor = false;
             this.tg_btn.Click += new System.EventHandler(this.Symbol_Click);
             // 
-            // exit_btn
+            // submit_btn
             // 
-            this.exit_btn.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.exit_btn.Location = new System.Drawing.Point(38, 594);
-            this.exit_btn.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.exit_btn.Name = "exit_btn";
-            this.exit_btn.Size = new System.Drawing.Size(462, 51);
-            this.exit_btn.TabIndex = 4;
-            this.exit_btn.Text = "Готово";
-            this.exit_btn.UseVisualStyleBackColor = true;
-            this.exit_btn.Click += new System.EventHandler(this.exit_btn_Click);
+            this.submit_btn.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.submit_btn.Location = new System.Drawing.Point(38, 594);
+            this.submit_btn.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.submit_btn.Name = "submit_btn";
+            this.submit_btn.Size = new System.Drawing.Size(462, 51);
+            this.submit_btn.TabIndex = 4;
+            this.submit_btn.Text = "Готово";
+            this.submit_btn.UseVisualStyleBackColor = true;
+            this.submit_btn.Click += new System.EventHandler(this.submit_btn_Click);
             // 
             // CalculatorForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(552, 692);
-            this.Controls.Add(this.exit_btn);
+            this.Controls.Add(this.submit_btn);
             this.Controls.Add(this.flowLayoutPanel1);
             this.Controls.Add(this.infixText);
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
@@ -586,6 +586,6 @@
         private System.Windows.Forms.Button cos_btn;
         private System.Windows.Forms.Button abs_btn;
         private System.Windows.Forms.Button tg_btn;
-        private System.Windows.Forms.Button exit_btn;
+        private System.Windows.Forms.Button submit_btn;
     }
 }
