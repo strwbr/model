@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections;
-using System.Collections.Generic;
 using System.Drawing;
 using System.Windows.Forms;
 
@@ -329,7 +328,7 @@ namespace model_lab_1
         }
 
         // Обработчик нажатия на кнопку "Справка"
-        private void button1_Click(object sender, EventArgs e)
+        private void infoBtn_Click(object sender, EventArgs e)
         {
             Info.Show();
         }

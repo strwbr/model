@@ -21,25 +21,28 @@ namespace model_lab_1
             infixText.Text = "";
         }
 
-        // МОИ СОБОЛЕЗНОВАНИЯ РАЗОБРАТЬСЯ В ЭТОМ:)
+        // Обработчик нажатия на кнопки для ввода переменных, символов арифметических операций и функций
         private void Symbol_Click(object sender, EventArgs e)
         {
+            // Если в строке более 80 символов
             if(MakeString().Length > 80)
             {
                 MessageBox.Show("Длина исходной строки символов не должна превышать 80 символов!");
                 return;
             }
-            // к строке добавляется текст с кнопки, к-ая вызвала событие
+            // Получение элемента, которое необходимо добавить к строке, с кнопки
             string newText = (sender as Button).Text;
-
+            // Вес предыдущего введенного элемента
+            // 0 - пустая строка
             byte lastSymbolID = (byte)((DisplayInfixLine.Count > 0) ?
                 GetWeight(DisplayInfixLine[DisplayInfixLine.Count - 1].ToString())
                 : 0);
+            // Вес текущего введенного элемента 
             byte currentSymbolID = GetWeight(newText);
 
             switch (currentSymbolID)
             {
-                case 1:
+                case 1: // Текущий элемент - переменная
                     if (lastSymbolID != 1 && lastSymbolID != 3)
                     {
                         DisplayInfixLine.Add(newText);
@@ -48,7 +51,7 @@ namespace model_lab_1
                     else
                         MessageBox.Show("Переменная не может быть после переменной или закрывающейся скобки!");
                     break;
-                case 2:
+                case 2: // Текущий элемент - арифметическая операция
                     if (lastSymbolID != 0 && lastSymbolID != 2 && lastSymbolID != 4 && lastSymbolID != 5)
                     {
                         DisplayInfixLine.Add(newText);
@@ -57,7 +60,7 @@ namespace model_lab_1
                     else
                         MessageBox.Show("Ошибка при вводе символа операции!");
                     break;
-                case 3:
+                case 3: // Текущий элемент - ")"
                     if (lastSymbolID != 0 && lastSymbolID != 2 && lastSymbolID != 4 && lastSymbolID != 5)
                     {
                         DisplayInfixLine.Add(newText);
@@ -65,7 +68,7 @@ namespace model_lab_1
                     }
                     else MessageBox.Show("Ошибка при вводе закрывающейся скобки!");
                     break;
-                case 4:
+                case 4: // Текущий элемент - функция
                     if (lastSymbolID != 3 && lastSymbolID != 1)
                     {
                         DisplayInfixLine.Add(newText + "(");
@@ -73,8 +76,7 @@ namespace model_lab_1
                     }
                     else MessageBox.Show("Ошибка при вводе функции!");
                     break;
-
-                case 5:
+                case 5: // Текущий элемент - "("
                     if (lastSymbolID != 1 && lastSymbolID != 3)
                     {
                         DisplayInfixLine.Add(newText);
@@ -93,6 +95,7 @@ namespace model_lab_1
             infixText.Text = MakeString();
         }
 
+        // Получение строки из массива
         private string MakeString()
         {
             string line = "";
