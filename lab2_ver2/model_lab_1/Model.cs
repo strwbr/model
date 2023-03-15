@@ -1,11 +1,6 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
-using System.Linq;
-using System.Reflection;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
 
 namespace model_lab_1
 {
@@ -69,7 +64,6 @@ namespace model_lab_1
                 // Если пустая строка
                 case '|':
                     ResText = Stack[Pointer].ToString();
-                    //MessageBox.Show("Успешное окончание вычисления!");
                     Pointer--;
                     index = 1;
                     break;
@@ -142,7 +136,7 @@ namespace model_lab_1
                         Stack[Pointer] = res;
                     }
                     break;
-                    // Если переменные
+                // Если переменные
                 default:
                     // Если ячейка ранее была использована - перезапись
                     if (Stack.Count > Pointer + 1)

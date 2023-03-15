@@ -1,13 +1,6 @@
 ﻿using System;
-using System.Collections;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Drawing;
-using System.Linq;
-using System.Reflection;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace model_lab_1
@@ -88,13 +81,11 @@ namespace model_lab_1
             if (model.Stack.Count > stackForm.RowCount)
                 stackForm.Rows.Add(model.Stack.Count - stackForm.RowCount);
 
-
             // Заполнение стека на форме
             for (int i = 0; i < model.Stack.Count; i++)
             {
                 stackForm.Rows[stackForm.Rows.Count - 1 - i].Cells[0].Value = model.Stack[i];
             }
-
 
             // Выделение вершины стека
             if (model.Pointer != -1)

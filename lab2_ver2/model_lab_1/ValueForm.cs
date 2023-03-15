@@ -39,22 +39,6 @@ namespace model_lab_1
                     operandValues[ch] = Double.Parse(panel.Controls.OfType<TextBox>().First().Text);
                 }
             }
-
-            //// Для каждого GroupBox с полями для ввода
-            //foreach (GroupBox group in inputGroupBox.Controls.OfType<GroupBox>())
-            //{
-            //    // Получение элемента Label
-            //    Label label = group.Controls.OfType<Label>().First();
-            //    // Получение первого символа - переменной
-            //    char ch = label.Text[0];
-
-            //    // Если такая переменная есть в словаре
-            //    if (operandValues.ContainsKey(ch))
-            //    {
-            //        // Добавление значения переменной
-            //        operandValues[ch] = Double.Parse(group.Controls.OfType<TextBox>().First().Text);
-            //    }
-            //}
         }
     }
 }
