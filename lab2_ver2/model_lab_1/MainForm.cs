@@ -1,23 +1,24 @@
 ﻿using System;
 using System.Collections;
-using System.Collections.Generic;
+using System.Drawing;
 using System.Windows.Forms;
 
 namespace model_lab_1
 {
     public partial class MainForm : Form
     {
-        private Calculator calculatorForm = new Calculator(); // форма для калькулятора 
-         
+        private CalculatorForm calculatorForm = new CalculatorForm(); // форма для калькулятора 
         private ArrayList Stack = new ArrayList(); // стек 
         private string InputString; // входная (инфиксная) строка
-        private string PostfixLine; // выходная (постфиксная) строка 
+        private string OutputString; // выходная (постфиксная) строка 
 
-        private byte Pointer = 0; // Указатель на вершину стека (по факту кол-во активных символов, типа +,-...)
+        private byte Pointer = 0; // указатель на вершину стека
+
+        private Point startArrowPos; // начальная позиция указателя вершины стека на форме
 
         private byte indexOperation = 0; // значение операции в таблице (поведение алгоритма) 
 
-        CountForm countForm;
+        private CountForm countForm;
 
         private byte[,] DijkstraTable = new byte[8, 10] // таблица принятия решений 
         {
@@ -34,16 +35,20 @@ namespace model_lab_1
         public MainForm()
         {
             InitializeComponent();
+            // Задание начального положения указателя на форме
+            startArrowPos = new Point(arrowLabel.Location.X, arrowLabel.Location.Y);
+            // Добавления обработчика события EnterLine
             calculatorForm.EnterLine += CalculatorForm_EnterLine;
             // Отключение кнопок
             beatBtn.Enabled = false;
             translateBtn.Enabled = false;
-            // Создание строк в таблице и в стеке
-            decisionTable.Rows.Add(8);
-            stackForm.Rows.Add(10); // 10 строк в стеке == 10 строк в таблице решений         
+            calculateBtn.Enabled = false;
+            // Добавление строк в таблицу принятия решения и в стек на форме
+            decisionTable.Rows.Add(8); // 8 строк в таблице принятия решений
+            stackForm.Rows.Add(12); // 12 строк в таблице стека        
             // Выделение верхушки стека
             this.stackForm.ClearSelection();
-            this.stackForm.Rows[9].Cells[0].Selected = true;
+            this.stackForm.Rows[11].Cells[0].Selected = true;
             // Добавление заголовков у строк в таблице решений
             this.decisionTable.Rows[0].HeaderCell.Value = "|";
             this.decisionTable.Rows[1].HeaderCell.Value = "+";
@@ -71,10 +76,16 @@ namespace model_lab_1
             originalLine.Text = displayLine;
 
             InputString = transformLine;
-
+            // Сброс индекса операции
+            indexOperation = 0;
             // Включение кнопок
             translateBtn.Enabled = true;
             beatBtn.Enabled = true;
+            // Очистка стека и указателя на вершину стека
+            Pointer = 0;
+            arrowLabel.Location = startArrowPos;
+            Stack.Clear();
+            ClearStack();
         }
 
         // Обработчик нажатия на кнопку "Ввести строку"
@@ -83,11 +94,11 @@ namespace model_lab_1
             // Открытие калькулятора
             calculatorForm.ShowDialog();
             postfixText.Text = "";
-            PostfixLine = "";
+            OutputString = "";
         }
 
         // Событие таймера для визуального отображения
-        // процесса преобразования в автоматичеком режиме
+        // процесса преобразования в автоматическом режиме
         private void timer1_Tick(object sender, EventArgs e)
         {
             // Если преобразование завершилось успешно или найдена ошибка
@@ -112,7 +123,7 @@ namespace model_lab_1
             timer1.Start();
         }
 
-        // Метод для получения значения строки в таблице решений
+        // Метод для получения значения строки в таблице принятия решений
         private byte GetRow(char elem)
         {
             byte row = 0;
@@ -126,20 +137,20 @@ namespace model_lab_1
                 case '^': row = 5; break;
                 case '(': row = 6; break;
                 case 'A': row = 7; break; // A = abs
-                case 'S': row = 7; break; // S = sin
+                case 'S': row = 7; break; // S = sqrt
                 case 'C': row = 7; break; // C = cos
-                case 'L': row = 7; break; // T = tg
+                case 'L': row = 7; break; // L = lg
             }
             return row;
         }
 
-        // Метод для получения значения столбца в таблице решений
+        // Метод для получения значения столбца в таблице принятия решений
         private byte GetColumn(char elem)
         {
             byte col = 0;
             switch (elem)
             {
-                case '|': col = 0; break; // Пустая входна строка
+                case '|': col = 0; break; // Пустая входная строка
                 case '+': col = 1; break;
                 case '-': col = 2; break;
                 case '*': col = 3; break;
@@ -148,9 +159,9 @@ namespace model_lab_1
                 case '(': col = 6; break;
                 case ')': col = 7; break;
                 case 'A': col = 8; break; // A = abs
-                case 'S': col = 8; break; // S = sin
+                case 'S': col = 8; break; // S = sqrt
                 case 'C': col = 8; break; // C = cos
-                case 'L': col = 8; break; // T = tg
+                case 'L': col = 8; break; // L = lg
                 default: col = 9; break;  // переменные      
             }
             return col;
@@ -164,33 +175,40 @@ namespace model_lab_1
                 case 0:
                     break;
                 case 1:
-                    Operation1(elem); // выполнение операции 1
+                    // 1 - поместить символ из входной строки в стек
+                    Operation1(elem);
                     RedrawStack(); // вывод содержимого стека на форму
                     break; // вышесказанное для каждого значения операции 
                 case 2:
+                    // 2 - извлечь символ из стека и отправить его в выходную строку
                     Operation2();
                     RedrawStack();
                     break;
                 case 3:
+                    // 3 - удалить символ ")" из входной строки и символ "(" из стека
                     Operation3();
                     RedrawStack();
                     break;
                 case 4:
+                    // 4 - успешное окончание преобразования
                     MessageBox.Show("Успешное окончание преобразования");
-                    countForm = new CountForm(PostfixLine);
                     createBtn.Enabled = true;
+                    calculateBtn.Enabled = true;
                     Stack.Clear(); // Очистка стека
                     break;
                 case 5:
+                    // 5 - ошибка скобочной структуры
                     MessageBox.Show("Ошибка скобочной структуры!");
                     Stack.Clear();
                     createBtn.Enabled = true;
                     break;
                 case 6:
+                    // 6 - переслать символ из входной строки в выходную строку
                     Operation6(elem);
                     RedrawStack();
                     break;
                 case 7:
+                    // 7 - ошибка: после функции отсутствует "("
                     MessageBox.Show("Ошибка: после функции отсутствует '('");
                     Stack.Clear();
                     createBtn.Enabled = true;
@@ -198,13 +216,13 @@ namespace model_lab_1
             }
         }
 
-        // Преобразование входной строки в постфиксную фомру
+        // Преобразование входной строки в постфиксную форму
         private void TransformInfixToPostfix()
         {
             // Верхний элемент стека
-            // Если стек пустой, т.е. указатель = 0, то равен символу пустого стека '|'
-            char currStackElem = (Pointer!= 0)
-                ? char.Parse(Stack[Pointer-1].ToString())
+            // Если стек пустой (т.е. указатель = 0), то элемент равен символу пустого стека '|'
+            char currStackElem = (Pointer != 0)
+                ? char.Parse(Stack[Pointer - 1].ToString())
                 : '|';
 
             // Текущий символ входной строки
@@ -212,7 +230,7 @@ namespace model_lab_1
                 ? char.Parse(InputString.Substring(0, 1))
                 : '|';
 
-            // Получение индекса операции
+            // Получение индекса операции в таблице принятия решений
             byte col = GetColumn(currInputStrElem);
             byte row = GetRow(currStackElem);
             indexOperation = DijkstraTable[row, col];
@@ -223,7 +241,7 @@ namespace model_lab_1
             DoOperation(indexOperation, currInputStrElem);
 
             // Вывод входной и выходной строк на форму
-            postfixText.Text = PostfixLine;
+            postfixText.Text = OutputString;
             infixText.Text = InputString;
         }
 
@@ -250,31 +268,50 @@ namespace model_lab_1
             if (Stack.Count > stackForm.RowCount)
                 stackForm.Rows.Add(Stack.Count - stackForm.RowCount);
 
-            //Stack.Reverse();
-
             // Заполнение стека на форме
             for (byte i = 0; i < Stack.Count; i++)
             {
                 stackForm.Rows[stackForm.Rows.Count - 1 - i].Cells[0].Value = Stack[i];
             }
 
-            // Выделение верхушки стека
+            // Выделение вершины стека
             if (Pointer != 0)
+            {
+                // Выделение строки - вершины стека в таблице-стеке на форме
                 stackForm.Rows[stackForm.RowCount - Pointer].Cells[0].Selected = true;
+                // Расчет новой координаты Y для указателя вершины стека на форме
+                int newY = startArrowPos.Y - 1 - ((Pointer - 1) * 20);
+                arrowLabel.Location = new Point(startArrowPos.X, newY);
+
+            }
+        }
+
+        // Метод для очистки стека на форме
+        private void ClearStack()
+        {
+            for (byte i = 0; i < stackForm.Rows.Count; i++)
+            {
+                stackForm.Rows[i].Cells[0].Value = "";
+            }
+            stackForm.Rows[stackForm.RowCount - 1].Cells[0].Selected = true;
         }
 
         // 1 – поместить символ из входной строки в стек
         public void Operation1(char symbol)
         {
+            // Если ячейка ранее была использована - перезапись
             if (Stack.Count > Pointer)
             {
                 Stack[Pointer] = symbol;
             }
+            // Если необходима новая ячейка
             else
             {
                 Stack.Add(symbol);
             }
+            // Увеличение указателя
             Pointer++;
+            // Удаление символа из строки, по которой проходит алгоритм
             InputString = (InputString.Length != 0)
                 ? InputString.Substring(1)
                 : "";
@@ -283,41 +320,44 @@ namespace model_lab_1
         // 2 – извлечь символ из стека и отправить его в выходную строку
         public void Operation2()
         {
-            PostfixLine += Stack[Pointer-1];
-            Stack[Pointer - 1] = '#'; // заменяем взятый символ на # - пустоту
-            //if (Stack.Count != 0)
-                Pointer--;
+            // Извлечение элемента из стека в выходную строку
+            OutputString += Stack[Pointer - 1];
+            Stack[Pointer - 1] = '#'; // Заменяем взятый символ на # - пустоту
+                                      //if (Stack.Count != 0) -- откуда это?
+            Pointer--;
         }
 
         // 3 – удалить символ ")" из входной строки и символ "(" из стека
         public void Operation3()
         {
-            //if (Stack.Peek() == '(')
-            Stack[Pointer-1] = '#'; // заменяем "(" на # - пустоту
-            Pointer--; 
-
+            Stack[Pointer - 1] = '#'; // Заменяем "(" на # - пустоту
+            Pointer--;
+            // Удаление символа ")" из строки, по которой проходит алгоритм
             InputString = InputString.Substring(InputString.IndexOf(')') + 1);
         }
 
         // 6 – переслать символ из входной строки в выходную строку
         public void Operation6(char symbol)
         {
-            PostfixLine += symbol;
-            InputString = (InputString.Length != 0) 
-                ? InputString.Substring(1) 
+            // Добавление символа в выходную строку
+            OutputString += symbol;
+            InputString = (InputString.Length != 0)
+                ? InputString.Substring(1)
                 : "";
         }
 
         // Обработчик нажатия на кнопку "Справка"
-        private void button1_Click(object sender, EventArgs e)
+        private void infoBtn_Click(object sender, EventArgs e)
         {
-            HelpForm Info = new HelpForm(); // форма для вывода справки
+            HelpForm Info = new HelpForm(); // форма для вывода справки 
             Info.Show();
         }
 
         private void calculateBtn_Click(object sender, EventArgs e)
         {
-            if(countForm != null) countForm.ShowDialog();
+            countForm = new CountForm(OutputString);
+            countForm.ShowDialog();
+            calculateBtn.Enabled = false;
         }
     }
 }
