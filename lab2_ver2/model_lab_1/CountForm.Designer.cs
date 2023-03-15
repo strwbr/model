@@ -29,10 +29,10 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.stackForm = new System.Windows.Forms.DataGridView();
             this.stackColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.arrowLabel = new System.Windows.Forms.Label();
@@ -60,51 +60,50 @@
             this.stackForm.AllowUserToResizeColumns = false;
             this.stackForm.AllowUserToResizeRows = false;
             this.stackForm.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Segoe UI", 14F);
-            dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.stackForm.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Segoe UI", 14F);
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.stackForm.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.stackForm.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.stackForm.ColumnHeadersVisible = false;
             this.stackForm.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.stackColumn});
-            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle7.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle7.Font = new System.Drawing.Font("Segoe UI", 12F);
-            dataGridViewCellStyle7.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.stackForm.DefaultCellStyle = dataGridViewCellStyle7;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 12F);
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.stackForm.DefaultCellStyle = dataGridViewCellStyle3;
             this.stackForm.Enabled = false;
-            this.stackForm.Location = new System.Drawing.Point(401, 328);
-            this.stackForm.Margin = new System.Windows.Forms.Padding(4);
+            this.stackForm.Location = new System.Drawing.Point(301, 266);
             this.stackForm.MultiSelect = false;
             this.stackForm.Name = "stackForm";
             this.stackForm.ReadOnly = true;
-            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle8.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle8.Font = new System.Drawing.Font("Segoe UI", 12F);
-            dataGridViewCellStyle8.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.stackForm.RowHeadersDefaultCellStyle = dataGridViewCellStyle8;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Segoe UI", 12F);
+            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.stackForm.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
             this.stackForm.RowHeadersVisible = false;
             this.stackForm.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToDisplayedHeaders;
             this.stackForm.RowTemplate.Height = 20;
-            this.stackForm.Size = new System.Drawing.Size(137, 300);
+            this.stackForm.Size = new System.Drawing.Size(103, 244);
             this.stackForm.TabIndex = 6;
             // 
             // stackColumn
             // 
             this.stackColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.stackColumn.DefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.stackColumn.DefaultCellStyle = dataGridViewCellStyle2;
             this.stackColumn.HeaderText = "Стек";
             this.stackColumn.MinimumWidth = 8;
             this.stackColumn.Name = "stackColumn";
@@ -115,10 +114,9 @@
             // 
             this.arrowLabel.AutoSize = true;
             this.arrowLabel.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
-            this.arrowLabel.Location = new System.Drawing.Point(364, 605);
-            this.arrowLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.arrowLabel.Location = new System.Drawing.Point(273, 492);
             this.arrowLabel.Name = "arrowLabel";
-            this.arrowLabel.Size = new System.Drawing.Size(29, 23);
+            this.arrowLabel.Size = new System.Drawing.Size(25, 19);
             this.arrowLabel.TabIndex = 13;
             this.arrowLabel.Text = "->";
             this.arrowLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -127,10 +125,10 @@
             // 
             this.translateBtn.AutoSize = true;
             this.translateBtn.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.translateBtn.Location = new System.Drawing.Point(765, 328);
-            this.translateBtn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.translateBtn.Location = new System.Drawing.Point(574, 266);
+            this.translateBtn.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.translateBtn.Name = "translateBtn";
-            this.translateBtn.Size = new System.Drawing.Size(136, 38);
+            this.translateBtn.Size = new System.Drawing.Size(102, 31);
             this.translateBtn.TabIndex = 24;
             this.translateBtn.Text = "Перевести";
             this.translateBtn.UseVisualStyleBackColor = true;
@@ -140,10 +138,10 @@
             // 
             this.beatBtn.AutoSize = true;
             this.beatBtn.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.beatBtn.Location = new System.Drawing.Point(765, 386);
-            this.beatBtn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.beatBtn.Location = new System.Drawing.Point(574, 314);
+            this.beatBtn.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.beatBtn.Name = "beatBtn";
-            this.beatBtn.Size = new System.Drawing.Size(136, 38);
+            this.beatBtn.Size = new System.Drawing.Size(102, 31);
             this.beatBtn.TabIndex = 23;
             this.beatBtn.Text = "Такт";
             this.beatBtn.UseVisualStyleBackColor = true;
@@ -153,10 +151,10 @@
             // 
             this.inputBtn.AutoSize = true;
             this.inputBtn.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.inputBtn.Location = new System.Drawing.Point(907, 64);
-            this.inputBtn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.inputBtn.Location = new System.Drawing.Point(680, 52);
+            this.inputBtn.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.inputBtn.Name = "inputBtn";
-            this.inputBtn.Size = new System.Drawing.Size(171, 41);
+            this.inputBtn.Size = new System.Drawing.Size(128, 33);
             this.inputBtn.TabIndex = 22;
             this.inputBtn.Text = "Ввести числа";
             this.inputBtn.UseVisualStyleBackColor = true;
@@ -166,10 +164,9 @@
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
-            this.label6.Location = new System.Drawing.Point(24, 16);
-            this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label6.Location = new System.Drawing.Point(18, 13);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(346, 23);
+            this.label6.Size = new System.Drawing.Size(294, 19);
             this.label6.TabIndex = 21;
             this.label6.Text = "Исходная строка в постфиксной форме:";
             this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -181,9 +178,10 @@
             this.originalLine.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.originalLine.Font = new System.Drawing.Font("Segoe UI", 14F);
             this.originalLine.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.originalLine.Location = new System.Drawing.Point(427, 9);
+            this.originalLine.Location = new System.Drawing.Point(320, 7);
+            this.originalLine.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.originalLine.Name = "originalLine";
-            this.originalLine.Size = new System.Drawing.Size(201, 34);
+            this.originalLine.Size = new System.Drawing.Size(161, 27);
             this.originalLine.TabIndex = 20;
             this.originalLine.Text = "Исходная строка";
             // 
@@ -195,11 +193,11 @@
             this.groupBox1.Controls.Add(this.label4);
             this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.groupBox1.Location = new System.Drawing.Point(17, 53);
-            this.groupBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.groupBox1.Location = new System.Drawing.Point(13, 43);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.groupBox1.Size = new System.Drawing.Size(884, 220);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox1.Size = new System.Drawing.Size(663, 179);
             this.groupBox1.TabIndex = 19;
             this.groupBox1.TabStop = false;
             // 
@@ -210,9 +208,10 @@
             this.postfixText.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.postfixText.Font = new System.Drawing.Font("Segoe UI", 14F);
             this.postfixText.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.postfixText.Location = new System.Drawing.Point(6, 62);
+            this.postfixText.Location = new System.Drawing.Point(4, 50);
+            this.postfixText.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.postfixText.Name = "postfixText";
-            this.postfixText.Size = new System.Drawing.Size(345, 34);
+            this.postfixText.Size = new System.Drawing.Size(272, 27);
             this.postfixText.TabIndex = 10;
             this.postfixText.Text = "Строка в постфиксной форме";
             // 
@@ -223,9 +222,10 @@
             this.resText.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.resText.Font = new System.Drawing.Font("Segoe UI", 14F);
             this.resText.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.resText.Location = new System.Drawing.Point(7, 157);
+            this.resText.Location = new System.Drawing.Point(5, 128);
+            this.resText.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.resText.Name = "resText";
-            this.resText.Size = new System.Drawing.Size(122, 34);
+            this.resText.Size = new System.Drawing.Size(98, 27);
             this.resText.TabIndex = 9;
             this.resText.Text = "Результат";
             // 
@@ -233,10 +233,9 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
-            this.label4.Location = new System.Drawing.Point(7, 120);
-            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label4.Location = new System.Drawing.Point(5, 98);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(93, 23);
+            this.label4.Size = new System.Drawing.Size(80, 19);
             this.label4.TabIndex = 8;
             this.label4.Text = "Результат:";
             this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -245,10 +244,9 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
-            this.label3.Location = new System.Drawing.Point(3, 29);
-            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label3.Location = new System.Drawing.Point(2, 24);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(264, 23);
+            this.label3.Size = new System.Drawing.Size(223, 19);
             this.label3.TabIndex = 7;
             this.label3.Text = "Строка в постфиксной форме:";
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -257,10 +255,9 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
-            this.label1.Location = new System.Drawing.Point(19, 302);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label1.Location = new System.Drawing.Point(14, 245);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(173, 23);
+            this.label1.Size = new System.Drawing.Size(148, 19);
             this.label1.TabIndex = 26;
             this.label1.Text = "Обозначения чисел";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -268,9 +265,10 @@
             // variableValuesBox
             // 
             this.variableValuesBox.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.variableValuesBox.Location = new System.Drawing.Point(17, 328);
+            this.variableValuesBox.Location = new System.Drawing.Point(13, 266);
+            this.variableValuesBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.variableValuesBox.Name = "variableValuesBox";
-            this.variableValuesBox.Size = new System.Drawing.Size(320, 305);
+            this.variableValuesBox.Size = new System.Drawing.Size(241, 249);
             this.variableValuesBox.TabIndex = 25;
             this.variableValuesBox.Text = "";
             // 
@@ -281,9 +279,9 @@
             // 
             // CountForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1100, 665);
+            this.ClientSize = new System.Drawing.Size(825, 540);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.variableValuesBox);
             this.Controls.Add(this.translateBtn);
@@ -294,8 +292,9 @@
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.arrowLabel);
             this.Controls.Add(this.stackForm);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "CountForm";
-            this.Text = "CountForm";
+            this.Text = "Вычисление выражения в постфикной форме";
             ((System.ComponentModel.ISupportInitialize)(this.stackForm)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();

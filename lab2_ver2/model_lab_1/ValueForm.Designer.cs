@@ -28,461 +28,451 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.inputGroupBox = new System.Windows.Forms.GroupBox();
-            this.groupBoxJ = new System.Windows.Forms.GroupBox();
-            this.textBox10 = new System.Windows.Forms.TextBox();
-            this.label10 = new System.Windows.Forms.Label();
-            this.groupBoxI = new System.Windows.Forms.GroupBox();
-            this.textBox9 = new System.Windows.Forms.TextBox();
-            this.label9 = new System.Windows.Forms.Label();
-            this.groupBoxH = new System.Windows.Forms.GroupBox();
-            this.textBox8 = new System.Windows.Forms.TextBox();
-            this.label8 = new System.Windows.Forms.Label();
-            this.groupBoxG = new System.Windows.Forms.GroupBox();
-            this.textBox7 = new System.Windows.Forms.TextBox();
-            this.label7 = new System.Windows.Forms.Label();
-            this.groupBoxF = new System.Windows.Forms.GroupBox();
-            this.textBox6 = new System.Windows.Forms.TextBox();
-            this.label6 = new System.Windows.Forms.Label();
-            this.groupBoxE = new System.Windows.Forms.GroupBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.label5 = new System.Windows.Forms.Label();
-            this.groupBoxD = new System.Windows.Forms.GroupBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.label4 = new System.Windows.Forms.Label();
-            this.groupBoxC = new System.Windows.Forms.GroupBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.groupBoxB = new System.Windows.Forms.GroupBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.groupBoxA = new System.Windows.Forms.GroupBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
             this.submitBtn = new System.Windows.Forms.Button();
-            this.inputGroupBox.SuspendLayout();
-            this.groupBoxJ.SuspendLayout();
-            this.groupBoxI.SuspendLayout();
-            this.groupBoxH.SuspendLayout();
-            this.groupBoxG.SuspendLayout();
-            this.groupBoxF.SuspendLayout();
-            this.groupBoxE.SuspendLayout();
-            this.groupBoxD.SuspendLayout();
-            this.groupBoxC.SuspendLayout();
-            this.groupBoxB.SuspendLayout();
-            this.groupBoxA.SuspendLayout();
+            this.inputPanel = new System.Windows.Forms.FlowLayoutPanel();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.textBox11 = new System.Windows.Forms.TextBox();
+            this.label11 = new System.Windows.Forms.Label();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.textBox12 = new System.Windows.Forms.TextBox();
+            this.label12 = new System.Windows.Forms.Label();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.textBox13 = new System.Windows.Forms.TextBox();
+            this.label13 = new System.Windows.Forms.Label();
+            this.panel4 = new System.Windows.Forms.Panel();
+            this.textBox14 = new System.Windows.Forms.TextBox();
+            this.label14 = new System.Windows.Forms.Label();
+            this.panel5 = new System.Windows.Forms.Panel();
+            this.textBox15 = new System.Windows.Forms.TextBox();
+            this.label15 = new System.Windows.Forms.Label();
+            this.panel6 = new System.Windows.Forms.Panel();
+            this.textBox16 = new System.Windows.Forms.TextBox();
+            this.label16 = new System.Windows.Forms.Label();
+            this.panel7 = new System.Windows.Forms.Panel();
+            this.textBox17 = new System.Windows.Forms.TextBox();
+            this.label17 = new System.Windows.Forms.Label();
+            this.panel8 = new System.Windows.Forms.Panel();
+            this.textBox18 = new System.Windows.Forms.TextBox();
+            this.label18 = new System.Windows.Forms.Label();
+            this.panel9 = new System.Windows.Forms.Panel();
+            this.textBox19 = new System.Windows.Forms.TextBox();
+            this.label19 = new System.Windows.Forms.Label();
+            this.panel10 = new System.Windows.Forms.Panel();
+            this.textBox20 = new System.Windows.Forms.TextBox();
+            this.label20 = new System.Windows.Forms.Label();
+            this.inputPanel.SuspendLayout();
+            this.panel1.SuspendLayout();
+            this.panel2.SuspendLayout();
+            this.panel3.SuspendLayout();
+            this.panel4.SuspendLayout();
+            this.panel5.SuspendLayout();
+            this.panel6.SuspendLayout();
+            this.panel7.SuspendLayout();
+            this.panel8.SuspendLayout();
+            this.panel9.SuspendLayout();
+            this.panel10.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // inputGroupBox
-            // 
-            this.inputGroupBox.Controls.Add(this.groupBoxJ);
-            this.inputGroupBox.Controls.Add(this.groupBoxI);
-            this.inputGroupBox.Controls.Add(this.groupBoxH);
-            this.inputGroupBox.Controls.Add(this.groupBoxG);
-            this.inputGroupBox.Controls.Add(this.groupBoxF);
-            this.inputGroupBox.Controls.Add(this.groupBoxE);
-            this.inputGroupBox.Controls.Add(this.groupBoxD);
-            this.inputGroupBox.Controls.Add(this.groupBoxC);
-            this.inputGroupBox.Controls.Add(this.groupBoxB);
-            this.inputGroupBox.Controls.Add(this.groupBoxA);
-            this.inputGroupBox.Location = new System.Drawing.Point(12, 12);
-            this.inputGroupBox.Name = "inputGroupBox";
-            this.inputGroupBox.Size = new System.Drawing.Size(760, 368);
-            this.inputGroupBox.TabIndex = 77;
-            this.inputGroupBox.TabStop = false;
-            // 
-            // groupBoxJ
-            // 
-            this.groupBoxJ.Controls.Add(this.textBox10);
-            this.groupBoxJ.Controls.Add(this.label10);
-            this.groupBoxJ.Location = new System.Drawing.Point(572, 33);
-            this.groupBoxJ.Name = "groupBoxJ";
-            this.groupBoxJ.Size = new System.Drawing.Size(178, 93);
-            this.groupBoxJ.TabIndex = 83;
-            this.groupBoxJ.TabStop = false;
-            // 
-            // textBox10
-            // 
-            this.textBox10.Font = new System.Drawing.Font("Segoe UI", 16F);
-            this.textBox10.Location = new System.Drawing.Point(68, 34);
-            this.textBox10.Name = "textBox10";
-            this.textBox10.Size = new System.Drawing.Size(90, 43);
-            this.textBox10.TabIndex = 62;
-            this.textBox10.Text = "0";
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Segoe UI", 16F, System.Drawing.FontStyle.Bold);
-            this.label10.Location = new System.Drawing.Point(3, 34);
-            this.label10.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(51, 37);
-            this.label10.TabIndex = 52;
-            this.label10.Text = "j =";
-            this.label10.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // groupBoxI
-            // 
-            this.groupBoxI.Controls.Add(this.textBox9);
-            this.groupBoxI.Controls.Add(this.label9);
-            this.groupBoxI.Location = new System.Drawing.Point(388, 242);
-            this.groupBoxI.Name = "groupBoxI";
-            this.groupBoxI.Size = new System.Drawing.Size(178, 93);
-            this.groupBoxI.TabIndex = 76;
-            this.groupBoxI.TabStop = false;
-            // 
-            // textBox9
-            // 
-            this.textBox9.Font = new System.Drawing.Font("Segoe UI", 16F);
-            this.textBox9.Location = new System.Drawing.Point(68, 34);
-            this.textBox9.Name = "textBox9";
-            this.textBox9.Size = new System.Drawing.Size(90, 43);
-            this.textBox9.TabIndex = 62;
-            this.textBox9.Text = "0";
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Segoe UI", 16F, System.Drawing.FontStyle.Bold);
-            this.label9.Location = new System.Drawing.Point(3, 34);
-            this.label9.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(51, 37);
-            this.label9.TabIndex = 52;
-            this.label9.Text = "i =";
-            this.label9.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // groupBoxH
-            // 
-            this.groupBoxH.Controls.Add(this.textBox8);
-            this.groupBoxH.Controls.Add(this.label8);
-            this.groupBoxH.Location = new System.Drawing.Point(388, 132);
-            this.groupBoxH.Name = "groupBoxH";
-            this.groupBoxH.Size = new System.Drawing.Size(178, 93);
-            this.groupBoxH.TabIndex = 84;
-            this.groupBoxH.TabStop = false;
-            // 
-            // textBox8
-            // 
-            this.textBox8.Font = new System.Drawing.Font("Segoe UI", 16F);
-            this.textBox8.Location = new System.Drawing.Point(68, 34);
-            this.textBox8.Name = "textBox8";
-            this.textBox8.Size = new System.Drawing.Size(90, 43);
-            this.textBox8.TabIndex = 62;
-            this.textBox8.Text = "0";
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Segoe UI", 16F, System.Drawing.FontStyle.Bold);
-            this.label8.Location = new System.Drawing.Point(3, 34);
-            this.label8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(59, 37);
-            this.label8.TabIndex = 52;
-            this.label8.Text = "h =";
-            this.label8.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // groupBoxG
-            // 
-            this.groupBoxG.Controls.Add(this.textBox7);
-            this.groupBoxG.Controls.Add(this.label7);
-            this.groupBoxG.Location = new System.Drawing.Point(388, 33);
-            this.groupBoxG.Name = "groupBoxG";
-            this.groupBoxG.Size = new System.Drawing.Size(178, 93);
-            this.groupBoxG.TabIndex = 77;
-            this.groupBoxG.TabStop = false;
-            // 
-            // textBox7
-            // 
-            this.textBox7.Font = new System.Drawing.Font("Segoe UI", 16F);
-            this.textBox7.Location = new System.Drawing.Point(68, 34);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(90, 43);
-            this.textBox7.TabIndex = 62;
-            this.textBox7.Text = "0";
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Segoe UI", 16F, System.Drawing.FontStyle.Bold);
-            this.label7.Location = new System.Drawing.Point(3, 34);
-            this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(60, 37);
-            this.label7.TabIndex = 52;
-            this.label7.Text = "g =";
-            this.label7.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // groupBoxF
-            // 
-            this.groupBoxF.Controls.Add(this.textBox6);
-            this.groupBoxF.Controls.Add(this.label6);
-            this.groupBoxF.Location = new System.Drawing.Point(204, 242);
-            this.groupBoxF.Name = "groupBoxF";
-            this.groupBoxF.Size = new System.Drawing.Size(178, 93);
-            this.groupBoxF.TabIndex = 78;
-            this.groupBoxF.TabStop = false;
-            // 
-            // textBox6
-            // 
-            this.textBox6.Font = new System.Drawing.Font("Segoe UI", 16F);
-            this.textBox6.Location = new System.Drawing.Point(68, 34);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(90, 43);
-            this.textBox6.TabIndex = 62;
-            this.textBox6.Text = "0";
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Segoe UI", 16F, System.Drawing.FontStyle.Bold);
-            this.label6.Location = new System.Drawing.Point(3, 34);
-            this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(53, 37);
-            this.label6.TabIndex = 52;
-            this.label6.Text = "f =";
-            this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // groupBoxE
-            // 
-            this.groupBoxE.Controls.Add(this.textBox5);
-            this.groupBoxE.Controls.Add(this.label5);
-            this.groupBoxE.Location = new System.Drawing.Point(204, 132);
-            this.groupBoxE.Name = "groupBoxE";
-            this.groupBoxE.Size = new System.Drawing.Size(178, 93);
-            this.groupBoxE.TabIndex = 79;
-            this.groupBoxE.TabStop = false;
-            // 
-            // textBox5
-            // 
-            this.textBox5.Font = new System.Drawing.Font("Segoe UI", 16F);
-            this.textBox5.Location = new System.Drawing.Point(68, 34);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(90, 43);
-            this.textBox5.TabIndex = 62;
-            this.textBox5.Text = "0";
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Segoe UI", 16F, System.Drawing.FontStyle.Bold);
-            this.label5.Location = new System.Drawing.Point(3, 34);
-            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(58, 37);
-            this.label5.TabIndex = 52;
-            this.label5.Text = "e =";
-            this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // groupBoxD
-            // 
-            this.groupBoxD.Controls.Add(this.textBox4);
-            this.groupBoxD.Controls.Add(this.label4);
-            this.groupBoxD.Location = new System.Drawing.Point(204, 33);
-            this.groupBoxD.Name = "groupBoxD";
-            this.groupBoxD.Size = new System.Drawing.Size(178, 93);
-            this.groupBoxD.TabIndex = 80;
-            this.groupBoxD.TabStop = false;
-            // 
-            // textBox4
-            // 
-            this.textBox4.Font = new System.Drawing.Font("Segoe UI", 16F);
-            this.textBox4.Location = new System.Drawing.Point(68, 34);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(90, 43);
-            this.textBox4.TabIndex = 62;
-            this.textBox4.Text = "0";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Segoe UI", 16F, System.Drawing.FontStyle.Bold);
-            this.label4.Location = new System.Drawing.Point(3, 34);
-            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(60, 37);
-            this.label4.TabIndex = 52;
-            this.label4.Text = "d =";
-            this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // groupBoxC
-            // 
-            this.groupBoxC.Controls.Add(this.textBox3);
-            this.groupBoxC.Controls.Add(this.label3);
-            this.groupBoxC.Location = new System.Drawing.Point(20, 242);
-            this.groupBoxC.Name = "groupBoxC";
-            this.groupBoxC.Size = new System.Drawing.Size(178, 93);
-            this.groupBoxC.TabIndex = 81;
-            this.groupBoxC.TabStop = false;
-            // 
-            // textBox3
-            // 
-            this.textBox3.Font = new System.Drawing.Font("Segoe UI", 16F);
-            this.textBox3.Location = new System.Drawing.Point(68, 34);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(90, 43);
-            this.textBox3.TabIndex = 62;
-            this.textBox3.Text = "0";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Segoe UI", 16F, System.Drawing.FontStyle.Bold);
-            this.label3.Location = new System.Drawing.Point(3, 34);
-            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(56, 37);
-            this.label3.TabIndex = 52;
-            this.label3.Text = "c =";
-            this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // groupBoxB
-            // 
-            this.groupBoxB.Controls.Add(this.textBox2);
-            this.groupBoxB.Controls.Add(this.label2);
-            this.groupBoxB.Location = new System.Drawing.Point(20, 132);
-            this.groupBoxB.Name = "groupBoxB";
-            this.groupBoxB.Size = new System.Drawing.Size(178, 93);
-            this.groupBoxB.TabIndex = 82;
-            this.groupBoxB.TabStop = false;
-            // 
-            // textBox2
-            // 
-            this.textBox2.Font = new System.Drawing.Font("Segoe UI", 16F);
-            this.textBox2.Location = new System.Drawing.Point(68, 34);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(90, 43);
-            this.textBox2.TabIndex = 62;
-            this.textBox2.Text = "0";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Segoe UI", 16F, System.Drawing.FontStyle.Bold);
-            this.label2.Location = new System.Drawing.Point(3, 34);
-            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(60, 37);
-            this.label2.TabIndex = 52;
-            this.label2.Text = "b =";
-            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // groupBoxA
-            // 
-            this.groupBoxA.Controls.Add(this.textBox1);
-            this.groupBoxA.Controls.Add(this.label1);
-            this.groupBoxA.Location = new System.Drawing.Point(20, 33);
-            this.groupBoxA.Name = "groupBoxA";
-            this.groupBoxA.Size = new System.Drawing.Size(178, 93);
-            this.groupBoxA.TabIndex = 75;
-            this.groupBoxA.TabStop = false;
-            // 
-            // textBox1
-            // 
-            this.textBox1.Font = new System.Drawing.Font("Segoe UI", 16F);
-            this.textBox1.Location = new System.Drawing.Point(68, 34);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(90, 43);
-            this.textBox1.TabIndex = 62;
-            this.textBox1.Text = "0";
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Segoe UI", 16F, System.Drawing.FontStyle.Bold);
-            this.label1.Location = new System.Drawing.Point(3, 34);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(58, 37);
-            this.label1.TabIndex = 52;
-            this.label1.Text = "a =";
-            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // submitBtn
             // 
             this.submitBtn.AutoSize = true;
             this.submitBtn.DialogResult = System.Windows.Forms.DialogResult.OK;
             this.submitBtn.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.submitBtn.Location = new System.Drawing.Point(601, 385);
-            this.submitBtn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.submitBtn.Location = new System.Drawing.Point(433, 207);
+            this.submitBtn.Margin = new System.Windows.Forms.Padding(2);
             this.submitBtn.Name = "submitBtn";
-            this.submitBtn.Size = new System.Drawing.Size(171, 41);
+            this.submitBtn.Size = new System.Drawing.Size(128, 33);
             this.submitBtn.TabIndex = 76;
             this.submitBtn.Text = "Подтвердить";
             this.submitBtn.UseVisualStyleBackColor = true;
             this.submitBtn.Click += new System.EventHandler(this.submitBtn_Click);
             // 
+            // inputPanel
+            // 
+            this.inputPanel.Controls.Add(this.panel1);
+            this.inputPanel.Controls.Add(this.panel2);
+            this.inputPanel.Controls.Add(this.panel3);
+            this.inputPanel.Controls.Add(this.panel4);
+            this.inputPanel.Controls.Add(this.panel5);
+            this.inputPanel.Controls.Add(this.panel6);
+            this.inputPanel.Controls.Add(this.panel7);
+            this.inputPanel.Controls.Add(this.panel8);
+            this.inputPanel.Controls.Add(this.panel9);
+            this.inputPanel.Controls.Add(this.panel10);
+            this.inputPanel.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
+            this.inputPanel.Location = new System.Drawing.Point(13, 12);
+            this.inputPanel.Name = "inputPanel";
+            this.inputPanel.Size = new System.Drawing.Size(548, 179);
+            this.inputPanel.TabIndex = 78;
+            // 
+            // panel1
+            // 
+            this.panel1.Controls.Add(this.textBox11);
+            this.panel1.Controls.Add(this.label11);
+            this.panel1.Location = new System.Drawing.Point(3, 3);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(130, 52);
+            this.panel1.TabIndex = 0;
+            // 
+            // textBox11
+            // 
+            this.textBox11.Font = new System.Drawing.Font("Segoe UI", 16F);
+            this.textBox11.Location = new System.Drawing.Point(59, 7);
+            this.textBox11.Margin = new System.Windows.Forms.Padding(2);
+            this.textBox11.Name = "textBox11";
+            this.textBox11.Size = new System.Drawing.Size(60, 36);
+            this.textBox11.TabIndex = 63;
+            this.textBox11.Text = "0";
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Font = new System.Drawing.Font("Segoe UI", 16F, System.Drawing.FontStyle.Bold);
+            this.label11.Location = new System.Drawing.Point(9, 10);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(47, 30);
+            this.label11.TabIndex = 53;
+            this.label11.Text = "a =";
+            this.label11.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // panel2
+            // 
+            this.panel2.Controls.Add(this.textBox12);
+            this.panel2.Controls.Add(this.label12);
+            this.panel2.Location = new System.Drawing.Point(3, 61);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(130, 52);
+            this.panel2.TabIndex = 1;
+            // 
+            // textBox12
+            // 
+            this.textBox12.Font = new System.Drawing.Font("Segoe UI", 16F);
+            this.textBox12.Location = new System.Drawing.Point(59, 7);
+            this.textBox12.Margin = new System.Windows.Forms.Padding(2);
+            this.textBox12.Name = "textBox12";
+            this.textBox12.Size = new System.Drawing.Size(60, 36);
+            this.textBox12.TabIndex = 63;
+            this.textBox12.Text = "0";
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Font = new System.Drawing.Font("Segoe UI", 16F, System.Drawing.FontStyle.Bold);
+            this.label12.Location = new System.Drawing.Point(9, 10);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(49, 30);
+            this.label12.TabIndex = 53;
+            this.label12.Text = "b =";
+            this.label12.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // panel3
+            // 
+            this.panel3.Controls.Add(this.textBox13);
+            this.panel3.Controls.Add(this.label13);
+            this.panel3.Location = new System.Drawing.Point(3, 119);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(130, 52);
+            this.panel3.TabIndex = 2;
+            // 
+            // textBox13
+            // 
+            this.textBox13.Font = new System.Drawing.Font("Segoe UI", 16F);
+            this.textBox13.Location = new System.Drawing.Point(59, 7);
+            this.textBox13.Margin = new System.Windows.Forms.Padding(2);
+            this.textBox13.Name = "textBox13";
+            this.textBox13.Size = new System.Drawing.Size(60, 36);
+            this.textBox13.TabIndex = 63;
+            this.textBox13.Text = "0";
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Font = new System.Drawing.Font("Segoe UI", 16F, System.Drawing.FontStyle.Bold);
+            this.label13.Location = new System.Drawing.Point(9, 10);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(46, 30);
+            this.label13.TabIndex = 53;
+            this.label13.Text = "c =";
+            this.label13.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // panel4
+            // 
+            this.panel4.Controls.Add(this.textBox14);
+            this.panel4.Controls.Add(this.label14);
+            this.panel4.Location = new System.Drawing.Point(139, 3);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(130, 52);
+            this.panel4.TabIndex = 3;
+            // 
+            // textBox14
+            // 
+            this.textBox14.Font = new System.Drawing.Font("Segoe UI", 16F);
+            this.textBox14.Location = new System.Drawing.Point(59, 7);
+            this.textBox14.Margin = new System.Windows.Forms.Padding(2);
+            this.textBox14.Name = "textBox14";
+            this.textBox14.Size = new System.Drawing.Size(60, 36);
+            this.textBox14.TabIndex = 63;
+            this.textBox14.Text = "0";
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Font = new System.Drawing.Font("Segoe UI", 16F, System.Drawing.FontStyle.Bold);
+            this.label14.Location = new System.Drawing.Point(9, 10);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(49, 30);
+            this.label14.TabIndex = 53;
+            this.label14.Text = "d =";
+            this.label14.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // panel5
+            // 
+            this.panel5.Controls.Add(this.textBox15);
+            this.panel5.Controls.Add(this.label15);
+            this.panel5.Location = new System.Drawing.Point(139, 61);
+            this.panel5.Name = "panel5";
+            this.panel5.Size = new System.Drawing.Size(130, 52);
+            this.panel5.TabIndex = 4;
+            // 
+            // textBox15
+            // 
+            this.textBox15.Font = new System.Drawing.Font("Segoe UI", 16F);
+            this.textBox15.Location = new System.Drawing.Point(59, 7);
+            this.textBox15.Margin = new System.Windows.Forms.Padding(2);
+            this.textBox15.Name = "textBox15";
+            this.textBox15.Size = new System.Drawing.Size(60, 36);
+            this.textBox15.TabIndex = 63;
+            this.textBox15.Text = "0";
+            // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.Font = new System.Drawing.Font("Segoe UI", 16F, System.Drawing.FontStyle.Bold);
+            this.label15.Location = new System.Drawing.Point(9, 10);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(47, 30);
+            this.label15.TabIndex = 53;
+            this.label15.Text = "e =";
+            this.label15.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // panel6
+            // 
+            this.panel6.Controls.Add(this.textBox16);
+            this.panel6.Controls.Add(this.label16);
+            this.panel6.Location = new System.Drawing.Point(139, 119);
+            this.panel6.Name = "panel6";
+            this.panel6.Size = new System.Drawing.Size(130, 52);
+            this.panel6.TabIndex = 5;
+            // 
+            // textBox16
+            // 
+            this.textBox16.Font = new System.Drawing.Font("Segoe UI", 16F);
+            this.textBox16.Location = new System.Drawing.Point(59, 7);
+            this.textBox16.Margin = new System.Windows.Forms.Padding(2);
+            this.textBox16.Name = "textBox16";
+            this.textBox16.Size = new System.Drawing.Size(60, 36);
+            this.textBox16.TabIndex = 63;
+            this.textBox16.Text = "0";
+            // 
+            // label16
+            // 
+            this.label16.AutoSize = true;
+            this.label16.Font = new System.Drawing.Font("Segoe UI", 16F, System.Drawing.FontStyle.Bold);
+            this.label16.Location = new System.Drawing.Point(9, 10);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(43, 30);
+            this.label16.TabIndex = 53;
+            this.label16.Text = "f =";
+            this.label16.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // panel7
+            // 
+            this.panel7.Controls.Add(this.textBox17);
+            this.panel7.Controls.Add(this.label17);
+            this.panel7.Location = new System.Drawing.Point(275, 3);
+            this.panel7.Name = "panel7";
+            this.panel7.Size = new System.Drawing.Size(130, 52);
+            this.panel7.TabIndex = 6;
+            // 
+            // textBox17
+            // 
+            this.textBox17.Font = new System.Drawing.Font("Segoe UI", 16F);
+            this.textBox17.Location = new System.Drawing.Point(59, 7);
+            this.textBox17.Margin = new System.Windows.Forms.Padding(2);
+            this.textBox17.Name = "textBox17";
+            this.textBox17.Size = new System.Drawing.Size(60, 36);
+            this.textBox17.TabIndex = 63;
+            this.textBox17.Text = "0";
+            // 
+            // label17
+            // 
+            this.label17.AutoSize = true;
+            this.label17.Font = new System.Drawing.Font("Segoe UI", 16F, System.Drawing.FontStyle.Bold);
+            this.label17.Location = new System.Drawing.Point(9, 10);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(49, 30);
+            this.label17.TabIndex = 53;
+            this.label17.Text = "g =";
+            this.label17.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // panel8
+            // 
+            this.panel8.Controls.Add(this.textBox18);
+            this.panel8.Controls.Add(this.label18);
+            this.panel8.Location = new System.Drawing.Point(275, 61);
+            this.panel8.Name = "panel8";
+            this.panel8.Size = new System.Drawing.Size(130, 52);
+            this.panel8.TabIndex = 7;
+            // 
+            // textBox18
+            // 
+            this.textBox18.Font = new System.Drawing.Font("Segoe UI", 16F);
+            this.textBox18.Location = new System.Drawing.Point(59, 7);
+            this.textBox18.Margin = new System.Windows.Forms.Padding(2);
+            this.textBox18.Name = "textBox18";
+            this.textBox18.Size = new System.Drawing.Size(60, 36);
+            this.textBox18.TabIndex = 63;
+            this.textBox18.Text = "0";
+            // 
+            // label18
+            // 
+            this.label18.AutoSize = true;
+            this.label18.Font = new System.Drawing.Font("Segoe UI", 16F, System.Drawing.FontStyle.Bold);
+            this.label18.Location = new System.Drawing.Point(9, 10);
+            this.label18.Name = "label18";
+            this.label18.Size = new System.Drawing.Size(48, 30);
+            this.label18.TabIndex = 53;
+            this.label18.Text = "h =";
+            this.label18.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // panel9
+            // 
+            this.panel9.Controls.Add(this.textBox19);
+            this.panel9.Controls.Add(this.label19);
+            this.panel9.Location = new System.Drawing.Point(275, 119);
+            this.panel9.Name = "panel9";
+            this.panel9.Size = new System.Drawing.Size(130, 52);
+            this.panel9.TabIndex = 8;
+            // 
+            // textBox19
+            // 
+            this.textBox19.Font = new System.Drawing.Font("Segoe UI", 16F);
+            this.textBox19.Location = new System.Drawing.Point(59, 7);
+            this.textBox19.Margin = new System.Windows.Forms.Padding(2);
+            this.textBox19.Name = "textBox19";
+            this.textBox19.Size = new System.Drawing.Size(60, 36);
+            this.textBox19.TabIndex = 63;
+            this.textBox19.Text = "0";
+            // 
+            // label19
+            // 
+            this.label19.AutoSize = true;
+            this.label19.Font = new System.Drawing.Font("Segoe UI", 16F, System.Drawing.FontStyle.Bold);
+            this.label19.Location = new System.Drawing.Point(9, 10);
+            this.label19.Name = "label19";
+            this.label19.Size = new System.Drawing.Size(41, 30);
+            this.label19.TabIndex = 53;
+            this.label19.Text = "i =";
+            this.label19.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // panel10
+            // 
+            this.panel10.Controls.Add(this.textBox20);
+            this.panel10.Controls.Add(this.label20);
+            this.panel10.Location = new System.Drawing.Point(411, 3);
+            this.panel10.Name = "panel10";
+            this.panel10.Size = new System.Drawing.Size(130, 52);
+            this.panel10.TabIndex = 9;
+            // 
+            // textBox20
+            // 
+            this.textBox20.Font = new System.Drawing.Font("Segoe UI", 16F);
+            this.textBox20.Location = new System.Drawing.Point(59, 7);
+            this.textBox20.Margin = new System.Windows.Forms.Padding(2);
+            this.textBox20.Name = "textBox20";
+            this.textBox20.Size = new System.Drawing.Size(60, 36);
+            this.textBox20.TabIndex = 63;
+            this.textBox20.Text = "0";
+            // 
+            // label20
+            // 
+            this.label20.AutoSize = true;
+            this.label20.Font = new System.Drawing.Font("Segoe UI", 16F, System.Drawing.FontStyle.Bold);
+            this.label20.Location = new System.Drawing.Point(9, 10);
+            this.label20.Name = "label20";
+            this.label20.Size = new System.Drawing.Size(41, 30);
+            this.label20.TabIndex = 53;
+            this.label20.Text = "j =";
+            this.label20.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // ValueForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(790, 439);
-            this.Controls.Add(this.inputGroupBox);
+            this.ClientSize = new System.Drawing.Size(579, 259);
+            this.Controls.Add(this.inputPanel);
             this.Controls.Add(this.submitBtn);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "ValueForm";
-            this.Text = "ValueForm";
-            this.inputGroupBox.ResumeLayout(false);
-            this.groupBoxJ.ResumeLayout(false);
-            this.groupBoxJ.PerformLayout();
-            this.groupBoxI.ResumeLayout(false);
-            this.groupBoxI.PerformLayout();
-            this.groupBoxH.ResumeLayout(false);
-            this.groupBoxH.PerformLayout();
-            this.groupBoxG.ResumeLayout(false);
-            this.groupBoxG.PerformLayout();
-            this.groupBoxF.ResumeLayout(false);
-            this.groupBoxF.PerformLayout();
-            this.groupBoxE.ResumeLayout(false);
-            this.groupBoxE.PerformLayout();
-            this.groupBoxD.ResumeLayout(false);
-            this.groupBoxD.PerformLayout();
-            this.groupBoxC.ResumeLayout(false);
-            this.groupBoxC.PerformLayout();
-            this.groupBoxB.ResumeLayout(false);
-            this.groupBoxB.PerformLayout();
-            this.groupBoxA.ResumeLayout(false);
-            this.groupBoxA.PerformLayout();
+            this.Text = "Ввод значений переменных";
+            this.inputPanel.ResumeLayout(false);
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
+            this.panel2.ResumeLayout(false);
+            this.panel2.PerformLayout();
+            this.panel3.ResumeLayout(false);
+            this.panel3.PerformLayout();
+            this.panel4.ResumeLayout(false);
+            this.panel4.PerformLayout();
+            this.panel5.ResumeLayout(false);
+            this.panel5.PerformLayout();
+            this.panel6.ResumeLayout(false);
+            this.panel6.PerformLayout();
+            this.panel7.ResumeLayout(false);
+            this.panel7.PerformLayout();
+            this.panel8.ResumeLayout(false);
+            this.panel8.PerformLayout();
+            this.panel9.ResumeLayout(false);
+            this.panel9.PerformLayout();
+            this.panel10.ResumeLayout(false);
+            this.panel10.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.GroupBox inputGroupBox;
-        private System.Windows.Forms.GroupBox groupBoxJ;
-        private System.Windows.Forms.TextBox textBox10;
-        private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.GroupBox groupBoxI;
-        private System.Windows.Forms.TextBox textBox9;
-        private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.GroupBox groupBoxH;
-        private System.Windows.Forms.TextBox textBox8;
-        private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.GroupBox groupBoxG;
-        private System.Windows.Forms.TextBox textBox7;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.GroupBox groupBoxF;
-        private System.Windows.Forms.TextBox textBox6;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.GroupBox groupBoxE;
-        private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.GroupBox groupBoxD;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.GroupBox groupBoxC;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.GroupBox groupBoxB;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.GroupBox groupBoxA;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button submitBtn;
+        private System.Windows.Forms.FlowLayoutPanel inputPanel;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.TextBox textBox11;
+        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.TextBox textBox12;
+        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.TextBox textBox13;
+        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.Panel panel4;
+        private System.Windows.Forms.TextBox textBox14;
+        private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.Panel panel5;
+        private System.Windows.Forms.TextBox textBox15;
+        private System.Windows.Forms.Label label15;
+        private System.Windows.Forms.Panel panel6;
+        private System.Windows.Forms.TextBox textBox16;
+        private System.Windows.Forms.Label label16;
+        private System.Windows.Forms.Panel panel7;
+        private System.Windows.Forms.TextBox textBox17;
+        private System.Windows.Forms.Label label17;
+        private System.Windows.Forms.Panel panel8;
+        private System.Windows.Forms.TextBox textBox18;
+        private System.Windows.Forms.Label label18;
+        private System.Windows.Forms.Panel panel9;
+        private System.Windows.Forms.TextBox textBox19;
+        private System.Windows.Forms.Label label19;
+        private System.Windows.Forms.Panel panel10;
+        private System.Windows.Forms.TextBox textBox20;
+        private System.Windows.Forms.Label label20;
     }
 }
