@@ -409,7 +409,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(579, 259);
+            this.ClientSize = new System.Drawing.Size(572, 259);
             this.Controls.Add(this.inputPanel);
             this.Controls.Add(this.submitBtn);
             this.Margin = new System.Windows.Forms.Padding(2);
