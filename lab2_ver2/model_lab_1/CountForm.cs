@@ -11,7 +11,7 @@ namespace model_lab_1
         // Словарь значений переменных
         public Dictionary<char, double> operandValues = new Dictionary<char, double>();
         // Начальная позиция указателя вершины стека на форме
-        private Point startArrowPos; 
+        private Point startArrowPos;
         // Постфиксная строка
         private string PostfixLine;
 
@@ -45,7 +45,7 @@ namespace model_lab_1
             model.PostfixLine = PostfixLine;
             postfixText.Text = PostfixLine;
             resText.Text = "";
-            
+
             // Открытие окна ввода значений переменных
             ValueForm valueForm = new ValueForm(operandValues);
             // Если на форме была нажата кнопка "Подтвердить"
@@ -125,7 +125,7 @@ namespace model_lab_1
                     resText.Text = model.ResText;
                     MessageBox.Show("Успешное окончание вычисления!");
                     beatBtn.Enabled = true;
-                    translateBtn.Enabled=true;
+                    translateBtn.Enabled = true;
                     inputBtn.Enabled = true;
                     break;
                 case 2:
@@ -156,7 +156,8 @@ namespace model_lab_1
             int index = model.CountExpression();
             RedrawForm();
             // Если преобразование завершилось успешно или найдена ошибка
-            if (index == 1 || index == 2 || index == 3 || index == 4)
+            //if (index == 1 || index == 2 || index == 3 || index == 4)
+            if (index > 0)
             {
                 // Отключение таймера
                 timer1.Enabled = false;
