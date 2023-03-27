@@ -15,11 +15,42 @@ namespace model_lab_3
         public Form1()
         {
             InitializeComponent();
+
+            // проверка графиков
+            for (int i = 0; i < 99; i++)
+            {
+                chart1.Series[0].Points.AddXY(i, 3);
+                chart2.Series[0].Points.AddXY(i, 3);
+            }
+            // проверка поля вывода статистики
+            StatField.Text = "wdsedfg\n";
+            StatField.Text += "wdsedfg\n";
+            StatField.Text += "wdsedfg\n";
+            StatField.Text += "wdsedfg\n";
         }
 
-        private void radioButton2_CheckedChanged(object sender, EventArgs e)
+        // Обработчик изменения содержимого поля ввода длины последовательности
+        private void InputSeqLenTb_TextChanged(object sender, EventArgs e)
         {
+            int num = Convert.ToInt32(InputSeqLenTb.Text);
+            bool accepted = CheckInputValue(num);
+            InputSeqLenTb.BackColor = accepted ? Color.White : Color.Red;
+            StartBtn.Enabled = accepted;
+        }
 
+        // Обработчик изменения содержимого поля ввода объема выборки для Pi
+        private void InputPiTb_TextChanged(object sender, EventArgs e)
+        {
+            int num = Convert.ToInt32(InputPiTb.Text);
+            bool accepted = CheckInputValue(num);
+            InputPiTb.BackColor = accepted ? Color.White : Color.Red;
+            CountPiBtn.Enabled = accepted;
+        }
+
+        // Проверка введенной длины последовательности на принадлежность диапазону [100; 10000] 
+        private bool CheckInputValue(int num)
+        {
+            return num >= 100 && num <= 10000;
         }
     }
 }
