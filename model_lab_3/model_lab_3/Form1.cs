@@ -13,7 +13,7 @@ namespace model_lab_3
 {
     public partial class Form1 : Form
     {
-        Generator generator;
+        //Generator generator;
 
         public Form1()
         {
@@ -26,10 +26,7 @@ namespace model_lab_3
             //    chart2.Series[0].Points.AddXY(i, 3);
             //}
             // проверка поля вывода статистики
-            StatField.Text = "wdsedfg\n";
-            StatField.Text += "wdsedfg\n";
-            StatField.Text += "wdsedfg\n";
-            StatField.Text += "wdsedfg\n";
+            StatField.Text = "";
         }
 
         // Генерация цвета для графика
@@ -75,8 +72,14 @@ namespace model_lab_3
 
         private void StartBtn_Click(object sender, EventArgs e)
         {
+            if (chart1.Series.Count == 6)
+            {
+                MessageBox.Show("Превышено число ввода допустимых длин последовательностию. Диаграммы будут очищены. Пожалуйста, повторно нажмите на кнопку Запуск "); // Диаграммы???
+                Clear();
+                return;
+            }
             int seqLength = Convert.ToInt32(InputSeqLenTb.Text);
-            generator = new Generator(seqLength);
+            Generator generator = new Generator(seqLength);
             if (SysRb.Checked)
             {
                 generator.Generate(Generator.SYSTEM_RANDOM);
@@ -87,29 +90,35 @@ namespace model_lab_3
                 generator.Generate(Generator.LEMER_RANDOM);
                 // lemer random
             }
-            DrawCharts(generator.Probability);
-
+            DrawCharts(generator.Probability, generator.DistributionFunction);
+            ShowStatistics(seqLength, generator.MathExpect, generator.Dispersion);
         }
 
-        private void DrawCharts(double[] data)
+        private void ShowStatistics(int len, double mathExpect, double dispersion)
         {
-            if (chart1.Series.Count == 6)
+            StatField.Text += "Длина посл-ти: " + len.ToString() + "\n";
+            StatField.Text += "Мат. ожидание: " + mathExpect.ToString() + "\n";
+            StatField.Text += "Дисперсия: " + dispersion.ToString() + "\n";
+            StatField.Text += "-------------------------\n";
+        }
+
+        private void DrawCharts(double[] dataForChart1, double[] dataForChart2)
+        {
+            Series series1 = new Series();
+            Series series2 = new Series();
+            series2.ChartType = SeriesChartType.StepLine;
+            Color color = GenerateColor();
+            series1.Color = color;
+            series2.Color = color;
+            for (int i = 0; i < 100; i++)
             {
-                MessageBox.Show("Превышено число ввода допустимых длин последовательностию. Диаграммы будут очищены. Пожалуйста, повторно нажмите на кнопку Запуск "); // Диаграммы???
-                chart1.Series.Clear();
+                series1.Points.AddXY(i, dataForChart1[i]);
+                series2.Points.AddXY(i, dataForChart2[i]);
             }
-            else
-            {
-                Series series = new Series();
-                series.Color = GenerateColor();
-                for (int i = 0; i < 100; i++)
-                {
-                    series.Points.AddXY(i, data[i]);
-                }
-                //series.IsXValueIndexed = false; -- не работает
-                chart1.Series.Add(series);
-            }
-            
+            //series.IsXValueIndexed = false; -- не работает
+            chart1.Series.Add(series1);
+            chart2.Series.Add(series2);
+
 
 
 
@@ -119,6 +128,31 @@ namespace model_lab_3
             //{
             //    chart1.Series[0].Points.AddXY(i, data[i]);
             //}
+        }
+
+        private void CountPiBtn_Click(object sender, EventArgs e)
+        {
+            Generator generator = new Generator(Convert.ToInt32(InputPiTb.Text));
+            double temp = generator.Pi();
+            PiLbl.Text = temp.ToString();
+        }
+
+        private void ClearChartSeries()
+        {
+            chart1.Series.Clear();
+            chart2.Series.Clear();
+        }
+
+        private void Clear()
+        {
+            ClearChartSeries();
+            StatField.Text = "";
+            InputSeqLenTb.Text = "100";
+        }
+
+        private void ClearBtn_Click(object sender, EventArgs e)
+        {
+            Clear();
         }
     }
 }
