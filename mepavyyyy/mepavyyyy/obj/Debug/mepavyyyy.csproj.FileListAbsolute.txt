@@ -1,0 +1,11 @@
+C:\Users\MSI\source\repos\mepavyyyy\mepavyyyy\bin\Debug\mepavyyyy.exe.config
+C:\Users\MSI\source\repos\mepavyyyy\mepavyyyy\bin\Debug\mepavyyyy.exe
+C:\Users\MSI\source\repos\mepavyyyy\mepavyyyy\bin\Debug\mepavyyyy.pdb
+C:\Users\MSI\source\repos\mepavyyyy\mepavyyyy\obj\Debug\mepavyyyy.csproj.AssemblyReference.cache
+C:\Users\MSI\source\repos\mepavyyyy\mepavyyyy\obj\Debug\mepavyyyy.csproj.SuggestedBindingRedirects.cache
+C:\Users\MSI\source\repos\mepavyyyy\mepavyyyy\obj\Debug\mepavyyyy.Form1.resources
+C:\Users\MSI\source\repos\mepavyyyy\mepavyyyy\obj\Debug\mepavyyyy.Properties.Resources.resources
+C:\Users\MSI\source\repos\mepavyyyy\mepavyyyy\obj\Debug\mepavyyyy.csproj.GenerateResource.cache
+C:\Users\MSI\source\repos\mepavyyyy\mepavyyyy\obj\Debug\mepavyyyy.csproj.CoreCompileInputs.cache
+C:\Users\MSI\source\repos\mepavyyyy\mepavyyyy\obj\Debug\mepavyyyy.exe
+C:\Users\MSI\source\repos\mepavyyyy\mepavyyyy\obj\Debug\mepavyyyy.pdb
