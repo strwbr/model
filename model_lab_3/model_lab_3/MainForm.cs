@@ -11,11 +11,11 @@ using System.Windows.Forms.DataVisualization.Charting;
 
 namespace model_lab_3
 {
-    public partial class Form1 : Form
+    public partial class MainForm : Form
     {
         //Generator generator;
 
-        public Form1()
+        public MainForm()
         {
             InitializeComponent();
 
@@ -73,7 +73,7 @@ namespace model_lab_3
 
         private void StartBtn_Click(object sender, EventArgs e)
         {
-            // Если построено 6 графиков
+            // Если построено 6 гистограмм/графиков
             if (chartProbability.Series.Count == 6)
             {
                 // Очистка диаграммы
@@ -95,7 +95,7 @@ namespace model_lab_3
                 // генератор на основе метода Лемера
                 generator.Generate(Generator.LEMER_RANDOM);
             }
-            // Отрисовка гистограмм функций f(X), F(X)
+            // Отрисовка гистограммы и графика функций f(X) и F(X)
             DrawCharts(generator.Probability, generator.DistributionFunction);
             // Отображение статистики
             ShowStatistics(seqLength, generator.MathExpect, generator.Dispersion);
@@ -110,14 +110,14 @@ namespace model_lab_3
             StatField.Text += "-------------------------\n";
         }
 
-        // Визуализация гистограмм функций f(X) и F(X)
+        // Визуализация гистограмм и графиков функций f(X) и F(X)
         private void DrawCharts(double[] dataForChart1, double[] dataForChart2)
         {
             Series seriesForChart1 = new Series();
             Series seriesForChart2 = new Series();
             seriesForChart2.ChartType = SeriesChartType.StepLine;
 
-            // Задание цвета для гистограмм (цвет одинаковый для обеих графиков)
+            // Задание цвета для гистограммы и графика (цвет одинаковый)
             Color color = GenerateColor();
             seriesForChart1.Color = color;
             seriesForChart2.Color = color;

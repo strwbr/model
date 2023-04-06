@@ -90,13 +90,13 @@ namespace model_lab_3
         // Генерация на основе системного генератора
         private void GenerateBySystem()
         {
-            Probability = new double[seqLength];
+            Probability = new double[MAX_NOT_INCLUSIVE];
             // Инициализация системного генератора
             Random random = new Random();
             // Генерация целых числа в диапазоне [0; 99] и подсчет кол-во появлений каждого сгенерированного числа
             for (int i = 0; i < seqLength; i++)
             {
-                Probability[random.Next(seqLength)]++;
+                Probability[random.Next(MAX_NOT_INCLUSIVE)]++;
             }
             // Подсчет частоты появления
             Frequency();
@@ -105,7 +105,7 @@ namespace model_lab_3
         // Генерация на основе метода Лемера
         private void GenerateByLemer()
         {
-            Probability = new double[seqLength];
+            Probability = new double[MAX_NOT_INCLUSIVE];
            
             for (int i = 0; i < seqLength; i++)
             {
@@ -124,7 +124,7 @@ namespace model_lab_3
             return index;
         }
 
-        // Частота появления каждого сгенерированного числа
+        // Частота появления каждого числа в диапазоне [0; 99]
         private void Frequency()
         {
             for (int i = 0; i < Probability.Length; i++)
@@ -163,7 +163,7 @@ namespace model_lab_3
                 arr[i] = Lemer(x);
                 x = arr[i] * 65535;
             }
-            // Подсчет кол-ва СВ, попаших в единичную окружность
+            // Подсчет кол-ва сгенерированных чисел, попавших в единичную окружность
             for(int i = 0; i < seqLength/2; i++)
             {
                 if (Math.Pow(arr[i], 2) + Math.Pow(arr[i + 1], 2) < 1)
