@@ -28,8 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea3 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea4 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label3 = new System.Windows.Forms.Label();
             this.StatField = new System.Windows.Forms.RichTextBox();
@@ -48,6 +48,8 @@
             this.chartDistributionFunc = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
+            this.legendPanel = new System.Windows.Forms.FlowLayoutPanel();
+            this.label6 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.GeneratorTypeGB.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.chartProbability)).BeginInit();
@@ -238,15 +240,15 @@
             // 
             this.chartProbability.BorderlineColor = System.Drawing.Color.Black;
             this.chartProbability.BorderlineDashStyle = System.Windows.Forms.DataVisualization.Charting.ChartDashStyle.Solid;
-            chartArea3.AxisX.MajorGrid.LineColor = System.Drawing.Color.LightGray;
-            chartArea3.AxisX.Maximum = 100D;
-            chartArea3.AxisX.Minimum = 0D;
-            chartArea3.AxisY.MajorGrid.LineColor = System.Drawing.Color.LightGray;
-            chartArea3.Name = "ChartArea1";
-            this.chartProbability.ChartAreas.Add(chartArea3);
+            chartArea1.AxisX.MajorGrid.LineColor = System.Drawing.Color.LightGray;
+            chartArea1.AxisX.Maximum = 100D;
+            chartArea1.AxisX.Minimum = 0D;
+            chartArea1.AxisY.MajorGrid.LineColor = System.Drawing.Color.LightGray;
+            chartArea1.Name = "ChartArea1";
+            this.chartProbability.ChartAreas.Add(chartArea1);
             this.chartProbability.Location = new System.Drawing.Point(226, 8);
             this.chartProbability.Name = "chartProbability";
-            this.chartProbability.Size = new System.Drawing.Size(702, 304);
+            this.chartProbability.Size = new System.Drawing.Size(659, 304);
             this.chartProbability.TabIndex = 1;
             this.chartProbability.Text = "chart1";
             // 
@@ -254,15 +256,15 @@
             // 
             this.chartDistributionFunc.BorderlineColor = System.Drawing.Color.Black;
             this.chartDistributionFunc.BorderlineDashStyle = System.Windows.Forms.DataVisualization.Charting.ChartDashStyle.Solid;
-            chartArea4.AxisX.MajorGrid.LineColor = System.Drawing.Color.LightGray;
-            chartArea4.AxisX.Maximum = 100D;
-            chartArea4.AxisX.Minimum = 0D;
-            chartArea4.AxisY.MajorGrid.LineColor = System.Drawing.Color.LightGray;
-            chartArea4.Name = "ChartArea1";
-            this.chartDistributionFunc.ChartAreas.Add(chartArea4);
+            chartArea2.AxisX.MajorGrid.LineColor = System.Drawing.Color.LightGray;
+            chartArea2.AxisX.Maximum = 100D;
+            chartArea2.AxisX.Minimum = 0D;
+            chartArea2.AxisY.MajorGrid.LineColor = System.Drawing.Color.LightGray;
+            chartArea2.Name = "ChartArea1";
+            this.chartDistributionFunc.ChartAreas.Add(chartArea2);
             this.chartDistributionFunc.Location = new System.Drawing.Point(226, 318);
             this.chartDistributionFunc.Name = "chartDistributionFunc";
-            this.chartDistributionFunc.Size = new System.Drawing.Size(702, 304);
+            this.chartDistributionFunc.Size = new System.Drawing.Size(659, 304);
             this.chartDistributionFunc.TabIndex = 2;
             this.chartDistributionFunc.Text = "chart2";
             // 
@@ -288,12 +290,34 @@
             this.label5.TabIndex = 4;
             this.label5.Text = "F(x)";
             // 
+            // legendPanel
+            // 
+            this.legendPanel.Location = new System.Drawing.Point(893, 30);
+            this.legendPanel.Margin = new System.Windows.Forms.Padding(0);
+            this.legendPanel.Name = "legendPanel";
+            this.legendPanel.Padding = new System.Windows.Forms.Padding(0, 0, 0, 10);
+            this.legendPanel.Size = new System.Drawing.Size(115, 590);
+            this.legendPanel.TabIndex = 0;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(890, 8);
+            this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(60, 19);
+            this.label6.TabIndex = 13;
+            this.label6.Text = "Легенда";
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.ClientSize = new System.Drawing.Size(940, 629);
+            this.ClientSize = new System.Drawing.Size(1017, 629);
+            this.Controls.Add(this.legendPanel);
+            this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.chartDistributionFunc);
@@ -333,6 +357,8 @@
         private System.Windows.Forms.TextBox InputSeqLenTb;
         private System.Windows.Forms.RichTextBox StatField;
         private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.FlowLayoutPanel legendPanel;
+        private System.Windows.Forms.Label label6;
     }
 }
 

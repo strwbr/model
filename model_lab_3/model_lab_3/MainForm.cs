@@ -96,7 +96,7 @@ namespace model_lab_3
                 generator.Generate(Generator.LEMER_RANDOM);
             }
             // Отрисовка гистограммы и графика функций f(X) и F(X)
-            DrawCharts(generator.Probability, generator.DistributionFunction);
+            DrawCharts(generator.Probability, generator.DistributionFunction, seqLength);
             // Отображение статистики
             ShowStatistics(seqLength, generator.MathExpect, generator.Dispersion);
         }
@@ -104,6 +104,7 @@ namespace model_lab_3
         // Вывод статистики: длина последовательности, мат.ожидание, дисперсия
         private void ShowStatistics(int len, double mathExpect, double dispersion)
         {
+            StatField.Text += "-- " + (SysRb.Checked ? "Встроенный" : "Лемер") + " --\n";
             StatField.Text += "Длина посл-ти: " + len.ToString() + "\n";
             StatField.Text += "Мат. ожидание: " + mathExpect.ToString() + "\n";
             StatField.Text += "Дисперсия: " + dispersion.ToString() + "\n";
@@ -111,7 +112,7 @@ namespace model_lab_3
         }
 
         // Визуализация гистограмм и графиков функций f(X) и F(X)
-        private void DrawCharts(double[] dataForChart1, double[] dataForChart2)
+        private void DrawCharts(double[] dataForChart1, double[] dataForChart2, int seqLen)
         {
             Series seriesForChart1 = new Series();
             Series seriesForChart2 = new Series();
@@ -130,8 +131,8 @@ namespace model_lab_3
             chartProbability.Series.Add(seriesForChart1);
             chartDistributionFunc.Series.Add(seriesForChart2);
 
-
-
+            // Добавление легенды
+            AddLegendForCharts(seqLen, color);
 
             //chart1.Series[0].Points.Clear();
             //chart1.Series[0].Color = GenerateColor();
@@ -139,6 +140,23 @@ namespace model_lab_3
             //{
             //    chart1.Series[0].Points.AddXY(i, data[i]);
             //}
+        }
+
+        // Добавление легенды к графикам
+        private void AddLegendForCharts(int seqLen, Color color)
+        {
+            Label colorLbl = new Label();
+            colorLbl.TextAlign = ContentAlignment.MiddleCenter;
+            colorLbl.BackColor = color;
+            colorLbl.Width = 30;
+
+            Label textLbl = new Label();
+            textLbl.Text = seqLen.ToString() + " (" + (SysRb.Checked ? "В" : "Л") + ")";
+            textLbl.Width = 70;
+            textLbl.TextAlign = ContentAlignment.MiddleLeft;
+
+            legendPanel.Controls.Add(colorLbl);
+            legendPanel.Controls.Add(textLbl);
         }
 
         // Обработчик нажатия на кнопку "Рассчитать"
@@ -160,6 +178,7 @@ namespace model_lab_3
         private void Clear()
         {
             ClearChartSeries();
+            legendPanel.Controls.Clear();
             StatField.Text = "";
             InputSeqLenTb.Text = "100";
         }
