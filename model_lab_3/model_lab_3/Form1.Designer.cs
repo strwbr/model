@@ -43,14 +43,14 @@
             this.GeneratorTypeGB = new System.Windows.Forms.GroupBox();
             this.LemRb = new System.Windows.Forms.RadioButton();
             this.SysRb = new System.Windows.Forms.RadioButton();
-            this.chart1 = new System.Windows.Forms.DataVisualization.Charting.Chart();
-            this.chart2 = new System.Windows.Forms.DataVisualization.Charting.Chart();
+            this.chartProbability = new System.Windows.Forms.DataVisualization.Charting.Chart();
+            this.chartDistributionFunc = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.GeneratorTypeGB.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.chart1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.chart2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.chartProbability)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.chartDistributionFunc)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -223,37 +223,37 @@
             // 
             // chart1
             // 
-            this.chart1.BorderlineColor = System.Drawing.Color.Black;
-            this.chart1.BorderlineDashStyle = System.Windows.Forms.DataVisualization.Charting.ChartDashStyle.Solid;
+            this.chartProbability.BorderlineColor = System.Drawing.Color.Black;
+            this.chartProbability.BorderlineDashStyle = System.Windows.Forms.DataVisualization.Charting.ChartDashStyle.Solid;
             chartArea3.AxisX.MajorGrid.LineColor = System.Drawing.Color.LightGray;
             chartArea3.AxisX.Maximum = 100D;
             chartArea3.AxisX.Minimum = 0D;
             chartArea3.AxisY.MajorGrid.LineColor = System.Drawing.Color.LightGray;
             chartArea3.Name = "ChartArea1";
-            this.chart1.ChartAreas.Add(chartArea3);
-            this.chart1.Location = new System.Drawing.Point(301, 10);
-            this.chart1.Margin = new System.Windows.Forms.Padding(4);
-            this.chart1.Name = "chart1";
-            this.chart1.Size = new System.Drawing.Size(936, 356);
-            this.chart1.TabIndex = 1;
-            this.chart1.Text = "chart1";
+            this.chartProbability.ChartAreas.Add(chartArea3);
+            this.chartProbability.Location = new System.Drawing.Point(301, 10);
+            this.chartProbability.Margin = new System.Windows.Forms.Padding(4);
+            this.chartProbability.Name = "chart1";
+            this.chartProbability.Size = new System.Drawing.Size(936, 356);
+            this.chartProbability.TabIndex = 1;
+            this.chartProbability.Text = "chart1";
             // 
             // chart2
             // 
-            this.chart2.BorderlineColor = System.Drawing.Color.Black;
-            this.chart2.BorderlineDashStyle = System.Windows.Forms.DataVisualization.Charting.ChartDashStyle.Solid;
+            this.chartDistributionFunc.BorderlineColor = System.Drawing.Color.Black;
+            this.chartDistributionFunc.BorderlineDashStyle = System.Windows.Forms.DataVisualization.Charting.ChartDashStyle.Solid;
             chartArea4.AxisX.MajorGrid.LineColor = System.Drawing.Color.LightGray;
             chartArea4.AxisX.Maximum = 100D;
             chartArea4.AxisX.Minimum = 0D;
             chartArea4.AxisY.MajorGrid.LineColor = System.Drawing.Color.LightGray;
             chartArea4.Name = "ChartArea1";
-            this.chart2.ChartAreas.Add(chartArea4);
-            this.chart2.Location = new System.Drawing.Point(301, 373);
-            this.chart2.Margin = new System.Windows.Forms.Padding(4);
-            this.chart2.Name = "chart2";
-            this.chart2.Size = new System.Drawing.Size(936, 356);
-            this.chart2.TabIndex = 2;
-            this.chart2.Text = "chart2";
+            this.chartDistributionFunc.ChartAreas.Add(chartArea4);
+            this.chartDistributionFunc.Location = new System.Drawing.Point(301, 373);
+            this.chartDistributionFunc.Margin = new System.Windows.Forms.Padding(4);
+            this.chartDistributionFunc.Name = "chart2";
+            this.chartDistributionFunc.Size = new System.Drawing.Size(936, 356);
+            this.chartDistributionFunc.TabIndex = 2;
+            this.chartDistributionFunc.Text = "chart2";
             // 
             // label4
             // 
@@ -287,8 +287,8 @@
             this.ClientSize = new System.Drawing.Size(1253, 740);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.chart2);
-            this.Controls.Add(this.chart1);
+            this.Controls.Add(this.chartDistributionFunc);
+            this.Controls.Add(this.chartProbability);
             this.Controls.Add(this.panel1);
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "Form1";
@@ -297,8 +297,8 @@
             this.panel1.PerformLayout();
             this.GeneratorTypeGB.ResumeLayout(false);
             this.GeneratorTypeGB.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.chart1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.chart2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.chartProbability)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.chartDistributionFunc)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -316,8 +316,8 @@
         private System.Windows.Forms.Button ClearBtn;
         private System.Windows.Forms.Button StartBtn;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.DataVisualization.Charting.Chart chart1;
-        private System.Windows.Forms.DataVisualization.Charting.Chart chart2;
+        private System.Windows.Forms.DataVisualization.Charting.Chart chartProbability;
+        private System.Windows.Forms.DataVisualization.Charting.Chart chartDistributionFunc;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.TextBox InputPiTb;

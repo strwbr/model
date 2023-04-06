@@ -9,17 +9,23 @@ namespace model_lab_3
 {
     public class Generator
     {
+        // Системный генератор
         public const int SYSTEM_RANDOM = 0;
+        // Генератор, реализующий метод Лемера
         public const int LEMER_RANDOM = 1;
+        // Максимальное число (не включительно) диапазона псевдослучайных чисел
         public const int MAX_NOT_INCLUSIVE = 100;
-
-        private int seqLength; // Длина последовательности
+        // Длина последовательности
+        private int seqLength; 
+        // Частоты появлений конкретных значений СВ f(x)
         public double[] Probability { get; set; }
+        // Функция распределения F(x)
         public double[] DistributionFunction { get; set; }
-
+        // Математическое ожижание
         public double MathExpect { get; set; }
+        // Дисперсия
         public double Dispersion { get; set; }
-
+        // Начальный x для метода Лемера
         public double x = 0;
 
         public Generator(int seqLength)
@@ -31,21 +37,28 @@ namespace model_lab_3
             Dispersion = 0;
         }
 
+        // Генерация последовательности чисел в зависимости от выбранного вида генератора
         public void Generate(int randomType)
         {
             switch (randomType)
             {
+                // Системный генератор
                 case SYSTEM_RANDOM:
                     GenerateBySystem(); break;
+                // Генератор на основе Лемера
                 case LEMER_RANDOM:
                     x = 0; // начальное число последовательности
                     GenerateByLemer(); break;
             }
+            // Вычисление f(x)
             CountDistribution();
+            // Вычисление мат. ожидания
             CountMathExpect();
+            // Вычисление дисперсии
             CountDispersion();
         }
 
+        // Расчет F(x)
         private void CountDistribution()
         {
             double sum = 0;
@@ -56,6 +69,7 @@ namespace model_lab_3
             }
         }
 
+        // Расчет дисперсии
         private void CountDispersion()
         {
             for (int i = 0; i < MAX_NOT_INCLUSIVE; i++)
@@ -64,6 +78,7 @@ namespace model_lab_3
             }
         }
 
+        // Расчет мат. ожидания
         private void CountMathExpect()
         {
             for(int i = 0; i < MAX_NOT_INCLUSIVE; i++)
@@ -72,19 +87,22 @@ namespace model_lab_3
             }
         }
 
+        // Генерация на основе системного генератора
         private void GenerateBySystem()
         {
             Probability = new double[seqLength];
-
+            // Инициализация системного генератора
             Random random = new Random();
-            // Генерируем целые числа в диапазоне [0; 99] и считаем кол-во появлений каждого сгенеренного числа
+            // Генерация целых числа в диапазоне [0; 99] и подсчет кол-во появлений каждого сгенерированного числа
             for (int i = 0; i < seqLength; i++)
             {
                 Probability[random.Next(seqLength)]++;
             }
+            // Подсчет частоты появления
             Frequency();
         }
 
+        // Генерация на основе метода Лемера
         private void GenerateByLemer()
         {
             Probability = new double[seqLength];
@@ -94,9 +112,11 @@ namespace model_lab_3
                 int index = LemerN(MAX_NOT_INCLUSIVE);
                 Probability[index]++;
             }
+            // Подсчет частоты появления
             Frequency();
         }
 
+        // Метод Лемера; возвращает целые числа интервала [0, N-1] 
         private int LemerN(int N)
         {
             x = Lemer(x) * (N - 1);
@@ -104,7 +124,7 @@ namespace model_lab_3
             return index;
         }
 
-        // Частота появления
+        // Частота появления каждого сгенерированного числа
         private void Frequency()
         {
             for (int i = 0; i < Probability.Length; i++)
@@ -135,12 +155,15 @@ namespace model_lab_3
                     countCircle++;
                 }
             }*/
+
+            // Генерация массива псевдослучайных чисел методом Лемера
             double[] arr = new double[seqLength];
             for(int i = 0; i < seqLength; i++)
             {
                 arr[i] = Lemer(x);
                 x = arr[i] * 65535;
             }
+            // Подсчет кол-ва СВ, попаших в единичную окружность
             for(int i = 0; i < seqLength/2; i++)
             {
                 if (Math.Pow(arr[i], 2) + Math.Pow(arr[i + 1], 2) < 1)
@@ -148,6 +171,7 @@ namespace model_lab_3
                     countCircle++;
                 }
             }
+            // Вычисление числа pi
             double pi = 4 * countCircle / (double)(seqLength / 2);
             return pi;
         }

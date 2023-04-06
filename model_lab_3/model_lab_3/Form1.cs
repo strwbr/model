@@ -26,6 +26,7 @@ namespace model_lab_3
             //    chart2.Series[0].Points.AddXY(i, 3);
             //}
             // проверка поля вывода статистики
+
             StatField.Text = "";
         }
 
@@ -72,28 +73,35 @@ namespace model_lab_3
 
         private void StartBtn_Click(object sender, EventArgs e)
         {
-            if (chart1.Series.Count == 6)
+            // Если построено 6 графиков
+            if (chartProbability.Series.Count == 6)
             {
+                // Очистка диаграммы
                 MessageBox.Show("Превышено число ввода допустимых длин последовательностию. Диаграммы будут очищены. Пожалуйста, повторно нажмите на кнопку Запуск "); // Диаграммы???
                 Clear();
                 return;
             }
+
             int seqLength = Convert.ToInt32(InputSeqLenTb.Text);
             Generator generator = new Generator(seqLength);
+            // Генерация в зависимости от выбранного генератора
             if (SysRb.Checked)
             {
+                // системный генератор
                 generator.Generate(Generator.SYSTEM_RANDOM);
-                // system random
             }
             else
             {
+                // генератор на основе метода Лемера
                 generator.Generate(Generator.LEMER_RANDOM);
-                // lemer random
             }
+            // Отрисовка гистограмм функций f(X), F(X)
             DrawCharts(generator.Probability, generator.DistributionFunction);
+            // Отображение статистики
             ShowStatistics(seqLength, generator.MathExpect, generator.Dispersion);
         }
 
+        // Вывод статистики: длина последовательности, мат.ожидание, дисперсия
         private void ShowStatistics(int len, double mathExpect, double dispersion)
         {
             StatField.Text += "Длина посл-ти: " + len.ToString() + "\n";
@@ -102,22 +110,25 @@ namespace model_lab_3
             StatField.Text += "-------------------------\n";
         }
 
+        // Визуализация гистограмм функций f(X) и F(X)
         private void DrawCharts(double[] dataForChart1, double[] dataForChart2)
         {
-            Series series1 = new Series();
-            Series series2 = new Series();
-            series2.ChartType = SeriesChartType.StepLine;
+            Series seriesForChart1 = new Series();
+            Series seriesForChart2 = new Series();
+            seriesForChart2.ChartType = SeriesChartType.StepLine;
+
+            // Задание цвета для гистограмм (цвет одинаковый для обеих графиков)
             Color color = GenerateColor();
-            series1.Color = color;
-            series2.Color = color;
+            seriesForChart1.Color = color;
+            seriesForChart2.Color = color;
+            
             for (int i = 0; i < 100; i++)
             {
-                series1.Points.AddXY(i, dataForChart1[i]);
-                series2.Points.AddXY(i, dataForChart2[i]);
+                seriesForChart1.Points.AddXY(i, dataForChart1[i]);
+                seriesForChart2.Points.AddXY(i, dataForChart2[i]);
             }
-            //series.IsXValueIndexed = false; -- не работает
-            chart1.Series.Add(series1);
-            chart2.Series.Add(series2);
+            chartProbability.Series.Add(seriesForChart1);
+            chartDistributionFunc.Series.Add(seriesForChart2);
 
 
 
@@ -130,6 +141,7 @@ namespace model_lab_3
             //}
         }
 
+        // Обработчик нажатия на кнопку "Рассчитать"
         private void CountPiBtn_Click(object sender, EventArgs e)
         {
             Generator generator = new Generator(Convert.ToInt32(InputPiTb.Text));
@@ -137,12 +149,14 @@ namespace model_lab_3
             PiLbl.Text = temp.ToString();
         }
 
+        // Очистка диаграмм
         private void ClearChartSeries()
         {
-            chart1.Series.Clear();
-            chart2.Series.Clear();
+            chartProbability.Series.Clear();
+            chartDistributionFunc.Series.Clear();
         }
 
+        // Очистка формы
         private void Clear()
         {
             ClearChartSeries();
@@ -150,6 +164,7 @@ namespace model_lab_3
             InputSeqLenTb.Text = "100";
         }
 
+        // обработчик нажатия на кнопку "Очистить"
         private void ClearBtn_Click(object sender, EventArgs e)
         {
             Clear();
