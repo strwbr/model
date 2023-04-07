@@ -146,7 +146,6 @@ namespace model_lab_3
         private void AddLegendForCharts(int seqLen, Color color)
         {
             Label colorLbl = new Label();
-            colorLbl.TextAlign = ContentAlignment.MiddleCenter;
             colorLbl.BackColor = color;
             colorLbl.Width = 30;
 

@@ -143,8 +143,11 @@ namespace model_lab_3
         // Расчет числа pi
         public double Pi()
         {
-            x = 0; // начальное число последовательности
+            // Начальное число последовательности
+            x = 0; 
+            // Кол-во точек, попавших внутрь окружности
             double countCircle = 0;
+
             /*for (int i = 0; i < seqLength / 2; i++)
             {
                 double num1 = Lemer(x);
@@ -157,14 +160,15 @@ namespace model_lab_3
             }*/
 
             // Генерация массива псевдослучайных чисел методом Лемера
-            double[] arr = new double[seqLength];
-            for(int i = 0; i < seqLength; i++)
+            int elements = seqLength * 2;
+            double[] arr = new double[elements];
+            for(int i = 0; i < elements; i++)
             {
                 arr[i] = Lemer(x);
                 x = arr[i] * 65535;
             }
             // Подсчет кол-ва сгенерированных чисел, попавших в единичную окружность
-            for(int i = 0; i < seqLength/2; i++)
+            for(int i = 0; i < elements-1; i+=2)
             {
                 if (Math.Pow(arr[i], 2) + Math.Pow(arr[i + 1], 2) < 1)
                 {
@@ -172,7 +176,7 @@ namespace model_lab_3
                 }
             }
             // Вычисление числа pi
-            double pi = 4 * countCircle / (double)(seqLength / 2);
+            double pi = 4 * countCircle / (double)(seqLength);
             return pi;
         }
     }
