@@ -1,0 +1,11 @@
+C:\Users\boris\CodeProjects\CSharpCode\model\model_lab_4\model_lab_4\bin\Debug\model_lab_4.exe.config
+C:\Users\boris\CodeProjects\CSharpCode\model\model_lab_4\model_lab_4\bin\Debug\model_lab_4.exe
+C:\Users\boris\CodeProjects\CSharpCode\model\model_lab_4\model_lab_4\bin\Debug\model_lab_4.pdb
+C:\Users\boris\CodeProjects\CSharpCode\model\model_lab_4\model_lab_4\obj\Debug\model_lab_4.csproj.AssemblyReference.cache
+C:\Users\boris\CodeProjects\CSharpCode\model\model_lab_4\model_lab_4\obj\Debug\model_lab_4.csproj.SuggestedBindingRedirects.cache
+C:\Users\boris\CodeProjects\CSharpCode\model\model_lab_4\model_lab_4\obj\Debug\model_lab_4.Form1.resources
+C:\Users\boris\CodeProjects\CSharpCode\model\model_lab_4\model_lab_4\obj\Debug\model_lab_4.Properties.Resources.resources
+C:\Users\boris\CodeProjects\CSharpCode\model\model_lab_4\model_lab_4\obj\Debug\model_lab_4.csproj.GenerateResource.cache
+C:\Users\boris\CodeProjects\CSharpCode\model\model_lab_4\model_lab_4\obj\Debug\model_lab_4.csproj.CoreCompileInputs.cache
+C:\Users\boris\CodeProjects\CSharpCode\model\model_lab_4\model_lab_4\obj\Debug\model_lab_4.exe
+C:\Users\boris\CodeProjects\CSharpCode\model\model_lab_4\model_lab_4\obj\Debug\model_lab_4.pdb

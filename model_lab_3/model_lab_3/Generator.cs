@@ -148,17 +148,6 @@ namespace model_lab_3
             // Кол-во точек, попавших внутрь окружности
             double countCircle = 0;
 
-            /*for (int i = 0; i < seqLength / 2; i++)
-            {
-                double num1 = Lemer(x);
-                double num2 = Lemer(num1);
-                x = num2;
-                if(Math.Pow(num1, 2) + Math.Pow(num2, 2) < 1)
-                {
-                    countCircle++;
-                }
-            }*/
-
             // Генерация массива псевдослучайных чисел методом Лемера
             int elements = seqLength * 2;
             double[] arr = new double[elements];

@@ -18,15 +18,6 @@ namespace model_lab_3
         public MainForm()
         {
             InitializeComponent();
-
-            // проверка графиков
-            //for (int i = 0; i < 99; i++)
-            //{
-            //    chart1.Series[0].Points.AddXY(i, 3);
-            //    chart2.Series[0].Points.AddXY(i, 3);
-            //}
-            // проверка поля вывода статистики
-
             StatField.Text = "";
         }
 
@@ -133,13 +124,6 @@ namespace model_lab_3
 
             // Добавление легенды
             AddLegendForCharts(seqLen, color);
-
-            //chart1.Series[0].Points.Clear();
-            //chart1.Series[0].Color = GenerateColor();
-            //for (int i = 0; i < 100; i++)
-            //{
-            //    chart1.Series[0].Points.AddXY(i, data[i]);
-            //}
         }
 
         // Добавление легенды к графикам
