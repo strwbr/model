@@ -20,6 +20,15 @@ namespace model_lab_4
 
         private void StartBtn_Click(object sender, EventArgs e)
         {
+            // Если построено 6 гистограмм/графиков
+            if (chartProbability.Series.Count == 6)
+            {
+                // Очистка диаграммы
+                MessageBox.Show("Превышено число ввода допустимых длин последовательностию. Диаграммы будут очищены. Пожалуйста, повторно нажмите на кнопку Запуск "); // Диаграммы???
+                Clear();
+                return;
+            }
+
             int seqLength = Convert.ToInt32(InputSeqLenTb.Text);
             Generator generator = new Generator(seqLength);
             generator.Generate();
@@ -32,7 +41,7 @@ namespace model_lab_4
         {
             Series seriesForChart1 = new Series();
             Series seriesForChart2 = new Series();
-            //seriesForChart2.ChartType = SeriesChartType.StepLine;
+            seriesForChart2.ChartType = SeriesChartType.StepLine;
 
             // Задание цвета для гистограммы и графика (цвет одинаковый)
             Color color = GenerateColor();
@@ -42,13 +51,13 @@ namespace model_lab_4
             for (int i = 0; i < 100; i++)
             {
                 seriesForChart1.Points.AddXY(i, dataForChart1[i]);
-                //seriesForChart2.Points.AddXY(i, dataForChart2[i]);
+                seriesForChart2.Points.AddXY(i, dataForChart2[i]);
             }
-            chart1.Series.Add(seriesForChart1);
-            //chart2.Series.Add(seriesForChart2);
+            chartProbability.Series.Add(seriesForChart1);
+            chartDistributionFunc.Series.Add(seriesForChart2);
 
             // Добавление легенды
-            //AddLegendForCharts(seqLen, color);
+            AddLegendForCharts(seqLen, color);
         }
 
         // Вывод статистики: длина последовательности, мат.ожидание, дисперсия
@@ -65,6 +74,38 @@ namespace model_lab_4
         {
             Random random = new Random();
             return Color.FromArgb(random.Next(256), random.Next(256), random.Next(256));
+        }
+
+        // Добавление легенды к графикам
+        private void AddLegendForCharts(int seqLen, Color color)
+        {
+            Label colorLbl = new Label();
+            colorLbl.BackColor = color;
+            colorLbl.Width = 30;
+
+            Label textLbl = new Label();
+            textLbl.Text = seqLen.ToString();
+            textLbl.Width = 70;
+            textLbl.TextAlign = ContentAlignment.MiddleLeft;
+
+            legendPanel.Controls.Add(colorLbl);
+            legendPanel.Controls.Add(textLbl);
+        }
+
+        // Очистка диаграмм
+        private void ClearChartSeries()
+        {
+            chartProbability.Series.Clear();
+            chartDistributionFunc.Series.Clear();
+        }
+
+        // Очистка формы
+        private void Clear()
+        {
+            ClearChartSeries();
+            legendPanel.Controls.Clear();
+            StatField.Text = "";
+            InputSeqLenTb.Text = "100";
         }
     }
 }

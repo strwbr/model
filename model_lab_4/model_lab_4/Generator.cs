@@ -40,7 +40,11 @@ namespace model_lab_4
                 Probability[GenerateNumber()]++;
             }
             Frequency();
+            // Вычисление f(x)
+            CountDistribution();
+            // Вычисление мат. ожидания
             CountMathExpect();
+            // Вычисление дисперсии
             CountDispersion();
         }
 
@@ -69,11 +73,24 @@ namespace model_lab_4
                 sum += Lemer();
                 //x *= 65535;
             }
-            sum -= 3;
-            sum /= 3;
-            sum += 1;
-            sum *= 50;
+            //sum -= 3;
+            //sum /= 3;
+            //sum += 1;
+            //sum *= 50;
+            sum /= 6;
+            sum *= 100;
             return (int)sum;
+        }
+
+        // Расчет F(x)
+        private void CountDistribution()
+        {
+            double sum = 0;
+            for (int i = 0; i < MAX_NOT_INCLUSIVE; i++)
+            {
+                sum += Probability[i];
+                DistributionFunction[i] = sum;
+            }
         }
 
         // Расчет дисперсии
