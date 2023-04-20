@@ -1,19 +1,13 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Windows.Forms.DataVisualization.Charting;
 
 namespace model_lab_4
 {
-    public partial class Form1 : Form
+    public partial class MainForm : Form
     {
-        public Form1()
+        public MainForm()
         {
             InitializeComponent();
         }
@@ -28,11 +22,15 @@ namespace model_lab_4
                 Clear();
                 return;
             }
-
+            // Получение длины послеовательности
             int seqLength = Convert.ToInt32(InputSeqLenTb.Text);
+            // Инициализация генератора
             Generator generator = new Generator(seqLength);
+            // Генерация нормального распределения
             generator.Generate();
+            // Отрисовка графиков
             DrawCharts(generator.Probability, generator.DistributionFunction, seqLength);
+            // Отображение статистики
             ShowStatistics(seqLength, generator.MathExpect, generator.Dispersion);
         }
 

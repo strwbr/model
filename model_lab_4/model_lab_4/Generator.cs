@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace model_lab_4
 {
@@ -16,13 +12,14 @@ namespace model_lab_4
         public double[] Probability { get; set; }
         // Функция распределения F(x)
         public double[] DistributionFunction { get; set; }
-        // Математическое ожижание
+        // Математическое ожидание
         public double MathExpect { get; set; }
         // Дисперсия
         public double Dispersion { get; set; }
         // Начальный x для метода Лемера
         public uint x = 0;
 
+        // Конструктор класса
         public Generator(int seqLength)
         {
             this.seqLength = seqLength;
@@ -32,13 +29,16 @@ namespace model_lab_4
             Dispersion = 0;
         }
 
+        // Генерация послежовательности случайных величин с нормальным законом распределения
         public void Generate()
         {
             Probability = new double[MAX_NOT_INCLUSIVE];
+            // Генерация целых чисел в диапазоне [0;99] и подсчет кол-ва появлений каждого числа из этого диапазона
             for(int i = 0; i < seqLength; i++)
             {
                 Probability[GenerateNumber()]++;
             }
+            // Подсчет частоты появления
             Frequency();
             // Вычисление f(x)
             CountDistribution();
@@ -57,22 +57,26 @@ namespace model_lab_4
             }
         }
 
-        // Лемер (диапазон [0;1))
+        // Лемер (интервал [0;1))
         private double Lemer()
         {
             uint a = 1103515245, b = 12345, c = 2147483648;
-            x = ((a * x + b) % c);
+            x = (a * x + b) % c;
             return (double)x / c;
         }
 
+        // Генерация одного числа из последовательности
         private int GenerateNumber()
         {
             double sum = 0;
+            // Вычисление суммы 6 чисел с равномерным законом распределения
+            // Конечное число - в интервале [0; 1)
             for(int i = 0; i < 6; i ++)
             {
                 sum += Lemer();
                 //x *= 65535;
             }
+            // Приведение к диапазону [0;99]
             //sum -= 3;
             //sum /= 3;
             //sum += 1;
